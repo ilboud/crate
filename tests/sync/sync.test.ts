@@ -199,6 +199,33 @@ describe('runSync', () => {
     expect(sim.n).toBeGreaterThan(0);
   });
 
+  it('keeps label links when several releases share a label', async () => {
+    // Regression: "INSERT OR REPLACE INTO label" deletes the label row before
+    // reinserting it, and release_label cascades on that delete — so storing a
+    // second Columbia release silently wiped the first one's label link.
+    await sync();
+    const links = db
+      .prepare('SELECT release_id FROM release_label ORDER BY release_id')
+      .all() as Array<{ release_id: number }>;
+    expect(links.map((l) => l.release_id)).toEqual([1, 2]);
+  });
+
+  it('keeps artist links when several releases share an artist', async () => {
+    client = new FakeClient(
+      [item(1, 101), item(2, 102)],
+      new Map([
+        [1, { ...detail(1, [['A1', 'X']]), artists: [{ id: 500, name: 'Shared Artist' }] }],
+        [2, { ...detail(2, [['A1', 'Y']]), artists: [{ id: 500, name: 'Shared Artist' }] }],
+      ]),
+    );
+    await runSync(db, { client, coversDir }, { username: 'tester' });
+
+    const links = db
+      .prepare('SELECT release_id FROM release_artist ORDER BY release_id')
+      .all() as Array<{ release_id: number }>;
+    expect(links.map((l) => l.release_id)).toEqual([1, 2]);
+  });
+
   it('skips tracklist headings, keeping only playable tracks', async () => {
     client = new FakeClient(
       [item(1, 101)],

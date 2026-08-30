@@ -71,7 +71,12 @@ export function storeRelease(
       JSON.stringify(detail),
     );
 
-    const upsertArtist = db.prepare('INSERT OR REPLACE INTO artist (id, name) VALUES (?,?)');
+    // NOT "INSERT OR REPLACE": REPLACE deletes the existing artist row first,
+    // and release_artist.artist_id cascades on delete, so re-storing a shared
+    // artist would silently wipe every OTHER release's link to them.
+    const upsertArtist = db.prepare(
+      'INSERT INTO artist (id, name) VALUES (?,?) ON CONFLICT(id) DO UPDATE SET name = excluded.name',
+    );
     const linkArtist = db.prepare(
       'INSERT OR REPLACE INTO release_artist (release_id, artist_id, seq, join_str) VALUES (?,?,?,?)',
     );
@@ -80,7 +85,11 @@ export function storeRelease(
       linkArtist.run(detail.id, a.id, i, a.join ?? null);
     });
 
-    const upsertLabel = db.prepare('INSERT OR REPLACE INTO label (id, name) VALUES (?,?)');
+    // Same cascade hazard as artist above — Columbia is shared by dozens of
+    // releases, and REPLACE would drop all their label links.
+    const upsertLabel = db.prepare(
+      'INSERT INTO label (id, name) VALUES (?,?) ON CONFLICT(id) DO UPDATE SET name = excluded.name',
+    );
     const linkLabel = db.prepare(
       'INSERT OR IGNORE INTO release_label (release_id, label_id, catno) VALUES (?,?,?)',
     );
