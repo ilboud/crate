@@ -12,6 +12,14 @@
 # Dependencies
 node_modules/
 
+# Build output
+dist/
+web/dist/
+
+# Runtime data — the synced collection and mirrored cover art
+data/
+covers/
+
 # OS / editor noise
 .DS_Store
 *.swp
