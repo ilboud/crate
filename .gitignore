@@ -27,3 +27,6 @@ covers/
 # Screenshots taken during development
 /*.png
 .playwright-mcp/
+
+# TypeScript incremental build info
+*.tsbuildinfo
