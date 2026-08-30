@@ -19,7 +19,7 @@
 - Secrets (`DISCOGS_PERSONAL_ACCESS_TOKEN`, `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`) are read from the environment server-side only and must never reach the browser.
 - The app binds to LAN only; there is no authentication layer.
 - The mutating-MCP-tool allowlist is enforced in server code, never by prompt text alone.
-- All 245 releases must receive exactly one primary group; group counts sum to 245.
+- All 244 distinct releases must receive exactly one primary group (245 collection items; one release is owned twice).
 - Track position parsing must handle whole-side positions (`"A"`) as well as indexed (`"C2"`).
 
 ---
@@ -139,7 +139,7 @@ Known-correct assertions (verified against the real collection during design):
 - `Blonde On Blonde` → Rock (genre tie-break, not Soul/Funk)
 - `De-Loused In The Comatorium` → Rock (genre tie-break, not Electronic)
 - `King Curtis — Live At Fillmore West` → Soul / Funk
-- All 245 fixtures assign; totals sum to 245
+- All 244 distinct fixtures assign; totals sum to 244
 
 - [ ] **Step 1: Write failing tests** including the four assertions above
 - [ ] **Step 2: Run, verify fail**

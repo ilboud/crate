@@ -196,7 +196,7 @@ recorded in `sync_run.failed_ids` and retried on the next run — a failed
 release must never abort the run or corrupt the index. Observed in testing:
 individual `get_release` calls do fail under sustained load.
 
-First run takes roughly 5 minutes for 245 releases. Subsequent runs touch only
+First run takes roughly 5 minutes for 244 releases. Subsequent runs touch only
 what changed. `--force` re-fetches everything, needed after taxonomy edits.
 
 Cover art mirrors to `covers/{id}-full.jpg` and `covers/{id}-thumb.jpg` and is
@@ -343,7 +343,7 @@ container.
 | Layer | Approach |
 |---|---|
 | Position parser | Unit tests over real fixtures: `"A"`, `"C2"`, `"1-1"`, `"1"` |
-| Taxonomy assignment | Fixture-based; asserts all 245 assign and totals match |
+| Taxonomy assignment | Fixture-based; asserts all 244 assign and totals match |
 | Sync | Mocked Discogs responses; asserts idempotency, failure isolation, deletion handling |
 | Search | FTS queries against a seeded database, including multi-pressing songs |
 | Recommendations | Asserts same-artist exclusion and IDF ordering |
