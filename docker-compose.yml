@@ -1,0 +1,55 @@
+# Two containers on the NAS: the app, and the Discogs MCP server it asks about
+# pressings and marketplace data.
+#
+# Both stay on the LAN. There is no authentication layer, which is the
+# deliberate trade recorded in the design: the Discogs token can modify the
+# collection, so the app is not exposed to the internet. Reach it from outside
+# the house over Tailscale or the Synology VPN rather than by opening a port.
+
+services:
+  discogs-app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: discogs-collection:latest
+    container_name: discogs-app
+    restart: unless-stopped
+    ports:
+      # Host port defaults to 8088. Change the left side if the NAS already
+      # uses it — DSM itself listens on 5000/5001.
+      - "${APP_PORT:-8088}:8080"
+    volumes:
+      - ./data:/data
+      - ./covers:/covers
+    environment:
+      DB_PATH: /data/collection.db
+      COVERS_DIR: /covers
+      WEB_DIR: /app/web/dist
+      PORT: "8080"
+      HOST: 0.0.0.0
+      # Sync needs this; the app itself does not read Discogs directly.
+      DISCOGS_PERSONAL_ACCESS_TOKEN: ${DISCOGS_PERSONAL_ACCESS_TOKEN:?set this in .env}
+      DISCOGS_USERNAME: ${DISCOGS_USERNAME:-}
+      # Chat. Set whichever you use; CHAT_BACKEND picks between them.
+      CHAT_BACKEND: ${CHAT_BACKEND:-anthropic}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-claude-sonnet-5}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o}
+      MCP_URL: http://discogs-mcp:3001/mcp
+    depends_on:
+      - discogs-mcp
+
+  discogs-mcp:
+    image: node:20-bookworm-slim
+    container_name: discogs-mcp
+    restart: unless-stopped
+    # HTTP stream mode rather than stdio, so the app reaches it as a peer over
+    # the Docker network instead of managing a subprocess.
+    command: npx -y discogs-mcp-server stream
+    environment:
+      DISCOGS_PERSONAL_ACCESS_TOKEN: ${DISCOGS_PERSONAL_ACCESS_TOKEN:?set this in .env}
+      PORT: "3001"
+      SERVER_HOST: 0.0.0.0
+    expose:
+      - "3001"
