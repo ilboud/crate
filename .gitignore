@@ -23,3 +23,7 @@ covers/
 # OS / editor noise
 .DS_Store
 *.swp
+
+# Screenshots taken during development
+/*.png
+.playwright-mcp/
