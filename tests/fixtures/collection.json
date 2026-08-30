@@ -1,0 +1,7275 @@
+[
+ {
+  "id": 23036210,
+  "title": "The Low End Theory",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 3268,
+    "name": "A Tribe Called Quest"
+   }
+  ],
+  "labels": [
+   {
+    "id": 2186,
+    "name": "Jive",
+    "catno": "19439937541"
+   },
+   {
+    "id": 276086,
+    "name": "Sony Music Commercial Music Group",
+    "catno": "19439937541"
+   }
+  ],
+  "genres": [
+   "Hip Hop"
+  ],
+  "styles": [
+   "Conscious",
+   "Jazzy Hip-Hop"
+  ]
+ },
+ {
+  "id": 22820696,
+  "title": "Aaliyah",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 13733,
+    "name": "Aaliyah"
+   }
+  ],
+  "labels": [
+   {
+    "id": 22430,
+    "name": "Blackground Records",
+    "catno": "ERE674"
+   },
+   {
+    "id": 22430,
+    "name": "Blackground Records",
+    "catno": "ERE714"
+   },
+   {
+    "id": 22430,
+    "name": "Blackground Records",
+    "catno": "ERE715"
+   }
+  ],
+  "genres": [
+   "Hip Hop",
+   "Funk / Soul",
+   "Pop"
+  ],
+  "styles": [
+   "Contemporary R&B"
+  ]
+ },
+ {
+  "id": 19472929,
+  "title": "It's Magic",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 271898,
+    "name": "Abbey Lincoln"
+   }
+  ],
+  "labels": [
+   {
+    "id": 34094,
+    "name": "Riverside Records",
+    "catno": "CR00412"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Hard Bop",
+   "Vocal"
+  ]
+ },
+ {
+  "id": 30104018,
+  "title": "Back In Black",
+  "year": 2024,
+  "artists": [
+   {
+    "id": 84752,
+    "name": "AC/DC"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "19658834541"
+   },
+   {
+    "id": 33440,
+    "name": "Albert Productions",
+    "catno": "19658834541"
+   },
+   {
+    "id": 25487,
+    "name": "Sony Music",
+    "catno": "19658834541"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Hard Rock",
+   "Blues Rock"
+  ]
+ },
+ {
+  "id": 2278079,
+  "title": "Iron Man 2",
+  "year": 2010,
+  "artists": [
+   {
+    "id": 84752,
+    "name": "AC/DC"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "88697661581"
+   },
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "C 766158"
+   },
+   {
+    "id": 150331,
+    "name": "Marvel",
+    "catno": "88697661581"
+   },
+   {
+    "id": 33440,
+    "name": "Albert Productions",
+    "catno": "88697661581"
+   },
+   {
+    "id": 25487,
+    "name": "Sony Music",
+    "catno": "88697661581"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Hard Rock",
+   "Arena Rock",
+   "Classic Rock"
+  ]
+ },
+ {
+  "id": 14664510,
+  "title": "Marvel's Luke Cage Season Two - Original Soundtrack",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 1611895,
+    "name": "Adrian Younge"
+   },
+   {
+    "id": 10378,
+    "name": "Ali Shaheed Muhammad"
+   }
+  ],
+  "labels": [
+   {
+    "id": 291374,
+    "name": "Mondo (3)",
+    "catno": "MOND-139"
+   }
+  ],
+  "genres": [
+   "Hip Hop",
+   "Funk / Soul",
+   "Stage & Screen"
+  ],
+  "styles": [
+   "Soundtrack"
+  ]
+ },
+ {
+  "id": 26913695,
+  "title": "موسيقى أصلية للأفلام = Musique Originale De Films",
+  "year": 2016,
+  "artists": [
+   {
+    "id": 3860005,
+    "name": "Ahmed Malek"
+   },
+   {
+    "id": 3860005,
+    "name": "Ahmed Malek"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1445174,
+    "name": "Habibi Funk",
+    "catno": "Habibi003"
+   },
+   {
+    "id": 1445174,
+    "name": "Habibi Funk",
+    "catno": "habibi003"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Funk / Soul",
+   "Folk, World, & Country",
+   "Stage & Screen"
+  ],
+  "styles": [
+   "Bossa Nova",
+   "Soundtrack",
+   "Soul-Jazz"
+  ]
+ },
+ {
+  "id": 26016160,
+  "title": "Moon Safari",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 2770,
+    "name": "AIR"
+   }
+  ],
+  "labels": [
+   {
+    "id": 2294,
+    "name": "Parlophone",
+    "catno": "190296159305"
+   }
+  ],
+  "genres": [
+   "Electronic",
+   "Pop"
+  ],
+  "styles": [
+   "Downtempo",
+   "Ambient",
+   "Trip Hop",
+   "Alt-Pop"
+  ]
+ },
+ {
+  "id": 13613314,
+  "title": "Call Me",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 25261,
+    "name": "Al Green"
+   }
+  ],
+  "labels": [
+   {
+    "id": 50948,
+    "name": "Hi Records",
+    "catno": "FPH1146-3"
+   },
+   {
+    "id": 33995,
+    "name": "Fat Possum Records",
+    "catno": "FPH1146-3"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Rhythm & Blues",
+   "Soul"
+  ]
+ },
+ {
+  "id": 15462114,
+  "title": "King, Does The King's Things",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 137224,
+    "name": "Albert King"
+   }
+  ],
+  "labels": [
+   {
+    "id": 24936,
+    "name": "Stax",
+    "catno": "CR00324"
+   }
+  ],
+  "genres": [
+   "Blues"
+  ],
+  "styles": [
+   "Memphis Blues",
+   "Electric Blues"
+  ]
+ },
+ {
+  "id": 30566533,
+  "title": "Eternity",
+  "year": 2024,
+  "artists": [
+   {
+    "id": 42058,
+    "name": "Alice Coltrane"
+   }
+  ],
+  "labels": [
+   {
+    "id": 134882,
+    "name": "Warner Records",
+    "catno": "RCV1 726262"
+   },
+   {
+    "id": 134882,
+    "name": "Warner Records",
+    "catno": "081227816919"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Fusion",
+   "Modal",
+   "Free Jazz"
+  ]
+ },
+ {
+  "id": 9330840,
+  "title": "1973 - 1980",
+  "year": 2016,
+  "artists": [
+   {
+    "id": 6427581,
+    "name": "Amara Touré"
+   }
+  ],
+  "labels": [
+   {
+    "id": 114311,
+    "name": "Analog Africa",
+    "catno": "AALP 078"
+   },
+   {
+    "id": 114311,
+    "name": "Analog Africa",
+    "catno": "AALP078"
+   }
+  ],
+  "genres": [
+   "Latin",
+   "Folk, World, & Country"
+  ],
+  "styles": [
+   "Afro-Cuban",
+   "Pachanga",
+   "Son",
+   "African"
+  ]
+ },
+ {
+  "id": 12082344,
+  "title": "Dream House",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 21735,
+    "name": "Âme"
+   }
+  ],
+  "labels": [
+   {
+    "id": 50166,
+    "name": "Innervisions",
+    "catno": "IVLP09"
+   }
+  ],
+  "genres": [
+   "Electronic"
+  ],
+  "styles": [
+   "House",
+   "Deep House",
+   "Downtempo"
+  ]
+ },
+ {
+  "id": 23400779,
+  "title": "Live At Glastonbury 2007",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 151223,
+    "name": "Amy Winehouse"
+   }
+  ],
+  "labels": [
+   {
+    "id": 176614,
+    "name": "UMC",
+    "catno": "4555684"
+   },
+   {
+    "id": 8377,
+    "name": "Island Records",
+    "catno": "4555684"
+   },
+   {
+    "id": 176614,
+    "name": "UMC",
+    "catno": "00602445556847"
+   },
+   {
+    "id": 8377,
+    "name": "Island Records",
+    "catno": "00602445556847"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Funk / Soul"
+  ],
+  "styles": []
+ },
+ {
+  "id": 11826116,
+  "title": "Whatever People Say I Am, That's What I'm Not",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 391170,
+    "name": "Arctic Monkeys"
+   }
+  ],
+  "labels": [
+   {
+    "id": 26465,
+    "name": "Domino",
+    "catno": "WIGLP162VMP"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Indie Rock"
+  ]
+ },
+ {
+  "id": 14777443,
+  "title": "Aretha Now",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 38863,
+    "name": "Aretha Franklin"
+   }
+  ],
+  "labels": [
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "R1 625153"
+   },
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "081227908058"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Soul"
+  ]
+ },
+ {
+  "id": 14509303,
+  "title": "I Never Loved A Man The Way I Love You",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 38863,
+    "name": "Aretha Franklin"
+   }
+  ],
+  "labels": [
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "8139"
+   },
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "RCV1 607271"
+   },
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "081227909550"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Rhythm & Blues",
+   "Soul"
+  ]
+ },
+ {
+  "id": 18150907,
+  "title": "Moanin'",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 262128,
+    "name": "Art Blakey & The Jazz Messengers"
+   }
+  ],
+  "labels": [
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "0746568"
+   },
+   {
+    "id": 68029,
+    "name": "UMe",
+    "catno": "0746568"
+   },
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "00602507465681"
+   },
+   {
+    "id": 68029,
+    "name": "UMe",
+    "catno": "00602507465681"
+   },
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "BST-84003"
+   },
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "BST 84003"
+   },
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "ST-84003"
+   },
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "84003"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Hard Bop"
+  ]
+ },
+ {
+  "id": 14125951,
+  "title": "The Freedom Rider",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 262128,
+    "name": "Art Blakey & The Jazz Messengers"
+   }
+  ],
+  "labels": [
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "84156"
+   },
+   {
+    "id": 56128,
+    "name": "Universal Music Special Markets",
+    "catno": "B0029463-01"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Hard Bop"
+  ]
+ },
+ {
+  "id": 14419223,
+  "title": "Maslak Halayı",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 2752858,
+    "name": "Ayyuka"
+   }
+  ],
+  "labels": [
+   {
+    "id": 706840,
+    "name": "Tantana Records",
+    "catno": "TNT031"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Psychedelic Rock"
+  ]
+ },
+ {
+  "id": 14535792,
+  "title": "Lucille",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 37729,
+    "name": "B.B. King"
+   }
+  ],
+  "labels": [
+   {
+    "id": 55827,
+    "name": "Bluesway",
+    "catno": "BLS-6016"
+   },
+   {
+    "id": 821,
+    "name": "Geffen Records",
+    "catno": "B0031195-01"
+   },
+   {
+    "id": 56128,
+    "name": "Universal Music Special Markets",
+    "catno": "B0031195-01"
+   }
+  ],
+  "genres": [
+   "Blues"
+  ],
+  "styles": [
+   "Electric Blues"
+  ]
+ },
+ {
+  "id": 15740345,
+  "title": "Money Talks",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 40301,
+    "name": "Bar-Kays"
+   }
+  ],
+  "labels": [
+   {
+    "id": 24936,
+    "name": "Stax",
+    "catno": "CR00325"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Soul",
+   "Funk"
+  ]
+ },
+ {
+  "id": 15740345,
+  "title": "Money Talks",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 40301,
+    "name": "Bar-Kays"
+   }
+  ],
+  "labels": [
+   {
+    "id": 24936,
+    "name": "Stax",
+    "catno": "CR00325"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Soul",
+   "Funk"
+  ]
+ },
+ {
+  "id": 13987157,
+  "title": "Châtelet 87",
+  "year": 1987,
+  "artists": [
+   {
+    "id": 374902,
+    "name": "Barbara (5)"
+   }
+  ],
+  "labels": [
+   {
+    "id": 7704,
+    "name": "Philips",
+    "catno": "25PP-245~6"
+   },
+   {
+    "id": 7704,
+    "name": "Philips",
+    "catno": "834 040-1"
+   }
+  ],
+  "genres": [
+   "Pop"
+  ],
+  "styles": [
+   "Chanson"
+  ]
+ },
+ {
+  "id": 9298923,
+  "title": "Châtelet 87",
+  "year": 1987,
+  "artists": [
+   {
+    "id": 374902,
+    "name": "Barbara (5)"
+   }
+  ],
+  "labels": [
+   {
+    "id": 7704,
+    "name": "Philips",
+    "catno": "834 042-1"
+   }
+  ],
+  "genres": [
+   "Pop"
+  ],
+  "styles": [
+   "Chanson"
+  ]
+ },
+ {
+  "id": 21710989,
+  "title": "Lea In Love",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 1143638,
+    "name": "Barbara Lea"
+   }
+  ],
+  "labels": [
+   {
+    "id": 19591,
+    "name": "Prestige",
+    "catno": "CR00472"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Vocal",
+   "Swing"
+  ]
+ },
+ {
+  "id": 1259328,
+  "title": "Devotion",
+  "year": 2008,
+  "artists": [
+   {
+    "id": 592308,
+    "name": "Beach House"
+   }
+  ],
+  "labels": [
+   {
+    "id": 842,
+    "name": "Carpark Records",
+    "catno": "Carpark 42"
+   }
+  ],
+  "genres": [
+   "Rock",
+   "Pop"
+  ],
+  "styles": [
+   "Indie Rock",
+   "Ballad",
+   "Indie Pop",
+   "Dream Pop"
+  ]
+ },
+ {
+  "id": 3950974,
+  "title": "Check Your Head",
+  "year": 2009,
+  "artists": [
+   {
+    "id": 10783,
+    "name": "Beastie Boys"
+   }
+  ],
+  "labels": [
+   {
+    "id": 654,
+    "name": "Capitol Records",
+    "catno": "C1-94225"
+   },
+   {
+    "id": 2236,
+    "name": "Grand Royal",
+    "catno": "C1-94225"
+   }
+  ],
+  "genres": [
+   "Hip Hop",
+   "Jazz",
+   "Rock"
+  ],
+  "styles": [
+   "Cut-up/DJ",
+   "Fusion"
+  ]
+ },
+ {
+  "id": 6514340,
+  "title": "Soulville",
+  "year": 2014,
+  "artists": [
+   {
+    "id": 2408160,
+    "name": "The Ben Webster Quintet"
+   }
+  ],
+  "labels": [
+   {
+    "id": 5041,
+    "name": "Verve Records",
+    "catno": "M GV-8274"
+   },
+   {
+    "id": 5041,
+    "name": "Verve Records",
+    "catno": "MG V-8274"
+   },
+   {
+    "id": 56128,
+    "name": "Universal Music Special Markets",
+    "catno": "B0022188-01"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": []
+ },
+ {
+  "id": 10549758,
+  "title": "Betty Davis",
+  "year": 2017,
+  "artists": [
+   {
+    "id": 29922,
+    "name": "Betty Davis"
+   }
+  ],
+  "labels": [
+   {
+    "id": 24105,
+    "name": "Light In The Attic",
+    "catno": "LITA 026"
+   },
+   {
+    "id": 56719,
+    "name": "Just Sunshine Records",
+    "catno": "JSS-5"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Funk"
+  ]
+ },
+ {
+  "id": 19806037,
+  "title": "Beverly Glenn-Copeland",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 1433146,
+    "name": "Beverly Glenn-Copeland"
+   }
+  ],
+  "labels": [
+   {
+    "id": 58970,
+    "name": "Transgressive Records",
+    "catno": "TRANS465VMP"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Rock",
+   "Folk, World, & Country"
+  ],
+  "styles": [
+   "Folk",
+   "Soul-Jazz"
+  ]
+ },
+ {
+  "id": 19932262,
+  "title": "+'Justments",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 59249,
+    "name": "Bill Withers"
+   }
+  ],
+  "labels": [
+   {
+    "id": 31221,
+    "name": "Sussex",
+    "catno": "19439882461"
+   },
+   {
+    "id": 276086,
+    "name": "Sony Music Commercial Music Group",
+    "catno": "19439882461"
+   },
+   {
+    "id": 31221,
+    "name": "Sussex",
+    "catno": "SRA 8032"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Soul"
+  ]
+ },
+ {
+  "id": 24901355,
+  "title": "Turn Blue",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 258372,
+    "name": "The Black Keys"
+   }
+  ],
+  "labels": [
+   {
+    "id": 652,
+    "name": "Nonesuch",
+    "catno": "542300-1"
+   }
+  ],
+  "genres": [
+   "Rock",
+   "Blues"
+  ],
+  "styles": [
+   "Alternative Rock"
+  ]
+ },
+ {
+  "id": 26017927,
+  "title": "Talking To The People",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 395849,
+    "name": "Black Nasty"
+   }
+  ],
+  "labels": [
+   {
+    "id": 45394,
+    "name": "Enterprise",
+    "catno": "CR00572"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": []
+ },
+ {
+  "id": 29434147,
+  "title": "Master Of Reality",
+  "year": 2024,
+  "artists": [
+   {
+    "id": 144998,
+    "name": "Black Sabbath"
+   }
+  ],
+  "labels": [
+   {
+    "id": 134882,
+    "name": "Warner Records",
+    "catno": "081227818999"
+   },
+   {
+    "id": 134882,
+    "name": "Warner Records",
+    "catno": "BS 2562"
+   },
+   {
+    "id": 33244,
+    "name": "Rhino Records (2)",
+    "catno": "RCV1 725691"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Hard Rock",
+   "Heavy Metal"
+  ]
+ },
+ {
+  "id": 13022009,
+  "title": "Blossom Dearie",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 104670,
+    "name": "Blossom Dearie"
+   }
+  ],
+  "labels": [
+   {
+    "id": 5041,
+    "name": "Verve Records",
+    "catno": "B0028934-01"
+   },
+   {
+    "id": 56128,
+    "name": "Universal Music Special Markets",
+    "catno": "B0028934-01"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Pop"
+  ],
+  "styles": [
+   "Vocal"
+  ]
+ },
+ {
+  "id": 25423858,
+  "title": "Blonde On Blonde",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 59792,
+    "name": "Bob Dylan"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "19658709361"
+   },
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "C2L 41"
+   }
+  ],
+  "genres": [
+   "Rock",
+   "Blues"
+  ],
+  "styles": [
+   "Folk Rock",
+   "Rhythm & Blues"
+  ]
+ },
+ {
+  "id": 27928278,
+  "title": "E. 1999 Eternal",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 80325,
+    "name": "Bone Thugs-N-Harmony"
+   }
+  ],
+  "labels": [
+   {
+    "id": 7801,
+    "name": "Ruthless Records",
+    "catno": "RUTHE1999"
+   }
+  ],
+  "genres": [
+   "Hip Hop"
+  ],
+  "styles": [
+   "Gangsta"
+  ]
+ },
+ {
+  "id": 23854310,
+  "title": "I'm Wide Awake, It's Morning",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 83606,
+    "name": "Bright Eyes"
+   }
+  ],
+  "labels": [
+   {
+    "id": 94740,
+    "name": "Dead Oceans",
+    "catno": "DOC290"
+   }
+  ],
+  "genres": [
+   "Rock",
+   "Folk, World, & Country"
+  ],
+  "styles": [
+   "Country Rock",
+   "Indie Rock"
+  ]
+ },
+ {
+  "id": 24768692,
+  "title": "Nebraska",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 219986,
+    "name": "Bruce Springsteen"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "19658704921"
+   },
+   {
+    "id": 276086,
+    "name": "Sony Music Commercial Music Group",
+    "catno": "19658704921"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Acoustic"
+  ]
+ },
+ {
+  "id": 877497,
+  "title": "Nebraska",
+  "year": 1982,
+  "artists": [
+   {
+    "id": 219986,
+    "name": "Bruce Springsteen"
+   }
+  ],
+  "labels": [
+   {
+    "id": 3072,
+    "name": "CBS",
+    "catno": "CBS 25100"
+   },
+   {
+    "id": 3072,
+    "name": "CBS",
+    "catno": "25100"
+   }
+  ],
+  "genres": [
+   "Rock",
+   "Folk, World, & Country"
+  ],
+  "styles": [
+   "Acoustic",
+   "Folk"
+  ]
+ },
+ {
+  "id": 11979243,
+  "title": "Energy Control Center",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 136480,
+    "name": "Bubbha Thomas & The Lightmen Plus One"
+   }
+  ],
+  "labels": [
+   {
+    "id": 30886,
+    "name": "Now-Again Records",
+    "catno": "NA 5157"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Post Bop",
+   "Modal"
+  ]
+ },
+ {
+  "id": 13172934,
+  "title": "Left My Blues In San Francisco",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 259799,
+    "name": "Buddy Guy"
+   }
+  ],
+  "labels": [
+   {
+    "id": 33931,
+    "name": "Chess",
+    "catno": "B0029129-01"
+   },
+   {
+    "id": 56128,
+    "name": "Universal Music Special Markets",
+    "catno": "B0029129-01"
+   },
+   {
+    "id": 821,
+    "name": "Geffen Records",
+    "catno": "B0029129-01"
+   }
+  ],
+  "genres": [
+   "Blues"
+  ],
+  "styles": [
+   "Electric Blues",
+   "Chicago Blues"
+  ]
+ },
+ {
+  "id": 15755719,
+  "title": "Buena Vista Social Club",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 227677,
+    "name": "Buena Vista Social Club"
+   }
+  ],
+  "labels": [
+   {
+    "id": 36689,
+    "name": "World Circuit",
+    "catno": "WCV050VMP"
+   },
+   {
+    "id": 1003,
+    "name": "BMG",
+    "catno": "WCV050VMP"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Latin"
+  ],
+  "styles": [
+   "Afro-Cuban",
+   "Cubano",
+   "Son",
+   "Rumba",
+   "Danzon",
+   "Guajira"
+  ]
+ },
+ {
+  "id": 14302369,
+  "title": "Celia & Johnny",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 99729,
+    "name": "Celia Cruz"
+   },
+   {
+    "id": 271005,
+    "name": "Johnny Pacheco"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1266884,
+    "name": "Craft Recordings",
+    "catno": "CR00231"
+   },
+   {
+    "id": 2457964,
+    "name": "Craft Recordings Latino",
+    "catno": "CR00231"
+   },
+   {
+    "id": 53771,
+    "name": "Vaya Records",
+    "catno": "CR00231"
+   }
+  ],
+  "genres": [
+   "Latin"
+  ],
+  "styles": [
+   "Salsa",
+   "Son"
+  ]
+ },
+ {
+  "id": 6723795,
+  "title": "Blues & Roots",
+  "year": 2015,
+  "artists": [
+   {
+    "id": 200815,
+    "name": "Charles Mingus"
+   }
+  ],
+  "labels": [
+   {
+    "id": 466581,
+    "name": "DOL",
+    "catno": "DOL701H"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Post Bop"
+  ]
+ },
+ {
+  "id": 18239962,
+  "title": "Tennessee Woman",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 1737802,
+    "name": "Charlie Musselwhite Blues Band"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1058,
+    "name": "Vanguard",
+    "catno": "CR00381"
+   }
+  ],
+  "genres": [
+   "Blues"
+  ],
+  "styles": [
+   "Chicago Blues",
+   "Harmonica Blues",
+   "Electric Blues"
+  ]
+ },
+ {
+  "id": 12668596,
+  "title": "Solo Piano",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 36276,
+    "name": "Chilly Gonzales"
+   }
+  ],
+  "labels": [
+   {
+    "id": 210058,
+    "name": "Gentle Threat",
+    "catno": "GENTLE012V"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Classical"
+  ],
+  "styles": [
+   "Modern Classical",
+   "Contemporary Jazz",
+   "Neo-Classical"
+  ]
+ },
+ {
+  "id": 12606342,
+  "title": "Solo Piano III",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 36276,
+    "name": "Chilly Gonzales"
+   }
+  ],
+  "labels": [
+   {
+    "id": 210058,
+    "name": "Gentle Threat",
+    "catno": "GENTLE020V"
+   },
+   {
+    "id": 210058,
+    "name": "Gentle Threat",
+    "catno": "GENTLE020CDB"
+   }
+  ],
+  "genres": [
+   "Pop",
+   "Classical"
+  ],
+  "styles": [
+   "Modern"
+  ]
+ },
+ {
+  "id": 31790114,
+  "title": "London Calling",
+  "year": 2015,
+  "artists": [
+   {
+    "id": 29890,
+    "name": "The Clash"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "88875112701"
+   },
+   {
+    "id": 25487,
+    "name": "Sony Music",
+    "catno": "88875112701"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Punk",
+   "New Wave"
+  ]
+ },
+ {
+  "id": 11978254,
+  "title": "Lord Willin'",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 99679,
+    "name": "Clipse"
+   }
+  ],
+  "labels": [
+   {
+    "id": 19189,
+    "name": "Star Trak Entertainment",
+    "catno": "VMP-E065"
+   },
+   {
+    "id": 19189,
+    "name": "Star Trak Entertainment",
+    "catno": "19075810841"
+   },
+   {
+    "id": 276086,
+    "name": "Sony Music Commercial Music Group",
+    "catno": "VMP-E065"
+   }
+  ],
+  "genres": [
+   "Hip Hop"
+  ],
+  "styles": [
+   "Gangsta"
+  ]
+ },
+ {
+  "id": 5717155,
+  "title": "An Evening At Papa Joe's",
+  "year": 2014,
+  "artists": [
+   {
+    "id": 251769,
+    "name": "Coleman Hawkins"
+   }
+  ],
+  "labels": [
+   {
+    "id": 466581,
+    "name": "Dol",
+    "catno": "DOL804"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Swing"
+  ]
+ },
+ {
+  "id": 16224777,
+  "title": "The Hawk Flies High",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 251769,
+    "name": "Coleman Hawkins"
+   }
+  ],
+  "labels": [
+   {
+    "id": 34094,
+    "name": "Riverside Records",
+    "catno": "CR00342"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Post Bop",
+   "Swing"
+  ]
+ },
+ {
+  "id": 16196979,
+  "title": "Machine Funk 3/12 - Urban Living EP",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 1932807,
+    "name": "Cygnus (5)"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1849794,
+    "name": "Electro Records (2)",
+    "catno": "ER000-03"
+   }
+  ],
+  "genres": [
+   "Electronic"
+  ],
+  "styles": [
+   "Electro"
+  ]
+ },
+ {
+  "id": 24749513,
+  "title": "Rat Hacker - Machine Funk 6/12",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 1932807,
+    "name": "Cygnus (5)"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1849794,
+    "name": "Electro Records (2)",
+    "catno": "Electro Records 010"
+   }
+  ],
+  "genres": [
+   "Electronic"
+  ],
+  "styles": [
+   "Electro"
+  ]
+ },
+ {
+  "id": 4570366,
+  "title": "Random Access Memories",
+  "year": 2013,
+  "artists": [
+   {
+    "id": 1289,
+    "name": "Daft Punk"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "88883716861"
+   },
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "88883 71686 1"
+   },
+   {
+    "id": 25487,
+    "name": "Sony Music",
+    "catno": "88883 71686 1"
+   }
+  ],
+  "genres": [
+   "Electronic",
+   "Funk / Soul",
+   "Pop"
+  ],
+  "styles": [
+   "Disco",
+   "Funk",
+   "Synth-pop",
+   "Electro",
+   "French House"
+  ]
+ },
+ {
+  "id": 18643519,
+  "title": "Psychic",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 2522005,
+    "name": "DARKSIDE (22)"
+   }
+  ],
+  "labels": [
+   {
+    "id": 586783,
+    "name": "Other People",
+    "catno": "OP003"
+   },
+   {
+    "id": 194,
+    "name": "Matador",
+    "catno": "OLE1035-1"
+   }
+  ],
+  "genres": [
+   "Electronic"
+  ],
+  "styles": [
+   "Ambient",
+   "Downtempo"
+  ]
+ },
+ {
+  "id": 12109920,
+  "title": "Here To Stay",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 287260,
+    "name": "Darrell Banks"
+   }
+  ],
+  "labels": [
+   {
+    "id": 33475,
+    "name": "Volt",
+    "catno": "CR00105"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Soul"
+  ]
+ },
+ {
+  "id": 14381832,
+  "title": "Jazz Impressions Of Japan",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 251689,
+    "name": "The Dave Brubeck Quartet"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "CS 9012"
+   },
+   {
+    "id": 25487,
+    "name": "Sony Music",
+    "catno": "19075986371"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Modal",
+   "Cool Jazz"
+  ]
+ },
+ {
+  "id": 10349860,
+  "title": "Time Out",
+  "year": 2011,
+  "artists": [
+   {
+    "id": 251689,
+    "name": "The Dave Brubeck Quartet"
+   }
+  ],
+  "labels": [
+   {
+    "id": 87847,
+    "name": "Not Now Music",
+    "catno": "NOTLP127"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Cool Jazz"
+  ]
+ },
+ {
+  "id": 25720516,
+  "title": "Folksinger",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 367078,
+    "name": "Dave Van Ronk"
+   }
+  ],
+  "labels": [
+   {
+    "id": 233893,
+    "name": "Prestige Folklore",
+    "catno": "CR00571"
+   }
+  ],
+  "genres": [
+   "Folk, World, & Country"
+  ],
+  "styles": [
+   "Folk"
+  ]
+ },
+ {
+  "id": 8014010,
+  "title": "Bowie At The Beeb (The Best Of The BBC Sessions 68-72)",
+  "year": 2016,
+  "artists": [
+   {
+    "id": 10263,
+    "name": "David Bowie"
+   }
+  ],
+  "labels": [
+   {
+    "id": 2294,
+    "name": "Parlophone",
+    "catno": "0825646095285"
+   },
+   {
+    "id": 101418,
+    "name": "BBC",
+    "catno": "DBBBCLP6872"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Pop Rock",
+   "Glam",
+   "Art Rock"
+  ]
+ },
+ {
+  "id": 28558351,
+  "title": "...Into A Real Thing",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 136177,
+    "name": "David Porter"
+   }
+  ],
+  "labels": [
+   {
+    "id": 45394,
+    "name": "Enterprise",
+    "catno": "CR00663"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": []
+ },
+ {
+  "id": 1005555,
+  "title": "3 Feet High And Rising",
+  "year": 1989,
+  "artists": [
+   {
+    "id": 4091,
+    "name": "De La Soul"
+   }
+  ],
+  "labels": [
+   {
+    "id": 26011,
+    "name": "Tommy Boy",
+    "catno": "TBLP 1019"
+   },
+   {
+    "id": 26011,
+    "name": "Tommy Boy",
+    "catno": "TB 1019"
+   }
+  ],
+  "genres": [
+   "Hip Hop"
+  ],
+  "styles": [
+   "Conscious",
+   "Boom Bap"
+  ]
+ },
+ {
+  "id": 24138083,
+  "title": "For Those In Love",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 33587,
+    "name": "Dinah Washington"
+   }
+  ],
+  "labels": [
+   {
+    "id": 19900,
+    "name": "EmArcy",
+    "catno": "MG 36011"
+   },
+   {
+    "id": 19900,
+    "name": "EmArcy",
+    "catno": "MG-36011"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Big Band"
+  ]
+ },
+ {
+  "id": 23605763,
+  "title": "Money For Nothing",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 103687,
+    "name": "Dire Straits"
+   }
+  ],
+  "labels": [
+   {
+    "id": 176614,
+    "name": "UMC",
+    "catno": "00602438631940"
+   },
+   {
+    "id": 39357,
+    "name": "Mercury",
+    "catno": "3863194"
+   },
+   {
+    "id": 2266,
+    "name": "Vertigo",
+    "catno": "3863194"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Blues Rock",
+   "Folk Rock",
+   "Pop Rock"
+  ]
+ },
+ {
+  "id": 26077246,
+  "title": "Private Investigations",
+  "year": 2005,
+  "artists": [
+   {
+    "id": 103687,
+    "name": "Dire Straits"
+   },
+   {
+    "id": 236897,
+    "name": "Mark Knopfler"
+   }
+  ],
+  "labels": [
+   {
+    "id": 39357,
+    "name": "Mercury",
+    "catno": "987576-2"
+   },
+   {
+    "id": 39357,
+    "name": "Mercury",
+    "catno": "987576-7"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Classic Rock"
+  ]
+ },
+ {
+  "id": 14622939,
+  "title": "Bitte Orca",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 400992,
+    "name": "Dirty Projectors"
+   }
+  ],
+  "labels": [
+   {
+    "id": 26465,
+    "name": "Domino",
+    "catno": "WIGLP229X-VMP"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Indie Rock"
+  ]
+ },
+ {
+  "id": 24480599,
+  "title": "Afro",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 284744,
+    "name": "Dizzy Gillespie And His Orchestra"
+   }
+  ],
+  "labels": [
+   {
+    "id": 122392,
+    "name": "Norgran Records",
+    "catno": "MG N-1003"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Afro-Cuban Jazz"
+  ]
+ },
+ {
+  "id": 23792510,
+  "title": "Soft Bits In (A Chiptune Tribute To The Flaming Lips)",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 2193948,
+    "name": "Doctor Octoroc"
+   }
+  ],
+  "labels": [
+   {
+    "id": 2764010,
+    "name": "Not On Label (Doctor Octoroc Self-released)",
+    "catno": "none"
+   }
+  ],
+  "genres": [
+   "Electronic",
+   "Rock"
+  ],
+  "styles": [
+   "Chiptune",
+   "Psychedelic Rock"
+  ]
+ },
+ {
+  "id": 12617686,
+  "title": "Fancy Free",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 20956,
+    "name": "Donald Byrd"
+   }
+  ],
+  "labels": [
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "B0028724-01"
+   },
+   {
+    "id": 56128,
+    "name": "Universal Music Special Markets",
+    "catno": "B0028724-01"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Soul-Jazz",
+   "Bop"
+  ]
+ },
+ {
+  "id": 9996335,
+  "title": "Everything Is Everything",
+  "year": 1970,
+  "artists": [
+   {
+    "id": 9746,
+    "name": "Donny Hathaway"
+   }
+  ],
+  "labels": [
+   {
+    "id": 3820,
+    "name": "ATCO Records",
+    "catno": "SD 33-332"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Soul"
+  ]
+ },
+ {
+  "id": 16448595,
+  "title": "Everything Is Everything",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 9746,
+    "name": "Donny Hathaway"
+   }
+  ],
+  "labels": [
+   {
+    "id": 3820,
+    "name": "ATCO Records",
+    "catno": "R1 643609"
+   },
+   {
+    "id": 3820,
+    "name": "ATCO Records",
+    "catno": "081227905767"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Soul"
+  ]
+ },
+ {
+  "id": 2548932,
+  "title": "The Doors",
+  "year": 2009,
+  "artists": [
+   {
+    "id": 56798,
+    "name": "The Doors"
+   }
+  ],
+  "labels": [
+   {
+    "id": 651,
+    "name": "Elektra",
+    "catno": "8122-79865-0"
+   },
+   {
+    "id": 152823,
+    "name": "Rhino Vinyl",
+    "catno": "8122-79865-0"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Psychedelic Rock",
+   "Blues Rock"
+  ]
+ },
+ {
+  "id": 27054339,
+  "title": "The Rubaiyat Of Dorothy Ashby",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 91960,
+    "name": "Dorothy Ashby"
+   }
+  ],
+  "labels": [
+   {
+    "id": 5041,
+    "name": "Verve Records",
+    "catno": "B0037200-01"
+   },
+   {
+    "id": 68029,
+    "name": "UMe",
+    "catno": "B0037200-01"
+   },
+   {
+    "id": 36003,
+    "name": "Cadet",
+    "catno": "LPS-841"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Soul-Jazz"
+  ]
+ },
+ {
+  "id": 2058336,
+  "title": "Experience Unlimited",
+  "year": 2002,
+  "artists": [
+   {
+    "id": 65522,
+    "name": "E.U."
+   }
+  ],
+  "labels": [
+   {
+    "id": 10119,
+    "name": "P-Vine Records",
+    "catno": "PCD-22017"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Funk",
+   "Jazz-Funk",
+   "Jazz-Rock"
+  ]
+ },
+ {
+  "id": 4121775,
+  "title": "Ebo Taylor",
+  "year": 2012,
+  "artists": [
+   {
+    "id": 274623,
+    "name": "Ebo Taylor"
+   }
+  ],
+  "labels": [
+   {
+    "id": 847,
+    "name": "Mr Bongo",
+    "catno": "MRBLP108"
+   }
+  ],
+  "genres": [
+   "Funk / Soul",
+   "Folk, World, & Country"
+  ],
+  "styles": [
+   "Afrobeat",
+   "African",
+   "Highlife"
+  ]
+ },
+ {
+  "id": 12767404,
+  "title": "Knock On Wood",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 284321,
+    "name": "Eddie Floyd"
+   }
+  ],
+  "labels": [
+   {
+    "id": 24936,
+    "name": "Stax",
+    "catno": "S 714"
+   },
+   {
+    "id": 24936,
+    "name": "Stax",
+    "catno": "R1-572329"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Rhythm & Blues",
+   "Soul"
+  ]
+ },
+ {
+  "id": 10027540,
+  "title": "Cheek To Cheek",
+  "year": 2017,
+  "artists": [
+   {
+    "id": 31615,
+    "name": "Ella Fitzgerald"
+   },
+   {
+    "id": 38201,
+    "name": "Louis Armstrong"
+   }
+  ],
+  "labels": [
+   {
+    "id": 27276,
+    "name": "Wagram Music",
+    "catno": "3344416"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": []
+ },
+ {
+  "id": 26982599,
+  "title": "Curtain Call - The Hits",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 38661,
+    "name": "Eminem"
+   }
+  ],
+  "labels": [
+   {
+    "id": 2310,
+    "name": "Aftermath Entertainment",
+    "catno": "602498878965"
+   },
+   {
+    "id": 12321,
+    "name": "Shady Records",
+    "catno": "602498878965"
+   },
+   {
+    "id": 2311,
+    "name": "Interscope Records",
+    "catno": "602498878965"
+   },
+   {
+    "id": 847983,
+    "name": "Goliath Artists",
+    "catno": "602498878965"
+   },
+   {
+    "id": 22082,
+    "name": "Web Entertainment",
+    "catno": "602498878965"
+   }
+  ],
+  "genres": [
+   "Hip Hop"
+  ],
+  "styles": [
+   "Pop Rap",
+   "Gangsta"
+  ]
+ },
+ {
+  "id": 15294556,
+  "title": "Magician",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 262816,
+    "name": "Erroll Garner"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1827777,
+    "name": "Mack Avenue Music Group",
+    "catno": "MAC1182LP"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Soul-Jazz",
+   "Latin Jazz"
+  ]
+ },
+ {
+  "id": 9443646,
+  "title": "Mama's Gun",
+  "year": 2016,
+  "artists": [
+   {
+    "id": 10995,
+    "name": "Erykah Badu"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1723,
+    "name": "Motown",
+    "catno": "00602557026931"
+   },
+   {
+    "id": 138199,
+    "name": "Universal Music Group International",
+    "catno": "00602557026931"
+   }
+  ],
+  "genres": [
+   "Hip Hop",
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Contemporary R&B",
+   "Neo Soul"
+  ]
+ },
+ {
+  "id": 9553577,
+  "title": "Yeni Şarkılar",
+  "year": 2016,
+  "artists": [
+   {
+    "id": 1064470,
+    "name": "Fazıl Say"
+   },
+   {
+    "id": 4482339,
+    "name": "Serenad Bağcan"
+   }
+  ],
+  "labels": [
+   {
+    "id": 47762,
+    "name": "Ada Müzik",
+    "catno": "ADA LP 011/2"
+   }
+  ],
+  "genres": [
+   "Classical"
+  ],
+  "styles": [
+   "Modern"
+  ]
+ },
+ {
+  "id": 12478531,
+  "title": "Let It Die",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 19828,
+    "name": "Feist"
+   }
+  ],
+  "labels": [
+   {
+    "id": 2311,
+    "name": "Interscope Records",
+    "catno": "B0028538-01"
+   },
+   {
+    "id": 1610,
+    "name": "Polydor",
+    "catno": "B0028538-01"
+   },
+   {
+    "id": 56128,
+    "name": "Universal Music Special Markets",
+    "catno": "B0028538-01"
+   },
+   {
+    "id": 959341,
+    "name": "Cherry (3)",
+    "catno": "B0028538-01"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Folk Rock",
+   "Lounge",
+   "Avantgarde",
+   "Indie Rock"
+  ]
+ },
+ {
+  "id": 10241165,
+  "title": "Tidal",
+  "year": 2017,
+  "artists": [
+   {
+    "id": 255740,
+    "name": "Fiona Apple"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1005,
+    "name": "Epic",
+    "catno": "88985420001"
+   },
+   {
+    "id": 131935,
+    "name": "Clean Slate",
+    "catno": "88985420001"
+   },
+   {
+    "id": 276086,
+    "name": "Sony Music Commercial Music Group",
+    "catno": "88985420001"
+   }
+  ],
+  "genres": [
+   "Rock",
+   "Pop"
+  ],
+  "styles": [
+   "Pop Rock"
+  ]
+ },
+ {
+  "id": 34777025,
+  "title": "Fleetwood Mac",
+  "year": 2025,
+  "artists": [
+   {
+    "id": 47333,
+    "name": "Fleetwood Mac"
+   }
+  ],
+  "labels": [
+   {
+    "id": 33244,
+    "name": "Rhino Records (2)",
+    "catno": "RHF1 2225"
+   },
+   {
+    "id": 33244,
+    "name": "Rhino Records (2)",
+    "catno": "603497813810"
+   },
+   {
+    "id": 157,
+    "name": "Reprise Records",
+    "catno": "RHF1 2225"
+   },
+   {
+    "id": 157,
+    "name": "Reprise Records",
+    "catno": "603497813810"
+   },
+   {
+    "id": 33244,
+    "name": "Rhino Records (2)",
+    "catno": "RHF7 2225"
+   },
+   {
+    "id": 157,
+    "name": "Reprise Records",
+    "catno": "RHF7 2225"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Pop Rock"
+  ]
+ },
+ {
+  "id": 2253877,
+  "title": "Cosmogramma",
+  "year": 2010,
+  "artists": [
+   {
+    "id": 365248,
+    "name": "Flying Lotus"
+   }
+  ],
+  "labels": [
+   {
+    "id": 23528,
+    "name": "Warp Records",
+    "catno": "WARPLP195"
+   }
+  ],
+  "genres": [
+   "Electronic"
+  ],
+  "styles": [
+   "Downtempo",
+   "IDM",
+   "Future Jazz",
+   "Trip Hop",
+   "Experimental",
+   "Abstract"
+  ]
+ },
+ {
+  "id": 7810336,
+  "title": "Pink",
+  "year": 2015,
+  "artists": [
+   {
+    "id": 3543,
+    "name": "Four Tet"
+   }
+  ],
+  "labels": [
+   {
+    "id": 11205,
+    "name": "Text Records",
+    "catno": "TEXT018"
+   }
+  ],
+  "genres": [
+   "Electronic"
+  ],
+  "styles": [
+   "Techno",
+   "IDM",
+   "Deep House",
+   "Experimental",
+   "Ambient"
+  ]
+ },
+ {
+  "id": 20877478,
+  "title": "My Feeling For The Blues",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 323162,
+    "name": "Freddie King"
+   }
+  ],
+  "labels": [
+   {
+    "id": 9638,
+    "name": "Cotillion",
+    "catno": "R1 661908"
+   },
+   {
+    "id": 9638,
+    "name": "Cotillion",
+    "catno": "081227880101"
+   }
+  ],
+  "genres": [
+   "Blues"
+  ],
+  "styles": [
+   "Rhythm & Blues",
+   "Texas Blues",
+   "Electric Blues"
+  ]
+ },
+ {
+  "id": 27028311,
+  "title": "Brown Sugar",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 29982,
+    "name": "Freddie Roach"
+   }
+  ],
+  "labels": [
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "VMP-C072"
+   },
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "84168"
+   },
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "ST-84168"
+   },
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "BST 84168"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Soul-Jazz"
+  ]
+ },
+ {
+  "id": 17270755,
+  "title": "I've Been Lonely For So Long",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 154433,
+    "name": "Frederick Knight"
+   }
+  ],
+  "labels": [
+   {
+    "id": 24936,
+    "name": "Stax",
+    "catno": "CR00343"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Soul"
+  ]
+ },
+ {
+  "id": 16030720,
+  "title": "Dreams",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 22851,
+    "name": "Gabor Szabo"
+   }
+  ],
+  "labels": [
+   {
+    "id": 997548,
+    "name": "Modern Harmonic",
+    "catno": "MH-8041"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Avant-garde Jazz"
+  ]
+ },
+ {
+  "id": 29772148,
+  "title": "Another Earth",
+  "year": 2024,
+  "artists": [
+   {
+    "id": 45008,
+    "name": "Gary Bartz"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1598688,
+    "name": "Milestone (4)",
+    "catno": "CR00700"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": []
+ },
+ {
+  "id": 10518619,
+  "title": "The Revolution Will Not Be Televised",
+  "year": 2017,
+  "artists": [
+   {
+    "id": 16533,
+    "name": "Gil Scott-Heron"
+   }
+  ],
+  "labels": [
+   {
+    "id": 7305,
+    "name": "BGP Records",
+    "catno": "BGPD 306"
+   },
+   {
+    "id": 24345,
+    "name": "Flying Dutchman",
+    "catno": "BGPD 306"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Funk",
+   "Rhythm & Blues",
+   "Spoken Word"
+  ]
+ },
+ {
+  "id": 9040458,
+  "title": "How To Be A Human Being",
+  "year": 2016,
+  "artists": [
+   {
+    "id": 2969609,
+    "name": "Glass Animals"
+   }
+  ],
+  "labels": [
+   {
+    "id": 2564,
+    "name": "Harvest",
+    "catno": "2547979544"
+   },
+   {
+    "id": 336203,
+    "name": "Wolf Tone",
+    "catno": "2547979544"
+   }
+  ],
+  "genres": [
+   "Electronic",
+   "Rock"
+  ],
+  "styles": [
+   "Pop Rock"
+  ]
+ },
+ {
+  "id": 10143726,
+  "title": "Demon Days",
+  "year": 2017,
+  "artists": [
+   {
+    "id": 6378,
+    "name": "Gorillaz"
+   }
+  ],
+  "labels": [
+   {
+    "id": 2294,
+    "name": "Parlophone",
+    "catno": "559329-1"
+   },
+   {
+    "id": 1000,
+    "name": "Warner Bros. Records",
+    "catno": "559329-1"
+   }
+  ],
+  "genres": [
+   "Electronic",
+   "Hip Hop",
+   "Rock"
+  ],
+  "styles": [
+   "Leftfield",
+   "Trip Hop",
+   "Lo-Fi",
+   "Pop Rap",
+   "Downtempo"
+  ]
+ },
+ {
+  "id": 37747407,
+  "title": "Gorillaz",
+  "year": 2026,
+  "artists": [
+   {
+    "id": 6378,
+    "name": "Gorillaz"
+   }
+  ],
+  "labels": [
+   {
+    "id": 2294,
+    "name": "Parlophone",
+    "catno": "7243 531138 1 0"
+   }
+  ],
+  "genres": [
+   "Electronic",
+   "Hip Hop",
+   "Rock",
+   "Latin",
+   "Funk / Soul",
+   "Pop"
+  ],
+  "styles": [
+   "Leftfield",
+   "Trip Hop",
+   "Lo-Fi",
+   "Experimental",
+   "UK Garage",
+   "Dub",
+   "Pop Rap"
+  ]
+ },
+ {
+  "id": 36594097,
+  "title": "पर्वत (The Mountain)",
+  "year": 2026,
+  "artists": [
+   {
+    "id": 6378,
+    "name": "Gorillaz"
+   }
+  ],
+  "labels": [
+   {
+    "id": 4265860,
+    "name": "Kong (7)",
+    "catno": "KONG001LPI"
+   }
+  ],
+  "genres": [
+   "Electronic",
+   "Hip Hop",
+   "Pop",
+   "Folk, World, & Country"
+  ],
+  "styles": [
+   "Latin Pop",
+   "Indie Pop",
+   "Indo-Pop",
+   "Alt-Pop"
+  ]
+ },
+ {
+  "id": 25694245,
+  "title": "Anthem Of The Sun",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 246650,
+    "name": "The Grateful Dead"
+   }
+  ],
+  "labels": [
+   {
+    "id": 134882,
+    "name": "Warner Records",
+    "catno": "RCV1 695008"
+   },
+   {
+    "id": 33244,
+    "name": "Rhino Records (2)",
+    "catno": "081227883171"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Psychedelic Rock"
+  ]
+ },
+ {
+  "id": 26376695,
+  "title": "Dookie",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 251593,
+    "name": "Green Day"
+   }
+  ],
+  "labels": [
+   {
+    "id": 157,
+    "name": "Reprise Records",
+    "catno": "9362-49869-5"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Punk",
+   "Pop Rock",
+   "Alternative Rock"
+  ]
+ },
+ {
+  "id": 22067014,
+  "title": "Visions",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 1993487,
+    "name": "Grimes (4)"
+   }
+  ],
+  "labels": [
+   {
+    "id": 634,
+    "name": "4AD",
+    "catno": "CAD3208"
+   },
+   {
+    "id": 634,
+    "name": "4AD",
+    "catno": "CAD 3208"
+   }
+  ],
+  "genres": [
+   "Electronic",
+   "Pop"
+  ],
+  "styles": [
+   "Leftfield",
+   "New Wave",
+   "Abstract",
+   "Synth-pop",
+   "Experimental",
+   "Ethereal"
+  ]
+ },
+ {
+  "id": 20529697,
+  "title": "Veckatimest",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 385924,
+    "name": "Grizzly Bear"
+   }
+  ],
+  "labels": [
+   {
+    "id": 23528,
+    "name": "Warp Records",
+    "catno": "WARPLP182V"
+   }
+  ],
+  "genres": [
+   "Rock",
+   "Folk, World, & Country"
+  ],
+  "styles": [
+   "Folk Rock",
+   "Acoustic",
+   "Indie Rock"
+  ]
+ },
+ {
+  "id": 27791616,
+  "title": "Straight From The Decks Volume 3",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 642245,
+    "name": "Guts"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1735802,
+    "name": "Pura Vida Sounds",
+    "catno": "PVS021LP"
+   },
+   {
+    "id": 64154,
+    "name": "Heavenly Sweetness",
+    "catno": "PVS021VL"
+   }
+  ],
+  "genres": [
+   "Reggae",
+   "Latin",
+   "Folk, World, & Country"
+  ],
+  "styles": [
+   "African",
+   "Afro-Cuban",
+   "Cumbia"
+  ]
+ },
+ {
+  "id": 30381359,
+  "title": "Pussy Cats",
+  "year": 2024,
+  "artists": [
+   {
+    "id": 152685,
+    "name": "Harry Nilsson"
+   }
+  ],
+  "labels": [
+   {
+    "id": 11358,
+    "name": "RCA Victor",
+    "catno": "19658843981"
+   },
+   {
+    "id": 895,
+    "name": "RCA",
+    "catno": "19658843981"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Pop Rock"
+  ]
+ },
+ {
+  "id": 30049423,
+  "title": "Little Queen",
+  "year": 2024,
+  "artists": [
+   {
+    "id": 136201,
+    "name": "Heart"
+   }
+  ],
+  "labels": [
+   {
+    "id": 5056,
+    "name": "Portrait",
+    "catno": "19658748021"
+   },
+   {
+    "id": 5056,
+    "name": "Portrait",
+    "catno": "19658748021OS1"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Folk Rock",
+   "Rock & Roll",
+   "Classic Rock"
+  ]
+ },
+ {
+  "id": 25274953,
+  "title": "The L.A.M.F. Demo Sessions",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 231644,
+    "name": "The Heartbreakers (2)"
+   }
+  ],
+  "labels": [
+   {
+    "id": 14333,
+    "name": "Jungle Records",
+    "catno": "FREUDLP135"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Rock & Roll",
+   "Punk"
+  ]
+ },
+ {
+  "id": 29178205,
+  "title": "Comedia",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 38204,
+    "name": "Hector Lavoe"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1266884,
+    "name": "Craft Recordings",
+    "catno": "CR00646"
+   },
+   {
+    "id": 2457964,
+    "name": "Craft Recordings Latino",
+    "catno": "CR00646"
+   },
+   {
+    "id": 36950,
+    "name": "Fania Records",
+    "catno": "CR00646"
+   }
+  ],
+  "genres": [
+   "Latin"
+  ],
+  "styles": [
+   "Salsa"
+  ]
+ },
+ {
+  "id": 6893578,
+  "title": "The Pink Panther (Music From The Film Score)",
+  "year": 2014,
+  "artists": [
+   {
+    "id": 10529,
+    "name": "Henry Mancini"
+   }
+  ],
+  "labels": [
+   {
+    "id": 11358,
+    "name": "RCA Victor",
+    "catno": "LSP-2795"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Stage & Screen"
+  ],
+  "styles": [
+   "Soundtrack",
+   "Big Band",
+   "Easy Listening"
+  ]
+ },
+ {
+  "id": 19301575,
+  "title": "Empyrean Isles",
+  "year": 0,
+  "artists": [
+   {
+    "id": 3865,
+    "name": "Herbie Hancock"
+   }
+  ],
+  "labels": [
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "BST 84175"
+   },
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "ST-84175"
+   },
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "84175"
+   },
+   {
+    "id": 68029,
+    "name": "UMe",
+    "catno": "B0022238-01"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Modal"
+  ]
+ },
+ {
+  "id": 31381,
+  "title": "Head Hunters",
+  "year": 1973,
+  "artists": [
+   {
+    "id": 3865,
+    "name": "Herbie Hancock"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "KC 32731"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Jazz-Funk"
+  ]
+ },
+ {
+  "id": 14615533,
+  "title": "Mr. Hands",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 3865,
+    "name": "Herbie Hancock"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "JC 36578"
+   },
+   {
+    "id": 276086,
+    "name": "Sony Music Commercial Music Group",
+    "catno": "19075977951"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Fusion",
+   "Jazz-Funk"
+  ]
+ },
+ {
+  "id": 29162812,
+  "title": "Sextant",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 3865,
+    "name": "Herbie Hancock"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "19658819721"
+   },
+   {
+    "id": 276086,
+    "name": "Sony Music Commercial Music Group",
+    "catno": "19658819721"
+   }
+  ],
+  "genres": [
+   "Electronic",
+   "Jazz"
+  ],
+  "styles": [
+   "Fusion",
+   "Jazz-Funk",
+   "Experimental",
+   "Space-Age"
+  ]
+ },
+ {
+  "id": 8402232,
+  "title": "Natural Boogie",
+  "year": 1979,
+  "artists": [
+   {
+    "id": 489663,
+    "name": "Hound Dog Taylor & The House Rockers"
+   }
+  ],
+  "labels": [
+   {
+    "id": 16207,
+    "name": "Sonet",
+    "catno": "STY 528096"
+   },
+   {
+    "id": 16207,
+    "name": "Sonet",
+    "catno": "STY. 28096"
+   }
+  ],
+  "genres": [
+   "Blues"
+  ],
+  "styles": [
+   "Electric Blues",
+   "Chicago Blues"
+  ]
+ },
+ {
+  "id": 24487997,
+  "title": "Turn On The Bright Lights",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 71725,
+    "name": "Interpol"
+   }
+  ],
+  "labels": [
+   {
+    "id": 194,
+    "name": "Matador",
+    "catno": "OLE545LPE"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Alternative Rock",
+   "Indie Rock",
+   "Post-Punk"
+  ]
+ },
+ {
+  "id": 16990143,
+  "title": "Tough Guys",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 48432,
+    "name": "Isaac Hayes"
+   }
+  ],
+  "labels": [
+   {
+    "id": 45394,
+    "name": "Enterprise",
+    "catno": "CR00365"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Funk / Soul",
+   "Stage & Screen"
+  ],
+  "styles": [
+   "Soundtrack",
+   "Score",
+   "Soul-Jazz",
+   "Funk"
+  ]
+ },
+ {
+  "id": 502592,
+  "title": "Go For Your Guns",
+  "year": 1977,
+  "artists": [
+   {
+    "id": 47512,
+    "name": "The Isley Brothers"
+   }
+  ],
+  "labels": [
+   {
+    "id": 107023,
+    "name": "T-Neck",
+    "catno": "PZ 34432"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Soul",
+   "Funk"
+  ]
+ },
+ {
+  "id": 22849259,
+  "title": "No Way!",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 16877,
+    "name": "Ivan 'Boogaloo' Joe Jones"
+   }
+  ],
+  "labels": [
+   {
+    "id": 19591,
+    "name": "Prestige",
+    "catno": "CR00476"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Soul-Jazz",
+   "Jazz-Funk"
+  ]
+ },
+ {
+  "id": 25135774,
+  "title": "The Diary",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 324866,
+    "name": "J Dilla"
+   }
+  ],
+  "labels": [
+   {
+    "id": 678745,
+    "name": "Vinyl Me, Please",
+    "catno": "VMP-RH063"
+   }
+  ],
+  "genres": [
+   "Hip Hop"
+  ],
+  "styles": [
+   "Instrumental",
+   "Conscious"
+  ]
+ },
+ {
+  "id": 12129565,
+  "title": "Jacques Brel",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 164263,
+    "name": "Jacques Brel"
+   }
+  ],
+  "labels": [
+   {
+    "id": 27276,
+    "name": "Wagram Music",
+    "catno": "3355986"
+   }
+  ],
+  "genres": [
+   "Pop"
+  ],
+  "styles": [
+   "Chanson"
+  ]
+ },
+ {
+  "id": 12342232,
+  "title": "The Lost Paramount Tapes",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 323165,
+    "name": "James Booker"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1501053,
+    "name": "General General",
+    "catno": "GENGEN001"
+   }
+  ],
+  "genres": [
+   "Funk / Soul",
+   "Blues"
+  ],
+  "styles": []
+ },
+ {
+  "id": 14115803,
+  "title": "U.F.O.",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 908492,
+    "name": "Jim Sullivan (3)"
+   }
+  ],
+  "labels": [
+   {
+    "id": 24105,
+    "name": "Light In The Attic",
+    "catno": "LITA 054"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Folk Rock",
+   "Psychedelic Rock"
+  ]
+ },
+ {
+  "id": 2416800,
+  "title": "Are You Experienced",
+  "year": 2010,
+  "artists": [
+   {
+    "id": 255672,
+    "name": "The Jimi Hendrix Experience"
+   }
+  ],
+  "labels": [
+   {
+    "id": 48276,
+    "name": "Experience Hendrix",
+    "catno": "88697 62395 1"
+   },
+   {
+    "id": 15491,
+    "name": "Legacy",
+    "catno": "88697 62395 1"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Blues Rock",
+   "Hard Rock",
+   "Psychedelic Rock",
+   "Acid Rock"
+  ]
+ },
+ {
+  "id": 14905763,
+  "title": "紅の豚 サウンドトラック= Porco Rosso",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 221662,
+    "name": "Joe Hisaishi"
+   }
+  ],
+  "labels": [
+   {
+    "id": 68326,
+    "name": "Studio Ghibli Records",
+    "catno": "TJJA-10023"
+   }
+  ],
+  "genres": [
+   "Pop",
+   "Classical",
+   "Stage & Screen"
+  ],
+  "styles": [
+   "Soundtrack",
+   "Anison",
+   "Chanson"
+  ]
+ },
+ {
+  "id": 2149112,
+  "title": "風の伝説「風の谷のナウシカ」シンフォニー編 ",
+  "year": 1984,
+  "artists": [
+   {
+    "id": 221662,
+    "name": "Joe Hisaishi"
+   }
+  ],
+  "labels": [
+   {
+    "id": 115838,
+    "name": "Animage",
+    "catno": "ANL-1017"
+   }
+  ],
+  "genres": [
+   "Classical",
+   "Stage & Screen"
+  ],
+  "styles": [
+   "Soundtrack",
+   "Anison"
+  ]
+ },
+ {
+  "id": 34966292,
+  "title": "The Goldberg Variations",
+  "year": 1956,
+  "artists": [
+   {
+    "id": 95537,
+    "name": "Johann Sebastian Bach"
+   },
+   {
+    "id": 517160,
+    "name": "Glenn Gould"
+   }
+  ],
+  "labels": [
+   {
+    "id": 73845,
+    "name": "Columbia Masterworks",
+    "catno": "ML 5060"
+   },
+   {
+    "id": 73845,
+    "name": "Columbia Masterworks",
+    "catno": "ML-5060"
+   }
+  ],
+  "genres": [
+   "Classical"
+  ],
+  "styles": [
+   "Baroque",
+   "Theme With Variations",
+   "Piano"
+  ]
+ },
+ {
+  "id": 23905847,
+  "title": "Sun Ship",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 97545,
+    "name": "John Coltrane"
+   }
+  ],
+  "labels": [
+   {
+    "id": 26557,
+    "name": "Impulse!",
+    "catno": "AS 9211"
+   },
+   {
+    "id": 5041,
+    "name": "Verve Records",
+    "catno": "AS 9211"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Post Bop",
+   "Free Jazz",
+   "Avant-garde Jazz"
+  ]
+ },
+ {
+  "id": 15601786,
+  "title": "Continuum",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 254479,
+    "name": "John Mayer"
+   }
+  ],
+  "labels": [
+   {
+    "id": 72497,
+    "name": "Aware Records",
+    "catno": "19439713611"
+   },
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "19439713611"
+   },
+   {
+    "id": 276086,
+    "name": "Sony Music Commercial Music Group",
+    "catno": "19439713611"
+   }
+  ],
+  "genres": [
+   "Rock",
+   "Blues"
+  ],
+  "styles": [
+   "Alternative Rock",
+   "Blues Rock",
+   "Pop Rock",
+   "Indie Rock"
+  ]
+ },
+ {
+  "id": 12217999,
+  "title": "John Prine",
+  "year": 1971,
+  "artists": [
+   {
+    "id": 274724,
+    "name": "John Prine"
+   }
+  ],
+  "labels": [
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "SD 8296"
+   }
+  ],
+  "genres": [
+   "Folk, World, & Country"
+  ],
+  "styles": [
+   "Country",
+   "Folk"
+  ]
+ },
+ {
+  "id": 23490317,
+  "title": "Wanted One Soul Singer",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 158399,
+    "name": "Johnnie Taylor"
+   }
+  ],
+  "labels": [
+   {
+    "id": 24936,
+    "name": "Stax",
+    "catno": "R1 687365"
+   },
+   {
+    "id": 24936,
+    "name": "Stax",
+    "catno": "081227882815"
+   }
+  ],
+  "genres": [
+   "Funk / Soul",
+   "Blues"
+  ],
+  "styles": [
+   "Rhythm & Blues",
+   "Soul"
+  ]
+ },
+ {
+  "id": 13855128,
+  "title": "África Brasil",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 30700,
+    "name": "Jorge Ben"
+   }
+  ],
+  "labels": [
+   {
+    "id": 56128,
+    "name": "Universal Music Special Markets",
+    "catno": "6349.187"
+   },
+   {
+    "id": 56128,
+    "name": "Universal Music Special Markets",
+    "catno": "B0028558-01"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Latin",
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Latin Jazz",
+   "Soul-Jazz",
+   "MPB"
+  ]
+ },
+ {
+  "id": 3115316,
+  "title": "Songs From The Jungle Book And Other Jungle Favorites",
+  "year": 1976,
+  "artists": [
+   {
+    "id": 15297690,
+    "name": "The Jungle V.I.P.'s"
+   }
+  ],
+  "labels": [
+   {
+    "id": 35242,
+    "name": "Disneyland",
+    "catno": "1304"
+   }
+  ],
+  "genres": [
+   "Children's",
+   "Stage & Screen"
+  ],
+  "styles": []
+ },
+ {
+  "id": 23491961,
+  "title": "†",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 52758,
+    "name": "Justice (3)"
+   }
+  ],
+  "labels": [
+   {
+    "id": 19066,
+    "name": "Ed Banger Records",
+    "catno": "VMP-E114"
+   },
+   {
+    "id": 54379,
+    "name": "Because Music",
+    "catno": "VMP-E114"
+   }
+  ],
+  "genres": [
+   "Electronic"
+  ],
+  "styles": [
+   "Electro House",
+   "French House"
+  ]
+ },
+ {
+  "id": 26373158,
+  "title": "Same Trailer Different Park",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 2866928,
+    "name": "Kacey Musgraves"
+   }
+  ],
+  "labels": [
+   {
+    "id": 39357,
+    "name": "Mercury",
+    "catno": "VMP-E123"
+   }
+  ],
+  "genres": [
+   "Folk, World, & Country"
+  ],
+  "styles": [
+   "Country"
+  ]
+ },
+ {
+  "id": 12221317,
+  "title": "مسلمين ومسيحيين = Muslims And Christians",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 6153830,
+    "name": "Kamal Keila"
+   },
+   {
+    "id": 6153830,
+    "name": "Kamal Keila"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1445174,
+    "name": "Habibi Funk",
+    "catno": "HABIBI008"
+   }
+  ],
+  "genres": [
+   "Funk / Soul",
+   "Folk, World, & Country"
+  ],
+  "styles": [
+   "African",
+   "Funk",
+   "Afrobeat"
+  ]
+ },
+ {
+  "id": 14381105,
+  "title": "Karsu",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 5779671,
+    "name": "Karsu"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1173756,
+    "name": "y kültür sanat",
+    "catno": "LP 008-1"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Pop"
+  ],
+  "styles": []
+ },
+ {
+  "id": 10439952,
+  "title": "City Music",
+  "year": 2017,
+  "artists": [
+   {
+    "id": 1920930,
+    "name": "Kevin Morby"
+   }
+  ],
+  "labels": [
+   {
+    "id": 94740,
+    "name": "Dead Oceans",
+    "catno": "DOC131"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": []
+ },
+ {
+  "id": 1979157,
+  "title": "Man On The Moon: The End Of Day",
+  "year": 2009,
+  "artists": [
+   {
+    "id": 1093094,
+    "name": "Kid Cudi"
+   }
+  ],
+  "labels": [
+   {
+    "id": 71518,
+    "name": "Universal Motown",
+    "catno": "B0013321-01"
+   }
+  ],
+  "genres": [
+   "Electronic",
+   "Hip Hop",
+   "Funk / Soul",
+   "Pop"
+  ],
+  "styles": [
+   "Pop Rap",
+   "Soul",
+   "Synth-pop"
+  ]
+ },
+ {
+  "id": 18649588,
+  "title": "Live At Fillmore West",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 36862,
+    "name": "King Curtis"
+   }
+  ],
+  "labels": [
+   {
+    "id": 3820,
+    "name": "ATCO Records",
+    "catno": "R1 654080"
+   },
+   {
+    "id": 3820,
+    "name": "ATCO Records",
+    "catno": "081227890094"
+   }
+  ],
+  "genres": [
+   "Funk / Soul",
+   "Pop"
+  ],
+  "styles": [
+   "Soul",
+   "Soul-Jazz"
+  ]
+ },
+ {
+  "id": 29430868,
+  "title": "Queen Of Latin Soul / Reina De La Cancion Latina",
+  "year": 2024,
+  "artists": [
+   {
+    "id": 430773,
+    "name": "La Lupe"
+   }
+  ],
+  "labels": [
+   {
+    "id": 50959,
+    "name": "Tico Records",
+    "catno": "CR00699"
+   },
+   {
+    "id": 2457964,
+    "name": "Craft Recordings Latino",
+    "catno": "CR00699"
+   }
+  ],
+  "genres": [
+   "Latin"
+  ],
+  "styles": [
+   "Pachanga",
+   "Afro-Cuban",
+   "Bolero",
+   "Boogaloo",
+   "Mambo"
+  ]
+ },
+ {
+  "id": 29430361,
+  "title": "Nightbirds",
+  "year": 2024,
+  "artists": [
+   {
+    "id": 21267,
+    "name": "LaBelle"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1005,
+    "name": "Epic",
+    "catno": "19658821591"
+   },
+   {
+    "id": 276086,
+    "name": "Sony Music Commercial Music Group",
+    "catno": "19658821591"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Funk",
+   "Disco"
+  ]
+ },
+ {
+  "id": 12238722,
+  "title": "Soul Makossa",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 48419,
+    "name": "Lafayette Afro Rock Band"
+   }
+  ],
+  "labels": [
+   {
+    "id": 764556,
+    "name": "Topomic Music",
+    "catno": "VMP-038"
+   }
+  ],
+  "genres": [
+   "Reggae",
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Afrobeat",
+   "Soul",
+   "Funk"
+  ]
+ },
+ {
+  "id": 4662259,
+  "title": "Led Zeppelin IV",
+  "year": 0,
+  "artists": [
+   {
+    "id": 34278,
+    "name": "Led Zeppelin"
+   }
+  ],
+  "labels": [
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "ATL 50008"
+   },
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "SD 7208"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Classic Rock"
+  ]
+ },
+ {
+  "id": 20104513,
+  "title": "Take Twelve",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 1500380,
+    "name": "Lee Morgan Quintet"
+   }
+  ],
+  "labels": [
+   {
+    "id": 33967,
+    "name": "Jazzland",
+    "catno": "CR00432"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Hard Bop"
+  ]
+ },
+ {
+  "id": 17892730,
+  "title": "Musical Massage",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 21259,
+    "name": "Leon Ware"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1723,
+    "name": "Motown",
+    "catno": "B0032476-01"
+   },
+   {
+    "id": 56128,
+    "name": "Universal Music Special Markets",
+    "catno": "B0032476-01"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Soul"
+  ]
+ },
+ {
+  "id": 22425598,
+  "title": "Lightnin' Strikes",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 290582,
+    "name": "Lightnin' Hopkins"
+   }
+  ],
+  "labels": [
+   {
+    "id": 34488,
+    "name": "Vee Jay Records",
+    "catno": "CR00477"
+   }
+  ],
+  "genres": [
+   "Blues"
+  ],
+  "styles": [
+   "Electric Blues",
+   "Country Blues",
+   "Texas Blues"
+  ]
+ },
+ {
+  "id": 13291150,
+  "title": "Oriental Jazz",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 639808,
+    "name": "Lloyd Miller"
+   },
+   {
+    "id": 3026619,
+    "name": "The Press Keys Quartet"
+   },
+   {
+    "id": 1779757,
+    "name": "The Lloyd Miller Trio"
+   }
+  ],
+  "labels": [
+   {
+    "id": 30886,
+    "name": "Now-Again Records",
+    "catno": "NA 5183"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Folk, World, & Country"
+  ],
+  "styles": []
+ },
+ {
+  "id": 13467992,
+  "title": "Coal Miner’s Daughter",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 320517,
+    "name": "Loretta Lynn"
+   }
+  ],
+  "labels": [
+   {
+    "id": 178754,
+    "name": "MCA Nashville",
+    "catno": "B0029785-01"
+   },
+   {
+    "id": 56128,
+    "name": "Universal Music Special Markets",
+    "catno": "B0029785-01"
+   },
+   {
+    "id": 5320,
+    "name": "Decca",
+    "catno": "B0029785-01"
+   }
+  ],
+  "genres": [
+   "Folk, World, & Country"
+  ],
+  "styles": [
+   "Country"
+  ]
+ },
+ {
+  "id": 1517947,
+  "title": "Kala",
+  "year": 2008,
+  "artists": [
+   {
+    "id": 141549,
+    "name": "M.I.A. (2)"
+   }
+  ],
+  "labels": [
+   {
+    "id": 160,
+    "name": "XL Recordings",
+    "catno": "XLCD281X"
+   }
+  ],
+  "genres": [
+   "Electronic",
+   "Hip Hop",
+   "Reggae",
+   "Pop"
+  ],
+  "styles": [
+   "Grime",
+   "Hip Hop",
+   "Dancehall"
+  ]
+ },
+ {
+  "id": 27389001,
+  "title": "Shades Of Blue (Madlib Invades Blue Note)",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 16508,
+    "name": "Madlib"
+   }
+  ],
+  "labels": [
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "5507723"
+   },
+   {
+    "id": 68029,
+    "name": "UMe",
+    "catno": "5507723"
+   },
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "00602455077233"
+   },
+   {
+    "id": 68029,
+    "name": "UMe",
+    "catno": "00602455077233"
+   }
+  ],
+  "genres": [
+   "Electronic",
+   "Hip Hop",
+   "Jazz"
+  ],
+  "styles": [
+   "Instrumental",
+   "Downtempo",
+   "Jazzy Hip-Hop",
+   "Fusion",
+   "Jazz-Funk",
+   "Soul-Jazz"
+  ]
+ },
+ {
+  "id": 97036,
+  "title": "Breaking Atoms",
+  "year": 1991,
+  "artists": [
+   {
+    "id": 29057,
+    "name": "Main Source"
+   }
+  ],
+  "labels": [
+   {
+    "id": 7561,
+    "name": "Wild Pitch Records",
+    "catno": "WPL 2004"
+   }
+  ],
+  "genres": [
+   "Hip Hop"
+  ],
+  "styles": [
+   "Boom Bap",
+   "Conscious",
+   "Cut-up/DJ"
+  ]
+ },
+ {
+  "id": 28915246,
+  "title": "Back To Back",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 212655,
+    "name": "The Mar-Keys"
+   },
+   {
+    "id": 129348,
+    "name": "Booker T & The MG's"
+   }
+  ],
+  "labels": [
+   {
+    "id": 24936,
+    "name": "Stax",
+    "catno": "720"
+   },
+   {
+    "id": 24936,
+    "name": "Stax",
+    "catno": "R1-725061"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Rhythm & Blues",
+   "Soul"
+  ]
+ },
+ {
+  "id": 19467631,
+  "title": "De-Loused In The Comatorium",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 96218,
+    "name": "The Mars Volta"
+   }
+  ],
+  "labels": [
+   {
+    "id": 382975,
+    "name": "Clouds Hill",
+    "catno": "CH 182"
+   },
+   {
+    "id": 162544,
+    "name": "Rodriguez Lopez Productions",
+    "catno": "CH 182"
+   }
+  ],
+  "genres": [
+   "Rock",
+   "Latin"
+  ],
+  "styles": [
+   "Abstract",
+   "Psychedelic Rock",
+   "Dub",
+   "Experimental",
+   "Prog Rock"
+  ]
+ },
+ {
+  "id": 29209312,
+  "title": "No Said Date",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 107494,
+    "name": "Masta Killa"
+   }
+  ],
+  "labels": [
+   {
+    "id": 22277,
+    "name": "Nature Sounds",
+    "catno": "RH076"
+   }
+  ],
+  "genres": [
+   "Hip Hop"
+  ],
+  "styles": [
+   "Hardcore Hip-Hop"
+  ]
+ },
+ {
+  "id": 12909387,
+  "title": "Mavis Staples",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 46766,
+    "name": "Mavis Staples"
+   }
+  ],
+  "labels": [
+   {
+    "id": 33475,
+    "name": "Volt",
+    "catno": "CR00146"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Soul"
+  ]
+ },
+ {
+  "id": 15609609,
+  "title": "Sahara",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 10620,
+    "name": "McCoy Tyner"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1598688,
+    "name": "Milestone (4)",
+    "catno": "CR00336"
+   },
+   {
+    "id": 1598688,
+    "name": "Milestone (4)",
+    "catno": "CR00336-STEREO"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Post Bop",
+   "Modal"
+  ]
+ },
+ {
+  "id": 27597933,
+  "title": "Trident",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 10620,
+    "name": "McCoy Tyner"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1598688,
+    "name": "Milestone (4)",
+    "catno": "CR00650"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Post Bop"
+  ]
+ },
+ {
+  "id": 22440361,
+  "title": "Metallica",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 18839,
+    "name": "Metallica"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1319428,
+    "name": "Blackened",
+    "catno": "BLCKND008R-1W"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Heavy Metal"
+  ]
+ },
+ {
+  "id": 21289177,
+  "title": "Rejuvenation",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 86616,
+    "name": "The Meters"
+   }
+  ],
+  "labels": [
+   {
+    "id": 157,
+    "name": "Reprise Records",
+    "catno": "RCV1 661906"
+   },
+   {
+    "id": 157,
+    "name": "Reprise Records",
+    "catno": "081227880088"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Bayou Funk",
+   "Soul"
+  ]
+ },
+ {
+  "id": 892714,
+  "title": "Tical",
+  "year": 1994,
+  "artists": [
+   {
+    "id": 17587,
+    "name": "Method Man"
+   }
+  ],
+  "labels": [
+   {
+    "id": 4241,
+    "name": "Def Jam Recordings",
+    "catno": "314 523 839-1"
+   }
+  ],
+  "genres": [
+   "Hip Hop"
+  ],
+  "styles": [
+   "Hardcore Hip-Hop"
+  ]
+ },
+ {
+  "id": 14922028,
+  "title": "Madvillainy",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 25058,
+    "name": "MF Doom"
+   },
+   {
+    "id": 16508,
+    "name": "Madlib"
+   },
+   {
+    "id": 157763,
+    "name": "Madvillain"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1217,
+    "name": "Stones Throw Records",
+    "catno": "STH2065"
+   }
+  ],
+  "genres": [
+   "Hip Hop"
+  ],
+  "styles": [
+   "Jazzy Hip-Hop",
+   "Abstract",
+   "Experimental",
+   "Leftfield",
+   "Conscious"
+  ]
+ },
+ {
+  "id": 28277659,
+  "title": "Madvillainy",
+  "year": 2011,
+  "artists": [
+   {
+    "id": 25058,
+    "name": "MF Doom"
+   },
+   {
+    "id": 16508,
+    "name": "Madlib"
+   },
+   {
+    "id": 157763,
+    "name": "Madvillain"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1217,
+    "name": "Stones Throw Records",
+    "catno": "STH2065"
+   }
+  ],
+  "genres": [
+   "Hip Hop"
+  ],
+  "styles": [
+   "Boom Bap",
+   "Jazzy Hip-Hop",
+   "Abstract",
+   "Experimental",
+   "Leftfield",
+   "Conscious"
+  ]
+ },
+ {
+  "id": 3278805,
+  "title": "Ascenseur Pour L'Échafaud (Lift To The Scaffold)",
+  "year": 2011,
+  "artists": [
+   {
+    "id": 23755,
+    "name": "Miles Davis"
+   }
+  ],
+  "labels": [
+   {
+    "id": 169635,
+    "name": "Music On Vinyl",
+    "catno": "MOVLP419"
+   },
+   {
+    "id": 205,
+    "name": "Fontana",
+    "catno": "MOVLP419"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Stage & Screen"
+  ],
+  "styles": [
+   "Hard Bop",
+   "Modal"
+  ]
+ },
+ {
+  "id": 37006,
+  "title": "Bitches Brew",
+  "year": 1970,
+  "artists": [
+   {
+    "id": 23755,
+    "name": "Miles Davis"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "GP 26"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Fusion"
+  ]
+ },
+ {
+  "id": 34055482,
+  "title": "Kind Of Blue",
+  "year": 2011,
+  "artists": [
+   {
+    "id": 23755,
+    "name": "Miles Davis"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "886976805715"
+   },
+   {
+    "id": 15491,
+    "name": "Legacy",
+    "catno": "886976805715"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Modal"
+  ]
+ },
+ {
+  "id": 1811497,
+  "title": "Porgy And Bess",
+  "year": 1997,
+  "artists": [
+   {
+    "id": 23755,
+    "name": "Miles Davis"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "CK 65141"
+   },
+   {
+    "id": 15491,
+    "name": "Legacy",
+    "catno": "CK 65141"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Cool Jazz"
+  ]
+ },
+ {
+  "id": 25168573,
+  "title": "Star People",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 23755,
+    "name": "Miles Davis"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "19439989601"
+   },
+   {
+    "id": 276086,
+    "name": "Sony Music Commercial Music Group",
+    "catno": "19439989601"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Blues"
+  ],
+  "styles": [
+   "Fusion"
+  ]
+ },
+ {
+  "id": 11706028,
+  "title": "The Final Tour: Paris, March 21, 1960",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 23755,
+    "name": "Miles Davis"
+   },
+   {
+    "id": 97545,
+    "name": "John Coltrane"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "88985448441"
+   },
+   {
+    "id": 15491,
+    "name": "Legacy",
+    "catno": "88985448441"
+   },
+   {
+    "id": 276086,
+    "name": "Sony Music Commercial Music Group",
+    "catno": "88985448441"
+   },
+   {
+    "id": 102090,
+    "name": "INA",
+    "catno": "88985448441"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": []
+ },
+ {
+  "id": 13503196,
+  "title": "Miles & Monk At Newport",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 260757,
+    "name": "The Miles Davis Sextet"
+   },
+   {
+    "id": 261339,
+    "name": "The Thelonious Monk Quartet"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1101747,
+    "name": "Cornbread Records (2)",
+    "catno": "CRNBR16051"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Hard Bop",
+   "Bop",
+   "Modal"
+  ]
+ },
+ {
+  "id": 12339557,
+  "title": "Be The Cowboy",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 4110740,
+    "name": "Mitski"
+   }
+  ],
+  "labels": [
+   {
+    "id": 94740,
+    "name": "Dead Oceans",
+    "catno": "DOC150LP-C2"
+   },
+   {
+    "id": 94740,
+    "name": "Dead Oceans",
+    "catno": "DOC150"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Indie Rock"
+  ]
+ },
+ {
+  "id": 22460452,
+  "title": "The Lonesome Crowded West",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 187919,
+    "name": "Modest Mouse"
+   }
+  ],
+  "labels": [
+   {
+    "id": 189546,
+    "name": "Glacial Pace",
+    "catno": "GPLP009"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Indie Rock"
+  ]
+ },
+ {
+  "id": 21668740,
+  "title": "Мусоргский: Борис Годунов",
+  "year": 1968,
+  "artists": [
+   {
+    "id": 523633,
+    "name": "Modest Mussorgsky"
+   },
+   {
+    "id": 1407024,
+    "name": "Александр Пирогов"
+   },
+   {
+    "id": 1905878,
+    "name": "Георгий Нэлепп"
+   },
+   {
+    "id": 1615068,
+    "name": "Мария Петровна Максакова"
+   },
+   {
+    "id": 1411797,
+    "name": "Максим Михайлов"
+   },
+   {
+    "id": 5121846,
+    "name": "Никандр Ханаев"
+   },
+   {
+    "id": 1427129,
+    "name": "Иван Козловский"
+   },
+   {
+    "id": 1569768,
+    "name": "Chorus Of The Bolshoi Theatre"
+   },
+   {
+    "id": 1351876,
+    "name": "Bolshoi Theatre Orchestra"
+   },
+   {
+    "id": 1398530,
+    "name": "Николай Голованов"
+   }
+  ],
+  "labels": [
+   {
+    "id": 15486,
+    "name": "Мелодия",
+    "catno": "33Д 05836-43"
+   }
+  ],
+  "genres": [
+   "Classical",
+   "Stage & Screen"
+  ],
+  "styles": [
+   "Opera",
+   "Romantic"
+  ]
+ },
+ {
+  "id": 23488610,
+  "title": "Fathers And Sons",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 59246,
+    "name": "Muddy Waters"
+   }
+  ],
+  "labels": [
+   {
+    "id": 33931,
+    "name": "Chess",
+    "catno": "B0028301-01"
+   },
+   {
+    "id": 821,
+    "name": "Geffen Records",
+    "catno": "B0028301-01"
+   },
+   {
+    "id": 56128,
+    "name": "Universal Music Special Markets",
+    "catno": "B0028301-01"
+   }
+  ],
+  "genres": [
+   "Blues"
+  ],
+  "styles": [
+   "Chicago Blues",
+   "Electric Blues"
+  ]
+ },
+ {
+  "id": 1997304,
+  "title": "New York - Addis - London - The Story Of Ethio Jazz 1965-1975",
+  "year": 2009,
+  "artists": [
+   {
+    "id": 286112,
+    "name": "Mulatu Astatke"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1213,
+    "name": "Strut",
+    "catno": "STRUT051LP"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Soul-Jazz",
+   "Afro-Cuban Jazz",
+   "Jazz-Funk",
+   "African"
+  ]
+ },
+ {
+  "id": 13458663,
+  "title": "Laugh To Keep From Crying",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 1054017,
+    "name": "Nat Turner Rebellion"
+   }
+  ],
+  "labels": [
+   {
+    "id": 115137,
+    "name": "Mad Dragon Records",
+    "catno": "VMP-053"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Soul"
+  ]
+ },
+ {
+  "id": 11088450,
+  "title": "Nina Simone At Town Hall",
+  "year": 2017,
+  "artists": [
+   {
+    "id": 10584,
+    "name": "Nina Simone"
+   }
+  ],
+  "labels": [
+   {
+    "id": 466581,
+    "name": "DOL",
+    "catno": "DOL822HG"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Pop"
+  ],
+  "styles": [
+   "Vocal"
+  ]
+ },
+ {
+  "id": 30066043,
+  "title": "Silk & Soul",
+  "year": 2024,
+  "artists": [
+   {
+    "id": 10584,
+    "name": "Nina Simone"
+   }
+  ],
+  "labels": [
+   {
+    "id": 11358,
+    "name": "RCA Victor",
+    "catno": "196588313221"
+   },
+   {
+    "id": 11358,
+    "name": "RCA Victor",
+    "catno": "LSP-3837"
+   },
+   {
+    "id": 11358,
+    "name": "RCA Victor",
+    "catno": "196588313219"
+   },
+   {
+    "id": 11358,
+    "name": "RCA Victor",
+    "catno": "19658831321OS1"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Soul-Jazz"
+  ]
+ },
+ {
+  "id": 26717858,
+  "title": "Odetta And The Blues",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 136445,
+    "name": "Odetta"
+   }
+  ],
+  "labels": [
+   {
+    "id": 34094,
+    "name": "Riverside Records",
+    "catno": "CR00585"
+   }
+  ],
+  "genres": [
+   "Blues"
+  ],
+  "styles": [
+   "Country Blues"
+  ]
+ },
+ {
+  "id": 24779189,
+  "title": "The Shape Of Jazz To Come",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 224506,
+    "name": "Ornette Coleman"
+   }
+  ],
+  "labels": [
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "R1 661904"
+   },
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "081227880057"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Free Jazz"
+  ]
+ },
+ {
+  "id": 15095640,
+  "title": "The Immortal Otis Redding",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 132136,
+    "name": "Otis Redding"
+   }
+  ],
+  "labels": [
+   {
+    "id": 3820,
+    "name": "ATCO Records",
+    "catno": "R1 627557"
+   },
+   {
+    "id": 3820,
+    "name": "ATCO Records",
+    "catno": "081227907563"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Soul"
+  ]
+ },
+ {
+  "id": 9089278,
+  "title": "الأطلال = El Atlaal",
+  "year": 2016,
+  "artists": [
+   {
+    "id": 249512,
+    "name": "Oum Kalthoum"
+   },
+   {
+    "id": 249512,
+    "name": "Oum Kalthoum"
+   }
+  ],
+  "labels": [
+   {
+    "id": 318631,
+    "name": "Music Box International (2)",
+    "catno": "MBSC LP 066"
+   }
+  ],
+  "genres": [
+   "Folk, World, & Country"
+  ],
+  "styles": []
+ },
+ {
+  "id": 13744282,
+  "title": "Southernplayalisticadillacmuzik",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 38561,
+    "name": "OutKast"
+   }
+  ],
+  "labels": [
+   {
+    "id": 2927,
+    "name": "LaFace Records",
+    "catno": "19075944781"
+   }
+  ],
+  "genres": [
+   "Hip Hop"
+  ],
+  "styles": []
+ },
+ {
+  "id": 16030220,
+  "title": "Stankonia",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 38561,
+    "name": "OutKast"
+   }
+  ],
+  "labels": [
+   {
+    "id": 2927,
+    "name": "LaFace Records",
+    "catno": "88875100511"
+   },
+   {
+    "id": 362,
+    "name": "Arista",
+    "catno": "88875100511"
+   },
+   {
+    "id": 276086,
+    "name": "Sony Music Commercial Music Group",
+    "catno": "88875100511"
+   }
+  ],
+  "genres": [
+   "Hip Hop"
+  ],
+  "styles": [
+   "Pop Rap",
+   "Conscious"
+  ]
+ },
+ {
+  "id": 9649225,
+  "title": "Person Pitch",
+  "year": 2017,
+  "artists": [
+   {
+    "id": 218809,
+    "name": "Panda Bear"
+   }
+  ],
+  "labels": [
+   {
+    "id": 993551,
+    "name": "My Animal Home",
+    "catno": "MAH08"
+   }
+  ],
+  "genres": [
+   "Electronic",
+   "Rock"
+  ],
+  "styles": [
+   "Lo-Fi",
+   "Abstract",
+   "Experimental",
+   "Indie Rock"
+  ]
+ },
+ {
+  "id": 23172488,
+  "title": "Here Is Phineas (The Piano Artistry Of Phineas Newborn Jr.)",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 824909,
+    "name": "Phineas Newborn Jr."
+   }
+  ],
+  "labels": [
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "R1 677295"
+   },
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "081227881887"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": []
+ },
+ {
+  "id": 13743682,
+  "title": "Wolfgang Amadeus Phoenix",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 2269,
+    "name": "Phoenix"
+   }
+  ],
+  "labels": [
+   {
+    "id": 529557,
+    "name": "Glassnote (2)",
+    "catno": "GLS-0265-01"
+   },
+   {
+    "id": 497754,
+    "name": "Loyauté",
+    "catno": "GLS-0265-01"
+   },
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "GLS-0265-01"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Pop Rock",
+   "Indie Rock"
+  ]
+ },
+ {
+  "id": 13314937,
+  "title": "A Night At The Opera",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 81013,
+    "name": "Queen"
+   }
+  ],
+  "labels": [
+   {
+    "id": 2859,
+    "name": "Hollywood Records",
+    "catno": "D002995401"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Arena Rock",
+   "Classic Rock"
+  ]
+ },
+ {
+  "id": 14374762,
+  "title": "Songs For The Deaf",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 56168,
+    "name": "Queens Of The Stone Age"
+   }
+  ],
+  "labels": [
+   {
+    "id": 2311,
+    "name": "Interscope Records",
+    "catno": "B0031009-01"
+   },
+   {
+    "id": 68029,
+    "name": "UMe",
+    "catno": "B0031009-01"
+   },
+   {
+    "id": 56128,
+    "name": "Universal Music Special Markets",
+    "catno": "B0031009-01"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Stoner Rock",
+   "Hard Rock"
+  ]
+ },
+ {
+  "id": 2659391,
+  "title": "Acid",
+  "year": 0,
+  "artists": [
+   {
+    "id": 19599,
+    "name": "Ray Barretto"
+   }
+  ],
+  "labels": [
+   {
+    "id": 36950,
+    "name": "Fania Records",
+    "catno": "SLP 346"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Latin",
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Boogaloo",
+   "Latin Jazz"
+  ]
+ },
+ {
+  "id": 28914880,
+  "title": "Ray Charles In Person",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 30552,
+    "name": "Ray Charles"
+   }
+  ],
+  "labels": [
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "RCV1 725050"
+   },
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "081227827014"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Post Bop",
+   "Rhythm & Blues",
+   "Soul"
+  ]
+ },
+ {
+  "id": 29747965,
+  "title": "Hootenanny",
+  "year": 2024,
+  "artists": [
+   {
+    "id": 268769,
+    "name": "The Replacements"
+   }
+  ],
+  "labels": [
+   {
+    "id": 222145,
+    "name": "Twin/Tone Records",
+    "catno": "RCV1 726062"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Garage Rock",
+   "Indie Rock"
+  ]
+ },
+ {
+  "id": 21289312,
+  "title": "Quiet Fire",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 63771,
+    "name": "Roberta Flack"
+   }
+  ],
+  "labels": [
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "R1 661909"
+   },
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "081227880118"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Soul"
+  ]
+ },
+ {
+  "id": 33954156,
+  "title": "Some Girls",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 20991,
+    "name": "The Rolling Stones"
+   }
+  ],
+  "labels": [
+   {
+    "id": 33962,
+    "name": "Rolling Stones Records",
+    "catno": "064-61 016"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": []
+ },
+ {
+  "id": 14776901,
+  "title": "Phrenology",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 76894,
+    "name": "The Roots"
+   }
+  ],
+  "labels": [
+   {
+    "id": 821,
+    "name": "Geffen Records",
+    "catno": "B0029462-01"
+   },
+   {
+    "id": 56128,
+    "name": "Universal Music Special Markets",
+    "catno": "B0029462-01"
+   }
+  ],
+  "genres": [
+   "Hip Hop"
+  ],
+  "styles": []
+ },
+ {
+  "id": 7970928,
+  "title": "Tougher Than Leather",
+  "year": 1988,
+  "artists": [
+   {
+    "id": 219213,
+    "name": "Run-DMC"
+   }
+  ],
+  "labels": [
+   {
+    "id": 2739,
+    "name": "Profile Records",
+    "catno": "PRO-1265"
+   }
+  ],
+  "genres": [
+   "Hip Hop"
+  ],
+  "styles": [
+   "Hip Hop",
+   "Conscious",
+   "Hardcore Hip-Hop"
+  ]
+ },
+ {
+  "id": 28180894,
+  "title": "Santigold",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 1513560,
+    "name": "Santigold"
+   }
+  ],
+  "labels": [
+   {
+    "id": 32976,
+    "name": "Downtown",
+    "catno": "VMP-E129"
+   }
+  ],
+  "genres": [
+   "Electronic",
+   "Hip Hop",
+   "Rock"
+  ],
+  "styles": [
+   "Indie Rock"
+  ]
+ },
+ {
+  "id": 12478292,
+  "title": "Jujus / Alchemy Of The Blues",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 192083,
+    "name": "Sarah Webster Fabio"
+   }
+  ],
+  "labels": [
+   {
+    "id": 20694,
+    "name": "Folkways Records",
+    "catno": "FL 9714"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Jazz-Funk",
+   "Poetry"
+  ]
+ },
+ {
+  "id": 13489497,
+  "title": "Gainsbourg Avant Gainsbarre",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 5951,
+    "name": "Serge Gainsbourg"
+   }
+  ],
+  "labels": [
+   {
+    "id": 100805,
+    "name": "Vinyl Passion",
+    "catno": "VP 90107"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Pop"
+  ],
+  "styles": [
+   "Chanson",
+   "Vocal"
+  ]
+ },
+ {
+  "id": 11126204,
+  "title": "Les Chemins De Katmandou",
+  "year": 2017,
+  "artists": [
+   {
+    "id": 5951,
+    "name": "Serge Gainsbourg"
+   },
+   {
+    "id": 150182,
+    "name": "Jean-Claude Vannier"
+   }
+  ],
+  "labels": [
+   {
+    "id": 38112,
+    "name": "Finders Keepers Records",
+    "catno": "FKR100LP"
+   }
+  ],
+  "genres": [
+   "Rock",
+   "Pop",
+   "Stage & Screen"
+  ],
+  "styles": [
+   "Soundtrack",
+   "Psychedelic Rock"
+  ]
+ },
+ {
+  "id": 13139591,
+  "title": "Düğün Ve Cenaze",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 97253,
+    "name": "Sezen Aksu"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1074101,
+    "name": "SN Music Publishing",
+    "catno": "SN-0014/03"
+   }
+  ],
+  "genres": [
+   "Pop",
+   "Folk, World, & Country"
+  ],
+  "styles": []
+ },
+ {
+  "id": 21687553,
+  "title": "Ágætis Byrjun",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 8299,
+    "name": "Sigur Rós"
+   }
+  ],
+  "labels": [
+   {
+    "id": 17502,
+    "name": "Krúnk",
+    "catno": "KRUNK8VMP"
+   },
+   {
+    "id": 678745,
+    "name": "Vinyl Me, Please",
+    "catno": "KRUNK8VMP"
+   }
+  ],
+  "genres": [
+   "Electronic",
+   "Rock"
+  ],
+  "styles": [
+   "Post Rock",
+   "Ambient"
+  ]
+ },
+ {
+  "id": 12235645,
+  "title": "Silver Bullets",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 87300,
+    "name": "The Silvertones"
+   }
+  ],
+  "labels": [
+   {
+    "id": 2068,
+    "name": "Trojan Records",
+    "catno": "BMG-538389851"
+   },
+   {
+    "id": 1492895,
+    "name": "Trojan Target",
+    "catno": "BMG-538389851"
+   },
+   {
+    "id": 1003,
+    "name": "BMG",
+    "catno": "BMG-538389851"
+   }
+  ],
+  "genres": [
+   "Reggae"
+  ],
+  "styles": [
+   "Roots Reggae"
+  ]
+ },
+ {
+  "id": 13744447,
+  "title": "Gospel Train",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 322295,
+    "name": "Sister Rosetta Tharpe"
+   }
+  ],
+  "labels": [
+   {
+    "id": 39357,
+    "name": "Mercury",
+    "catno": "MG-20201"
+   },
+   {
+    "id": 5041,
+    "name": "Verve Records",
+    "catno": "B0029461-01"
+   },
+   {
+    "id": 56128,
+    "name": "Universal Music Special Markets",
+    "catno": "B0029461-01"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Gospel"
+  ]
+ },
+ {
+  "id": 13980901,
+  "title": "The Center Won't Hold",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 218269,
+    "name": "Sleater-Kinney"
+   }
+  ],
+  "labels": [
+   {
+    "id": 194365,
+    "name": "Mom + Pop",
+    "catno": "MP431"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Indie Rock"
+  ]
+ },
+ {
+  "id": 27647037,
+  "title": "There's a Riot Goin' On",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 39768,
+    "name": "Sly & The Family Stone"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1005,
+    "name": "Epic",
+    "catno": "19658763921"
+   },
+   {
+    "id": 15491,
+    "name": "Legacy",
+    "catno": "19658763921"
+   },
+   {
+    "id": 276086,
+    "name": "Sony Music Commercial Music Group",
+    "catno": "19658763921"
+   },
+   {
+    "id": 1005,
+    "name": "Epic",
+    "catno": "KE 30986"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Funk"
+  ]
+ },
+ {
+  "id": 15888016,
+  "title": "Freedom Suite",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 145264,
+    "name": "Sonny Rollins"
+   }
+  ],
+  "labels": [
+   {
+    "id": 34094,
+    "name": "Riverside Records",
+    "catno": "CR00337"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Hard Bop"
+  ]
+ },
+ {
+  "id": 15886061,
+  "title": "Ladies And Gentlemen We Are Floating In Space",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 3551,
+    "name": "Spiritualized"
+   }
+  ],
+  "labels": [
+   {
+    "id": 33995,
+    "name": "Fat Possum Records",
+    "catno": "FP1753-3"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Space Rock",
+   "Psychedelic Rock",
+   "Indie Rock"
+  ]
+ },
+ {
+  "id": 15282815,
+  "title": "Bella Donna",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 13735,
+    "name": "Stevie Nicks"
+   }
+  ],
+  "labels": [
+   {
+    "id": 40865,
+    "name": "Modern Records",
+    "catno": "RCV1 628771"
+   },
+   {
+    "id": 40865,
+    "name": "Modern Records",
+    "catno": "081227907341"
+   },
+   {
+    "id": 3820,
+    "name": "ATCO Records",
+    "catno": "RCV1 628771"
+   },
+   {
+    "id": 3820,
+    "name": "ATCO Records",
+    "catno": "081227907341"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Country Rock",
+   "Pop Rock"
+  ]
+ },
+ {
+  "id": 30376697,
+  "title": "Couldn't Stand The Weather",
+  "year": 2024,
+  "artists": [
+   {
+    "id": 284965,
+    "name": "Stevie Ray Vaughan & Double Trouble"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1005,
+    "name": "Epic",
+    "catno": "1965844071"
+   }
+  ],
+  "genres": [
+   "Rock",
+   "Blues"
+  ],
+  "styles": [
+   "Texas Blues"
+  ]
+ },
+ {
+  "id": 9763161,
+  "title": "Texas Flood",
+  "year": 2017,
+  "artists": [
+   {
+    "id": 284965,
+    "name": "Stevie Ray Vaughan & Double Trouble"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1005,
+    "name": "Epic",
+    "catno": "88985375421"
+   },
+   {
+    "id": 15491,
+    "name": "Legacy",
+    "catno": "88985375421"
+   },
+   {
+    "id": 25487,
+    "name": "Sony Music",
+    "catno": "88985375421"
+   }
+  ],
+  "genres": [
+   "Blues"
+  ],
+  "styles": [
+   "Modern Electric Blues"
+  ]
+ },
+ {
+  "id": 37088073,
+  "title": "N⁰4",
+  "year": 2026,
+  "artists": [
+   {
+    "id": 87642,
+    "name": "Stone Temple Pilots"
+   }
+  ],
+  "labels": [
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "MFSL 2-595"
+   },
+   {
+    "id": 35095,
+    "name": "Mobile Fidelity Sound Lab",
+    "catno": "MFSL 2-595"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Alternative Rock",
+   "Grunge",
+   "Hard Rock"
+  ]
+ },
+ {
+  "id": 31335157,
+  "title": "Raw Power",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 39770,
+    "name": "The Stooges"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "none"
+   },
+   {
+    "id": 15491,
+    "name": "Legacy",
+    "catno": "none"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Garage Rock",
+   "Hard Rock",
+   "Punk"
+  ]
+ },
+ {
+  "id": 15081560,
+  "title": "The Stooges (John Cale Mix)",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 39770,
+    "name": "The Stooges"
+   }
+  ],
+  "labels": [
+   {
+    "id": 651,
+    "name": "Elektra",
+    "catno": "RCV1 607300"
+   },
+   {
+    "id": 651,
+    "name": "Elektra",
+    "catno": "081227909437"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Garage Rock"
+  ]
+ },
+ {
+  "id": 17262997,
+  "title": "Room On Fire",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 55980,
+    "name": "The Strokes"
+   }
+  ],
+  "labels": [
+   {
+    "id": 895,
+    "name": "RCA",
+    "catno": "19439741411"
+   },
+   {
+    "id": 276086,
+    "name": "Sony Music Commercial Music Group",
+    "catno": "19439741411"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Alternative Rock",
+   "Indie Rock",
+   "Garage Rock"
+  ]
+ },
+ {
+  "id": 8687804,
+  "title": "Sublime",
+  "year": 2016,
+  "artists": [
+   {
+    "id": 98600,
+    "name": "Sublime (2)"
+   }
+  ],
+  "labels": [
+   {
+    "id": 28237,
+    "name": "Gasoline Alley",
+    "catno": "B0024679-01"
+   },
+   {
+    "id": 103923,
+    "name": "Skunk Records (2)",
+    "catno": "B0024679-01"
+   },
+   {
+    "id": 821,
+    "name": "Geffen Records",
+    "catno": "B0024679-01"
+   },
+   {
+    "id": 68029,
+    "name": "UMe",
+    "catno": "B0024679-01"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Punk",
+   "Ska"
+  ]
+ },
+ {
+  "id": 147829,
+  "title": "Step II",
+  "year": 1978,
+  "artists": [
+   {
+    "id": 16794,
+    "name": "Sylvester"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1329,
+    "name": "Fantasy",
+    "catno": "F-9556"
+   }
+  ],
+  "genres": [
+   "Electronic",
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Soul",
+   "Disco"
+  ]
+ },
+ {
+  "id": 20530732,
+  "title": "Life Is A Song Worth Singing",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 41105,
+    "name": "Teddy Pendergrass"
+   }
+  ],
+  "labels": [
+   {
+    "id": 11910,
+    "name": "Philadelphia International Records",
+    "catno": "19439885131"
+   },
+   {
+    "id": 276086,
+    "name": "Sony Music Commercial Music Group",
+    "catno": "19439885131"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Soul",
+   "Disco"
+  ]
+ },
+ {
+  "id": 9954508,
+  "title": "Yours Conditionally ",
+  "year": 2017,
+  "artists": [
+   {
+    "id": 1920547,
+    "name": "Tennis (6)"
+   }
+  ],
+  "labels": [
+   {
+    "id": 678745,
+    "name": "Vinyl Me, Please",
+    "catno": "VMP-007"
+   },
+   {
+    "id": 1182437,
+    "name": "Mutually Detrimental",
+    "catno": "VMP-007"
+   }
+  ],
+  "genres": [
+   "Rock",
+   "Pop"
+  ],
+  "styles": [
+   "Indie Pop",
+   "Indie Rock",
+   "Alternative Rock"
+  ]
+ },
+ {
+  "id": 25484383,
+  "title": "Genius Of Modern Music (Volume One)",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 145256,
+    "name": "Thelonious Monk"
+   }
+  ],
+  "labels": [
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "4535336"
+   },
+   {
+    "id": 68029,
+    "name": "UMe",
+    "catno": "4535336"
+   },
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "00602445353361"
+   },
+   {
+    "id": 68029,
+    "name": "UMe",
+    "catno": "00602445353361"
+   },
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "BLP 1510"
+   },
+   {
+    "id": 281,
+    "name": "Blue Note",
+    "catno": "1510"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Bop"
+  ]
+ },
+ {
+  "id": 7498029,
+  "title": "Greatest Hits",
+  "year": 1962,
+  "artists": [
+   {
+    "id": 145256,
+    "name": "Thelonious Monk"
+   }
+  ],
+  "labels": [
+   {
+    "id": 34094,
+    "name": "Riverside Records",
+    "catno": "RLP9421"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": []
+ },
+ {
+  "id": 14481069,
+  "title": "Monk's Dream",
+  "year": 2020,
+  "artists": [
+   {
+    "id": 261339,
+    "name": "The Thelonious Monk Quartet"
+   }
+  ],
+  "labels": [
+   {
+    "id": 466581,
+    "name": "DOL",
+    "catno": "DOL1020HB"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Hard Bop"
+  ]
+ },
+ {
+  "id": 27353163,
+  "title": "Monk's Music",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 269589,
+    "name": "Thelonious Monk Septet"
+   }
+  ],
+  "labels": [
+   {
+    "id": 34094,
+    "name": "Riverside Records",
+    "catno": "CR00574"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Bop",
+   "Hard Bop"
+  ]
+ },
+ {
+  "id": 24139166,
+  "title": "Jailbreak",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 136188,
+    "name": "Thin Lizzy"
+   }
+  ],
+  "labels": [
+   {
+    "id": 2266,
+    "name": "Vertigo",
+    "catno": "VMP-E116"
+   },
+   {
+    "id": 39357,
+    "name": "Mercury",
+    "catno": "VMP-E116"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Hard Rock",
+   "Classic Rock"
+  ]
+ },
+ {
+  "id": 24780023,
+  "title": "Blood Money ",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 82294,
+    "name": "Tom Waits"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1873,
+    "name": "Anti-",
+    "catno": "86629-1"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Experimental"
+  ]
+ },
+ {
+  "id": 12617233,
+  "title": "For The Sake Of The Song",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 274324,
+    "name": "Townes Van Zandt"
+   }
+  ],
+  "labels": [
+   {
+    "id": 33995,
+    "name": "Fat Possum Records",
+    "catno": "FP1087-3"
+   }
+  ],
+  "genres": [
+   "Rock",
+   "Folk, World, & Country"
+  ],
+  "styles": [
+   "Country",
+   "Folk",
+   "Acoustic"
+  ]
+ },
+ {
+  "id": 790078,
+  "title": "Return To Cookie Mountain",
+  "year": 2006,
+  "artists": [
+   {
+    "id": 172047,
+    "name": "TV On The Radio"
+   }
+  ],
+  "labels": [
+   {
+    "id": 634,
+    "name": "4AD",
+    "catno": "CAD 2607"
+   },
+   {
+    "id": 819,
+    "name": "Touch And Go",
+    "catno": "CAD 2607"
+   }
+  ],
+  "genres": [
+   "Electronic",
+   "Rock"
+  ],
+  "styles": [
+   "Post Rock",
+   "Downtempo",
+   "Indie Rock",
+   "Experimental"
+  ]
+ },
+ {
+  "id": 20811709,
+  "title": "Confessions",
+  "year": 2021,
+  "artists": [
+   {
+    "id": 97139,
+    "name": "Usher"
+   }
+  ],
+  "labels": [
+   {
+    "id": 362,
+    "name": "Arista",
+    "catno": "19439916621"
+   },
+   {
+    "id": 276086,
+    "name": "Sony Music Commercial Music Group",
+    "catno": "19439916621"
+   }
+  ],
+  "genres": [
+   "Hip Hop",
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Contemporary R&B"
+  ]
+ },
+ {
+  "id": 13145206,
+  "title": "Veedon Fleece",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 255411,
+    "name": "Van Morrison"
+   }
+  ],
+  "labels": [
+   {
+    "id": 31037,
+    "name": "Exile",
+    "catno": "VMP-E074"
+   },
+   {
+    "id": 15491,
+    "name": "Legacy",
+    "catno": "VMP-E074"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Folk Rock"
+  ]
+ },
+ {
+  "id": 3943985,
+  "title": "Aristocats",
+  "year": 1971,
+  "artists": [
+   {
+    "id": 194,
+    "name": "Various"
+   }
+  ],
+  "labels": [
+   {
+    "id": 35242,
+    "name": "Disneyland",
+    "catno": "DK 3995"
+   },
+   {
+    "id": 1610,
+    "name": "Polydor",
+    "catno": "DK 3995"
+   }
+  ],
+  "genres": [
+   "Children's"
+  ],
+  "styles": [
+   "Story"
+  ]
+ },
+ {
+  "id": 21607723,
+  "title": "Lost In Translation (Music From The Motion Picture Soundtrack)",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 194,
+    "name": "Various"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1048,
+    "name": "Emperor Norton",
+    "catno": "RR1 317068"
+   },
+   {
+    "id": 1048,
+    "name": "Emperor Norton",
+    "catno": "603497843510"
+   }
+  ],
+  "genres": [
+   "Electronic",
+   "Rock",
+   "Stage & Screen"
+  ],
+  "styles": [
+   "Soundtrack",
+   "Downtempo",
+   "Post Rock",
+   "Indie Rock"
+  ]
+ },
+ {
+  "id": 9264471,
+  "title": "Music of Burkina Faso",
+  "year": 2016,
+  "artists": [
+   {
+    "id": 194,
+    "name": "Various"
+   }
+  ],
+  "labels": [
+   {
+    "id": 52340,
+    "name": "Sublime Frequencies",
+    "catno": "SF100LP"
+   }
+  ],
+  "genres": [
+   "Folk, World, & Country"
+  ],
+  "styles": [
+   "African",
+   "Folk",
+   "Field Recording"
+  ]
+ },
+ {
+  "id": 6295622,
+  "title": "Spirit Of Malombo - Malombo Jazz Makers, Jabula And Jazz Afrika 1966- 1984",
+  "year": 2014,
+  "artists": [
+   {
+    "id": 194,
+    "name": "Various"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1213,
+    "name": "Strut",
+    "catno": "STRUT119LP"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Folk, World, & Country"
+  ],
+  "styles": [
+   "Cape Jazz"
+  ]
+ },
+ {
+  "id": 1792840,
+  "title": "The Jungle Book",
+  "year": 1967,
+  "artists": [
+   {
+    "id": 194,
+    "name": "Various"
+   }
+  ],
+  "labels": [
+   {
+    "id": 35242,
+    "name": "Disneyland",
+    "catno": "ST-3948"
+   },
+   {
+    "id": 35242,
+    "name": "Disneyland",
+    "catno": "ST 3948"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Children's",
+   "Stage & Screen"
+  ],
+  "styles": [
+   "Story",
+   "Big Band",
+   "Soundtrack"
+  ]
+ },
+ {
+  "id": 12549925,
+  "title": "The Man With The Iron Fists (Original Motion Picture Soundtrack)",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 194,
+    "name": "Various"
+   }
+  ],
+  "labels": [
+   {
+    "id": 169635,
+    "name": "Music On Vinyl",
+    "catno": "MOVLP700"
+   }
+  ],
+  "genres": [
+   "Hip Hop",
+   "Rock",
+   "Funk / Soul",
+   "Blues",
+   "Stage & Screen"
+  ],
+  "styles": [
+   "Soundtrack"
+  ]
+ },
+ {
+  "id": 4077018,
+  "title": "The Man With The Iron Fists (Original Motion Picture Soundtrack)",
+  "year": 2012,
+  "artists": [
+   {
+    "id": 194,
+    "name": "Various"
+   }
+  ],
+  "labels": [
+   {
+    "id": 169635,
+    "name": "Music On Vinyl",
+    "catno": "MOVLP700"
+   }
+  ],
+  "genres": [
+   "Hip Hop",
+   "Rock",
+   "Funk / Soul",
+   "Blues",
+   "Stage & Screen"
+  ],
+  "styles": [
+   "Soundtrack"
+  ]
+ },
+ {
+  "id": 28583887,
+  "title": "A Charlie Brown Thanksgiving (Original Soundtrack Recording)",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 258298,
+    "name": "Vince Guaraldi"
+   },
+   {
+    "id": 4767883,
+    "name": "Vince Guaraldi Quintet"
+   }
+  ],
+  "labels": [
+   {
+    "id": 623134,
+    "name": "Lee Mendelson Film Productions",
+    "catno": "LM02301"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Stage & Screen"
+  ],
+  "styles": [
+   "Cool Jazz",
+   "Soundtrack"
+  ]
+ },
+ {
+  "id": 2585754,
+  "title": "De Stijl",
+  "year": 2010,
+  "artists": [
+   {
+    "id": 116345,
+    "name": "The White Stripes"
+   }
+  ],
+  "labels": [
+   {
+    "id": 89238,
+    "name": "Third Man Records",
+    "catno": "TMR032"
+   }
+  ],
+  "genres": [
+   "Rock",
+   "Blues"
+  ],
+  "styles": [
+   "Alternative Rock",
+   "Garage Rock"
+  ]
+ },
+ {
+  "id": 11747018,
+  "title": "A.M.",
+  "year": 2015,
+  "artists": [
+   {
+    "id": 102984,
+    "name": "Wilco"
+   }
+  ],
+  "labels": [
+   {
+    "id": 652,
+    "name": "Nonesuch",
+    "catno": "518084-1"
+   },
+   {
+    "id": 652,
+    "name": "Nonesuch",
+    "catno": "547896-1"
+   }
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "styles": [
+   "Country Rock",
+   "Indie Rock"
+  ]
+ },
+ {
+  "id": 11831707,
+  "title": "The Soul Of A Bell",
+  "year": 2018,
+  "artists": [
+   {
+    "id": 88689,
+    "name": "William Bell"
+   }
+  ],
+  "labels": [
+   {
+    "id": 24936,
+    "name": "Stax",
+    "catno": "S719"
+   },
+   {
+    "id": 24936,
+    "name": "Stax",
+    "catno": "S 719"
+   },
+   {
+    "id": 24936,
+    "name": "Stax",
+    "catno": "R1 562742"
+   }
+  ],
+  "genres": [
+   "Funk / Soul",
+   "Blues"
+  ],
+  "styles": [
+   "Soul",
+   "Rhythm & Blues"
+  ]
+ },
+ {
+  "id": 13855253,
+  "title": "Uno Dos Tres 1•2•3",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 33585,
+    "name": "Willie Bobo"
+   }
+  ],
+  "labels": [
+   {
+    "id": 5041,
+    "name": "Verve Records",
+    "catno": "V6-8648"
+   },
+   {
+    "id": 56128,
+    "name": "Universal Music Special Markets",
+    "catno": "B0028935-01"
+   }
+  ],
+  "genres": [
+   "Jazz",
+   "Latin"
+  ],
+  "styles": [
+   "Latin Jazz",
+   "Boogaloo"
+  ]
+ },
+ {
+  "id": 30049393,
+  "title": "Phases And Stages",
+  "year": 2024,
+  "artists": [
+   {
+    "id": 249449,
+    "name": "Willie Nelson"
+   }
+  ],
+  "labels": [
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "RCV1 726063"
+   },
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "812278177014"
+   }
+  ],
+  "genres": [
+   "Folk, World, & Country"
+  ],
+  "styles": [
+   "Country"
+  ]
+ },
+ {
+  "id": 26389715,
+  "title": "Hey Jude",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 83396,
+    "name": "Wilson Pickett"
+   }
+  ],
+  "labels": [
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "R1 698596"
+   },
+   {
+    "id": 681,
+    "name": "Atlantic",
+    "catno": "081227852108"
+   }
+  ],
+  "genres": [
+   "Funk / Soul"
+  ],
+  "styles": [
+   "Rhythm & Blues",
+   "Soul",
+   "Funk"
+  ]
+ },
+ {
+  "id": 153749,
+  "title": "Enter The Wu-Tang (36 Chambers)",
+  "year": 1993,
+  "artists": [
+   {
+    "id": 11213,
+    "name": "Wu-Tang Clan"
+   }
+  ],
+  "labels": [
+   {
+    "id": 177742,
+    "name": "RCA Records Label",
+    "catno": "07863 66336-1"
+   },
+   {
+    "id": 8984,
+    "name": "Loud Records",
+    "catno": "07863 66336-1"
+   },
+   {
+    "id": 19401,
+    "name": "Wu-Tang Records",
+    "catno": "07863 66336-1"
+   }
+  ],
+  "genres": [
+   "Hip Hop"
+  ],
+  "styles": [
+   "Boom Bap",
+   "Hardcore Hip-Hop"
+  ]
+ },
+ {
+  "id": 27919077,
+  "title": "Black Codes (From The Underground)",
+  "year": 2023,
+  "artists": [
+   {
+    "id": 253392,
+    "name": "Wynton Marsalis"
+   }
+  ],
+  "labels": [
+   {
+    "id": 1866,
+    "name": "Columbia",
+    "catno": "19658795151"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": [
+   "Post Bop",
+   "Contemporary Jazz",
+   "Modal"
+  ]
+ },
+ {
+  "id": 25560640,
+  "title": "The Three Faces Of Yusef Lateef",
+  "year": 2022,
+  "artists": [
+   {
+    "id": 167055,
+    "name": "Yusef Lateef"
+   }
+  ],
+  "labels": [
+   {
+    "id": 34094,
+    "name": "Riverside Records",
+    "catno": "CR00478"
+   }
+  ],
+  "genres": [
+   "Jazz"
+  ],
+  "styles": []
+ },
+ {
+  "id": 13921939,
+  "title": "Abu Ali",
+  "year": 2019,
+  "artists": [
+   {
+    "id": 588664,
+    "name": "Ziad Rahbani"
+   }
+  ],
+  "labels": [
+   {
+    "id": 998481,
+    "name": "Wewantsounds",
+    "catno": "WWSLP27"
+   }
+  ],
+  "genres": [
+   "Funk / Soul",
+   "Folk, World, & Country"
+  ],
+  "styles": [
+   "Disco"
+  ]
+ }
+]

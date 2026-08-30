@@ -117,10 +117,21 @@ export interface SimilarRow {
   same_artist: number;
 }
 
+export interface CollectionItemRow {
+  instance_id: number;
+  release_id: number;
+  folder_id: number | null;
+  date_added: string | null;
+}
+
 export interface SyncResult {
+  /** distinct releases newly fetched */
   added: number;
+  /** distinct releases no longer owned */
   removed: number;
   unchanged: number;
+  /** collection items (physical copies) seen; may exceed distinct releases */
+  items: number;
   failed: number[];
   durationMs: number;
 }

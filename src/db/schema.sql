@@ -33,11 +33,21 @@ CREATE TABLE IF NOT EXISTS release (
   assign_method  TEXT,
   cover_path     TEXT,
   thumb_path     TEXT,
-  instance_id    INTEGER,
-  folder_id      INTEGER,
-  date_added     TEXT,
   raw_json       TEXT NOT NULL
 );
+
+-- One row per physical copy owned. A release can be owned more than once —
+-- the collection contains two copies of Bar-Kays "Money Talks" — so instances
+-- live here rather than on `release`. Browsing shows distinct releases; the
+-- copy count comes from this table.
+CREATE TABLE IF NOT EXISTS collection_item (
+  instance_id  INTEGER PRIMARY KEY,
+  release_id   INTEGER NOT NULL REFERENCES release(id) ON DELETE CASCADE,
+  folder_id    INTEGER,
+  date_added   TEXT
+);
+
+CREATE INDEX IF NOT EXISTS idx_item_release ON collection_item(release_id);
 
 CREATE TABLE IF NOT EXISTS artist (
   id    INTEGER PRIMARY KEY,

@@ -2,7 +2,8 @@
 
 **Date:** 2026-08-30
 **Status:** Approved, ready for implementation planning
-**Discogs user:** Ilboud (id 16645087) — 245 releases, 248 vinyl, 67 multi-disc
+**Discogs user:** Ilboud (id 16645087) — 245 collection items covering 244
+distinct releases (one record is owned twice), 248 vinyl, 67 multi-disc
 
 ## Purpose
 
@@ -135,8 +136,9 @@ taxonomy as JSON, which keeps it diffable in git and portable between installs.
 SQLite via `better-sqlite3`, one file on a mounted volume.
 
 ```
-release(id PK, master_id, title, year, primary_group, cover_path,
-        thumb_path, instance_id, date_added, raw_json)
+release(id PK, master_id, title, year, primary_group, assign_method,
+        cover_path, thumb_path, raw_json)
+collection_item(instance_id PK, release_id FK, folder_id, date_added)
 artist(id PK, name)
 release_artist(release_id, artist_id, seq, join_str)
 label(id PK, name)
@@ -159,6 +161,11 @@ the taxonomy tables whenever the taxonomy or the collection changes.
 
 An FTS5 virtual table indexes `track.title` with denormalized artist and album
 names, making song search a single indexed query across ~3,000 tracks.
+
+A release can be owned more than once — the collection holds two copies of
+Bar-Kays *Money Talks* — so physical copies live in `collection_item` rather
+than as columns on `release`. Browsing lists distinct releases; the copy count
+comes from that table. Group totals therefore sum to 244, not 245.
 
 ### Track positions
 
