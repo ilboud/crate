@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "discogs": {
+      "command": "npx",
+      "args": ["-y", "discogs-mcp-server"],
+      "env": {
+        "DISCOGS_PERSONAL_ACCESS_TOKEN": "PASTE_YOUR_TOKEN_HERE"
+      }
+    }
+  }
+}

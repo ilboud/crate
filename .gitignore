@@ -1,0 +1,17 @@
+# MCP server config — contains a live Discogs personal access token
+.mcp.json
+
+# Claude Code local state (per-machine permission grants, not shareable)
+.claude/settings.local.json
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# OS / editor noise
+.DS_Store
+*.swp
