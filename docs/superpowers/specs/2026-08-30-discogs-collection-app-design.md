@@ -74,7 +74,7 @@ Every album belongs to exactly **one** primary group, assigned by four tiers:
 
 | Tier | Rule | Albums |
 |---|---|---:|
-| 1 | Manual override in `overrides.json`, keyed by release id | as needed |
+| 1 | Manual override in `release_override`, keyed by release id | as needed |
 | 2 | Style majority — group matching the most of the album's styles | 202 |
 | 3 | Genre tie-break — Discogs' coarse `genre` field breaks style ties | 11 |
 | 4 | Fixed precedence, or genre alone for the 20 style-less releases | 32 |
@@ -90,7 +90,7 @@ list is clearer than heuristics that would still be wrong sometimes.
 |---|---:|---|
 | Jazz | 62 | Hard Bop, Modal, Post Bop, Cool, Free, Fusion, Soul-Jazz, Jazz-Funk |
 | Rock | 54 | Indie, Alternative, Psychedelic, Hard, Punk, Garage, Prog, Post-Punk |
-| Soul / Funk | 37 | Soul, Funk, Rhythm & Blues, Disco, Neo Soul, Gospel, Boogaloo |
+| Soul / Funk | 36 | Soul, Funk, Rhythm & Blues, Disco, Neo Soul, Gospel, Boogaloo |
 | Hip-Hop / R&B | 20 | Conscious, Boom Bap, Jazzy Hip-Hop, Pop Rap, Contemporary R&B |
 | Electronic | 18 | Downtempo, Ambient, Abstract, IDM, House, Techno, Trip Hop |
 | Folk / World | 18 | Folk, African, Afrobeat, Chanson, Country, Highlife |
@@ -101,8 +101,8 @@ list is clearer than heuristics that would still be wrong sometimes.
 | Pop | 3 | Indie Pop, Dream Pop, Alt-Pop, Lounge |
 | Reggae / Dub | 1 | Dub, Roots Reggae, Ska, Dancehall |
 
-Totals sum to exactly 245. Groups holding fewer than 3 albums are hidden from
-top-level navigation and reachable through search.
+Totals sum to 244 — the distinct releases. Groups holding fewer than 3 albums
+are hidden from top-level navigation and reachable through search.
 
 ### Editing the taxonomy
 
@@ -123,7 +123,7 @@ The admin screen supports:
 - Set a per-album override, which is tier 1 and wins over every rule
 - Toggle the "hide groups with fewer than N albums" threshold
 
-Saving triggers immediate reassignment of all 245 releases — a sub-second
+Saving triggers immediate reassignment of every release — a sub-second
 operation at this collection size — and the affected `similar` rows are
 recomputed. No sync or restart is needed.
 
