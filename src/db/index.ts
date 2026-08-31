@@ -18,6 +18,24 @@ export function openDb(path: string): Db {
 export function migrate(db: Db): void {
   const sql = readFileSync(join(here, 'schema.sql'), 'utf8');
   db.exec(sql);
+  addMissingColumns(db);
+}
+
+/**
+ * schema.sql only creates tables that do not exist, so columns added later
+ * never reach a database built by an earlier version. Add them here.
+ */
+function addMissingColumns(db: Db): void {
+  const columns = new Set(
+    (db.prepare('PRAGMA table_info(release)').all() as Array<{ name: string }>).map((c) => c.name),
+  );
+  for (const [name, type] of [
+    ['hi_path', 'TEXT'],
+    ['art_source', 'TEXT'],
+    ['art_checked_at', 'TEXT'],
+  ] as const) {
+    if (!columns.has(name)) db.exec(`ALTER TABLE release ADD COLUMN ${name} ${type}`);
+  }
 }
 
 /** Open, migrate and seed in one call — the normal entry point. */

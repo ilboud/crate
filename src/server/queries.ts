@@ -15,6 +15,7 @@ export interface GroupSummary {
 
 const ALBUM_COLUMNS = `
   r.id, r.title, r.year, r.primary_group, r.thumb_path, r.cover_path,
+  r.hi_path, r.art_source,
   (SELECT GROUP_CONCAT(a.name, ' / ')
      FROM release_artist ra JOIN artist a ON a.id = ra.artist_id
     WHERE ra.release_id = r.id) AS artist,

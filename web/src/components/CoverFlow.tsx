@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { AlbumCard } from '../api';
-import { coverUrl } from '../api';
+import { bestArt } from '../api';
 import { Sleeve } from './Sleeve';
 
 /**
@@ -158,7 +158,7 @@ export function CoverFlow({ albums, index, onIndexChange, onOpen }: Props) {
               }}
             >
               <Sleeve
-                src={coverUrl(album.cover_path ?? album.thumb_path)}
+                src={bestArt(album)}
                 title={album.title}
                 artist={album.artist}
               />

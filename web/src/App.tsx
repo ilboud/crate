@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { api, coverUrl, type AlbumCard, type Group, type Stats } from './api';
+import { api, bestArt, type AlbumCard, type Group, type Stats } from './api';
 import { CoverFlow } from './components/CoverFlow';
 import { AlbumDetail } from './components/AlbumDetail';
 import { Search } from './components/Search';
@@ -230,7 +230,7 @@ export default function App() {
             <div className="grid">
               {albums.map((a) => (
                 <button className="strip-card" key={a.id} onClick={() => open(a)}>
-                  <Sleeve src={coverUrl(a.cover_path ?? a.thumb_path)} title={a.title} artist={a.artist} />
+                  <Sleeve src={bestArt(a)} title={a.title} artist={a.artist} />
                   <b>{a.title}</b>
                   <span>{a.artist}</span>
                   <span>{a.year ?? ''}</span>

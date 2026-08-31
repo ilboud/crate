@@ -6,6 +6,9 @@ export interface AlbumCard {
   primary_group: string | null;
   thumb_path: string | null;
   cover_path: string | null;
+  /** Higher-resolution art from iTunes or Cover Art Archive, when one matched. */
+  hi_path: string | null;
+  art_source: string | null;
   copies: number;
   score?: number;
   reason?: string;
@@ -135,6 +138,16 @@ export const api = {
 };
 
 export const coverUrl = (path: string | null): string | null => (path ? `/covers/${path}` : null);
+
+/**
+ * Best available art for a large rendering: the upgraded image if one was
+ * verified, then the 600px Discogs cover, then the thumbnail.
+ */
+export const bestArt = (a: {
+  hi_path?: string | null;
+  cover_path?: string | null;
+  thumb_path?: string | null;
+}): string | null => coverUrl(a.hi_path ?? a.cover_path ?? a.thumb_path ?? null);
 
 export function duration(sec: number | null): string {
   if (sec == null) return '';

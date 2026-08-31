@@ -33,6 +33,11 @@ CREATE TABLE IF NOT EXISTS release (
   assign_method  TEXT,
   cover_path     TEXT,
   thumb_path     TEXT,
+  -- Higher-resolution art sourced outside Discogs, whose images cap at 600px.
+  -- Null means no confident match was found and cover_path still applies.
+  hi_path        TEXT,
+  art_source     TEXT,
+  art_checked_at TEXT,
   raw_json       TEXT NOT NULL
 );
 

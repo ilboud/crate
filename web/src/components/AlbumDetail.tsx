@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { api, coverUrl, duration, totalDuration, type Album, type AlbumCard } from '../api';
+import { api, bestArt, duration, totalDuration, type Album, type AlbumCard } from '../api';
 import { Sleeve } from './Sleeve';
 
 /**
@@ -92,7 +92,7 @@ export function AlbumDetail({
               </div>
             ))}
             <Sleeve
-              src={coverUrl(album.cover_path ?? album.thumb_path)}
+              src={bestArt(album)}
               title={album.title}
               artist={album.artist}
             />
@@ -181,7 +181,7 @@ function Strip({ albums, onOpen }: { albums: AlbumCard[]; onOpen: (a: AlbumCard)
     <div className="strip">
       {albums.map((a) => (
         <button className="strip-card" key={a.id} onClick={() => onOpen(a)}>
-          <Sleeve src={coverUrl(a.cover_path ?? a.thumb_path)} title={a.title} artist={a.artist} />
+          <Sleeve src={bestArt(a)} title={a.title} artist={a.artist} />
           <b>{a.title}</b>
           <span>{a.artist}</span>
           {a.reason && <span>{a.reason}</span>}

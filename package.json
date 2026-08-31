@@ -12,7 +12,8 @@
     "build": "tsc -p tsconfig.json && cp src/db/schema.sql dist/src/db/ && npm --prefix web run build",
     "start": "node dist/src/server/index.js",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "art": "tsx src/art/cli.ts"
   },
   "dependencies": {
     "better-sqlite3": "^11.7.0",
