@@ -181,7 +181,7 @@ function Strip({ albums, onOpen }: { albums: AlbumCard[]; onOpen: (a: AlbumCard)
     <div className="strip">
       {albums.map((a) => (
         <button className="strip-card" key={a.id} onClick={() => onOpen(a)}>
-          <Sleeve src={coverUrl(a.thumb_path ?? a.cover_path)} title={a.title} artist={a.artist} />
+          <Sleeve src={coverUrl(a.cover_path ?? a.thumb_path)} title={a.title} artist={a.artist} />
           <b>{a.title}</b>
           <span>{a.artist}</span>
           {a.reason && <span>{a.reason}</span>}

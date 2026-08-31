@@ -482,9 +482,17 @@ a { color: inherit; }
   overflow-x: auto;
   padding-bottom: 8px;
   scrollbar-width: thin;
+  align-items: start;
 }
 .strip-card { text-align: left; }
-.strip-card .sleeve { box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45); aspect-ratio: 1; }
+/* height:auto is load-bearing: the base .sleeve rule sets height:100%, which a
+   stretched grid row would honour over aspect-ratio, squashing square art into
+   a portrait box and cropping its edges away. */
+.strip-card .sleeve {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+  aspect-ratio: 1;
+  height: auto;
+}
 .strip-card b { display: block; font-size: 12px; font-weight: 600; margin-top: 7px; line-height: 1.25; }
 .strip-card span { display: block; font-family: var(--mono); font-size: 10px; color: var(--dust); margin-top: 2px; }
 .strip-card:hover b { color: var(--shellac); }
@@ -497,6 +505,7 @@ a { color: inherit; }
   grid-template-columns: repeat(auto-fill, minmax(clamp(120px, 22vw, 178px), 1fr));
   gap: clamp(12px, 2.4vw, 22px);
   padding: var(--pad);
+  align-items: start;
 }
 
 .section-head {
@@ -676,3 +685,62 @@ a { color: inherit; }
 }
 
 .savedmark { font-family: var(--mono); font-size: 11px; color: var(--brass); }
+
+/* ---------------------------------------------------------- shelf filters */
+
+.filterbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 12px var(--pad) 0;
+}
+
+.filterbar label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.filterbar label > span {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dust);
+}
+
+.filterbar select {
+  background: var(--crate);
+  color: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 6px 26px 6px 9px;
+  font-family: var(--body);
+  font-size: 13px;
+  cursor: pointer;
+  /* Native arrow is invisible on a dark control in Safari, so draw one. */
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--dust) 50%),
+                    linear-gradient(135deg, var(--dust) 50%, transparent 50%);
+  background-position: calc(100% - 14px) 52%, calc(100% - 9px) 52%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  max-width: 62vw;
+}
+.filterbar select:hover { border-color: var(--line-strong); }
+.filterbar select:disabled { opacity: 0.45; cursor: default; }
+.filterbar select:focus-visible { outline: 2px solid var(--brass); outline-offset: 1px; }
+
+.activefilter {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--brass);
+  border: 1px solid rgba(201, 162, 39, 0.35);
+  border-radius: 999px;
+  padding: 3px 9px;
+}
+
+@media (max-width: 560px) {
+  .filterbar label { flex: 1 1 100%; }
+  .filterbar select { flex: 1; max-width: none; }
+}

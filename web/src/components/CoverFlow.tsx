@@ -158,7 +158,7 @@ export function CoverFlow({ albums, index, onIndexChange, onOpen }: Props) {
               }}
             >
               <Sleeve
-                src={coverUrl(album.thumb_path ?? album.cover_path)}
+                src={coverUrl(album.cover_path ?? album.thumb_path)}
                 title={album.title}
                 artist={album.artist}
               />

@@ -27,6 +27,8 @@ export default function App() {
   const [sort, setSort] = useState<Sort>('artist');
   const [index, setIndex] = useState(0);
   const [openId, setOpenId] = useState<number | null>(null);
+  const [style, setStyle] = useState<string | undefined>();
+  const [styles, setStyles] = useState<Array<{ style: string; count: number }>>([]);
   const [query, setQuery] = useState('');
   const [loadError, setLoadError] = useState<string | null>(null);
 
@@ -41,7 +43,7 @@ export default function App() {
     let live = true;
     setLoadError(null);
     api
-      .browse({ group, artist, sort })
+      .browse({ group, style, artist, sort })
       .then((a) => {
         if (!live) return;
         setAlbums(a);
@@ -49,13 +51,28 @@ export default function App() {
       })
       .catch((e: Error) => { if (live) setLoadError(e.message); });
     return () => { live = false; };
-  }, [group, artist, sort]);
+  }, [group, style, artist, sort]);
+
+  // Styles are scoped to the chosen group, so the second dropdown only ever
+  // offers styles that can actually narrow the current list.
+  useEffect(() => {
+    let live = true;
+    api.styles(group).then((s) => { if (live) setStyles(s); }).catch(() => undefined);
+    return () => { live = false; };
+  }, [group]);
+
+  /** Changing the group invalidates the style under it. */
+  const pickGroup = useCallback((name: string | undefined) => {
+    setArtist(undefined);
+    setStyle(undefined);
+    setGroup(name);
+  }, []);
 
   const open = useCallback((album: AlbumCard) => setOpenId(album.id), []);
 
   const visibleGroups = useMemo(() => groups.filter((g) => !g.hidden && g.count > 0), [groups]);
 
-  const filterLabel = artist ?? group ?? 'The whole crate';
+  const filterLabel = artist ?? style ?? group ?? 'The whole crate';
 
   return (
     <div className="app">
@@ -145,10 +162,7 @@ export default function App() {
                 <GenreRail
                   groups={visibleGroups}
                   active={group}
-                  onPick={(name) => {
-                    setArtist(undefined);
-                    setGroup(name);
-                  }}
+                  onPick={pickGroup}
                 />
               </div>
             )}
@@ -168,20 +182,55 @@ export default function App() {
                 ))}
               </div>
             </div>
-            {(group || artist) && (
-              <div style={{ padding: '10px 24px 0' }}>
+            <div className="filterbar">
+              <label>
+                <span>Genre</span>
+                <select
+                  value={group ?? ''}
+                  onChange={(e) => pickGroup(e.target.value || undefined)}
+                >
+                  <option value="">All genres</option>
+                  {groups
+                    .filter((g) => g.count > 0)
+                    .map((g) => (
+                      <option key={g.name} value={g.name}>
+                        {g.name} ({g.count})
+                      </option>
+                    ))}
+                </select>
+              </label>
+
+              <label>
+                <span>Style</span>
+                <select
+                  value={style ?? ''}
+                  onChange={(e) => setStyle(e.target.value || undefined)}
+                  disabled={styles.length === 0}
+                >
+                  <option value="">{group ? `All ${group} styles` : 'All styles'}</option>
+                  {styles.map((s) => (
+                    <option key={s.style} value={s.style}>
+                      {s.style} ({s.count})
+                    </option>
+                  ))}
+                </select>
+              </label>
+
+              {artist && <span className="activefilter">Artist: {artist}</span>}
+
+              {(group || style || artist) && (
                 <button
                   className="navbtn"
-                  onClick={() => { setGroup(undefined); setArtist(undefined); }}
+                  onClick={() => { setGroup(undefined); setStyle(undefined); setArtist(undefined); }}
                 >
-                  Clear filter
+                  Clear
                 </button>
-              </div>
-            )}
+              )}
+            </div>
             <div className="grid">
               {albums.map((a) => (
                 <button className="strip-card" key={a.id} onClick={() => open(a)}>
-                  <Sleeve src={coverUrl(a.thumb_path ?? a.cover_path)} title={a.title} artist={a.artist} />
+                  <Sleeve src={coverUrl(a.cover_path ?? a.thumb_path)} title={a.title} artist={a.artist} />
                   <b>{a.title}</b>
                   <span>{a.artist}</span>
                   <span>{a.year ?? ''}</span>
