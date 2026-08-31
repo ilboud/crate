@@ -21,8 +21,10 @@ export interface ArtCandidateSource {
 
 export interface UpgradeOptions {
   coversDir: string;
-  /** Re-examine records already checked. */
+  /** Re-examine every record, including ones already upgraded. */
   force?: boolean;
+  /** Re-examine only records that have no upgraded art yet. */
+  retry?: boolean;
   /** Minimum width to bother storing; below this the Discogs art is as good. */
   minWidth?: number;
   onProgress?: (done: number, total: number, label: string) => void;
@@ -96,7 +98,9 @@ export async function upgradeArt(
       hi_path: string | null; art_checked_at: string | null; artist: string | null;
     }>;
 
-  const todo = releases.filter((r) => opts.force || !r.art_checked_at);
+  const todo = releases.filter(
+    (r) => opts.force || !r.art_checked_at || (opts.retry && !r.hi_path),
+  );
 
   const result: UpgradeResult = {
     upgraded: 0, kept: 0, failed: 0, bySource: {}, rejections: [],

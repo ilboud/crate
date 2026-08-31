@@ -14,6 +14,9 @@ async function main(): Promise<void> {
   const dbPath = process.env.DB_PATH ?? 'data/collection.db';
   const coversDir = process.env.COVERS_DIR ?? 'covers';
   const force = process.argv.includes('--force');
+  // --retry re-examines only what has no upgraded art, which is the cheap way
+  // to pick up matcher improvements without refetching what already worked.
+  const retry = process.argv.includes('--retry');
 
   const db = initDb(dbPath);
 
@@ -27,7 +30,8 @@ async function main(): Promise<void> {
     }
   };
 
-  console.log(`Upgrading cover art${force ? ' (forced)' : ''} — this is rate-limited, expect a few minutes.`);
+  const mode = force ? ' (forced)' : retry ? ' (retrying records without upgraded art)' : '';
+  console.log(`Upgrading cover art${mode} — this is rate-limited, expect a few minutes.`);
 
   const result = await upgradeArt(
     db,
@@ -35,6 +39,7 @@ async function main(): Promise<void> {
     {
       coversDir,
       force,
+      retry,
       onProgress: (done, total, label) => {
         process.stdout.write(`\r  ${done}/${total}  ${label.slice(0, 44)}`.padEnd(64));
       },

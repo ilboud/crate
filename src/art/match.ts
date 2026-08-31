@@ -16,7 +16,15 @@ export function normalise(raw: string): string {
     .replace(/[̀-ͯ]/g, '')
     // Discogs disambiguates same-named artists with a trailing "(2)".
     .replace(/\(\d+\)/g, ' ')
-    // Edition noise that differs between services but not between records.
+    // Drop a whole parenthetical when it is an edition note, so a trailing
+    // year goes with it: "Acid (Remastered 2024)" must reduce to "acid", not
+    // to "acid 2024", which wrecks the score on a short title. Album titles
+    // that are genuinely years — "1973 - 1980" — carry no keyword and survive.
+    .replace(
+      /[([][^)\]]*\b(remaster|reissue|deluxe|expanded|anniversar|edition|version|mono|stereo|explicit|clean|bonus|digital|remix|mix)\w*\b[^)\]]*[)\]]/g,
+      ' ',
+    )
+    // The same words outside brackets.
     .replace(
       /\b(remaster(ed)?|reissue|deluxe|expanded|anniversary|edition|version|mono|stereo|explicit|clean|bonus track[s]?|digital|remix)\b/g,
       ' ',

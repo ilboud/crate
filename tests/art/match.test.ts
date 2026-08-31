@@ -21,6 +21,17 @@ describe('normalise', () => {
     expect(normalise('Barbara (5)')).toBe(normalise('Barbara'));
   });
 
+  it('drops a trailing year that rides along with an edition note', () => {
+    // Real rejection: "Acid" vs "Acid (Remastered 2024)" scored 0.55 because
+    // the year survived, which is fatal on a short title.
+    expect(normalise('Acid (Remastered 2024)')).toBe(normalise('Acid'));
+    expect(normalise('Sahara [2019 Reissue]')).toBe(normalise('Sahara'));
+  });
+
+  it('keeps a title that is genuinely a year range', () => {
+    expect(normalise('1973 - 1980')).toBe('1973 1980');
+  });
+
   it('folds accents so ASCII and accented spellings match', () => {
     expect(normalise('Sigur Rós')).toBe(normalise('Sigur Ros'));
     expect(normalise('Amara Touré')).toBe(normalise('Amara Toure'));
@@ -58,6 +69,12 @@ describe('verify', () => {
 
   it('accepts a remastered edition of the same album', () => {
     expect(verify(target, cand('A Tribe Called Quest', 'The Low End Theory (Remastered)')).ok).toBe(true);
+  });
+
+  it('accepts a short title carrying a remaster year', () => {
+    const v = verify({ artist: 'Ray Barretto', title: 'Acid' },
+      cand('Ray Barretto', 'Acid (Remastered 2024)'));
+    expect(v.ok).toBe(true);
   });
 
   it('rejects the right title by the wrong artist', () => {

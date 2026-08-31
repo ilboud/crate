@@ -65,6 +65,28 @@ mirrored art, both bind-mounted so they survive a rebuild.
 To reach it away from home, use Tailscale or the Synology VPN. Do not forward a
 port — there is no login, and the token behind it can change your collection.
 
+## Cover art
+
+Discogs caps its images at 600px, which is soft on a retina cover flow.
+
+```bash
+npm run art             # fetch higher-resolution art; rate-limited, ~10 min
+npm run art -- --retry  # re-check only records that have no upgrade yet
+npm run art -- --force  # re-check everything
+```
+
+Art comes from Cover Art Archive (matched by barcode through MusicBrainz —
+exact, so trusted outright) and iTunes (matched by search, so every candidate
+must clear separate artist and title similarity thresholds). A record keeps its
+Discogs art unless a candidate is both verified and measurably larger.
+
+Upgrades land in `covers/{id}-hi.jpg` and a separate column; `cover_path` is
+never overwritten. To undo one, delete the file and clear `hi_path`.
+
+On this collection: 157 of 243 upgraded to 1200px. The rest kept Discogs art,
+mostly because the candidate was no larger — which is the right outcome, not a
+failure.
+
 ## Keeping it current
 
 ```bash
@@ -120,7 +142,7 @@ any unrecognised mutating verb. A prompt instruction is not a control.
 ## Development
 
 ```bash
-npm test          # 93 tests
+npm test          # 124 tests
 npx tsc --noEmit  # typecheck
 ```
 

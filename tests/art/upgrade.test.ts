@@ -165,6 +165,29 @@ describe('upgradeArt', () => {
     expect(calls).toBe(first);
   });
 
+  it('retry re-examines only records with no upgraded art', async () => {
+    let seen: string[] = [];
+    const s = sources({
+      searchItunes: async (_a: string, title: string) => {
+        seen.push(title);
+        // Only the first record gets a usable match on the initial pass.
+        return title.includes('Low End')
+          ? [{ artist: 'A Tribe Called Quest', title,
+               imageUrl: 'https://example.test/x.jpg', source: 'itunes' as const }]
+          : [];
+      },
+    });
+
+    await upgradeArt(db, s, { coversDir });
+    expect(hiOf(1).hi_path).toBe('1-hi.jpg');
+    expect(hiOf(2).hi_path).toBeNull();
+
+    seen = [];
+    await upgradeArt(db, s, { coversDir, retry: true });
+    // The already-upgraded record is left alone; only the other is retried.
+    expect(seen).toEqual(['Breaking Atoms']);
+  });
+
   it('rechecks everything when forced', async () => {
     let calls = 0;
     const s = sources({ searchItunes: async () => { calls++; return []; } });
