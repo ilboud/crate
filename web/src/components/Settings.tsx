@@ -255,7 +255,10 @@ function ChatPanel() {
           {p.provider === 'anthropic' && (
             <>
               <p className="fieldhelp" style={{ margin: '12px 0 4px' }}>
-                Workspace ID — only needed for a workspace-scoped key. Leave blank otherwise.
+                Workspace ID — needed only if your key covers <b>all workspaces</b>, since
+                each request then has to say which one it acts in. A key scoped to a single
+                workspace needs nothing here. Copy it from the ID column of Settings →
+                Workspaces in the Claude Console.
               </p>
               <div className="keyrow">
                 <input
