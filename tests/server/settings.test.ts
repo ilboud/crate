@@ -12,7 +12,9 @@ import {
   readBackendChoice,
   readFeel,
   resolveKey,
+  readWorkspaceId,
   storeKey,
+  storeWorkspaceId,
   writeFeel,
 } from '../../src/server/settings.js';
 import type { Express } from 'express';
@@ -130,6 +132,35 @@ describe('key storage', () => {
   });
 });
 
+describe('anthropic workspace id', () => {
+  let db: Db;
+  const saved = { ...process.env };
+  beforeEach(() => {
+    db = initDb(':memory:');
+    delete process.env.ANTHROPIC_WORKSPACE_ID;
+  });
+  afterEach(() => { db.close(); process.env = { ...saved }; });
+
+  it('is absent until set', () => {
+    expect(providerStatus(db, 'anthropic').workspaceId).toBeNull();
+  });
+
+  it('round-trips, and is returned since it is not a secret', () => {
+    storeWorkspaceId(db, 'wrkspc_abc123');
+    expect(providerStatus(db, 'anthropic').workspaceId).toBe('wrkspc_abc123');
+  });
+
+  it('lets the environment win', () => {
+    storeWorkspaceId(db, 'wrkspc_stored');
+    process.env.ANTHROPIC_WORKSPACE_ID = 'wrkspc_env';
+    expect(readWorkspaceId(db)).toBe('wrkspc_env');
+  });
+
+  it('is not offered for OpenAI', () => {
+    expect(providerStatus(db, 'openai').workspaceId).toBeUndefined();
+  });
+});
+
 describe('settings API', () => {
   let db: Db;
   let app: Express;
@@ -224,6 +255,28 @@ describe('settings API', () => {
 
   it('rejects an invalid feel value', async () => {
     await request(app).put('/api/admin/settings/feel').send({ momentum: 'nope' }).expect(400);
+  });
+
+  it('saves a workspace id for an identity-linked key', async () => {
+    await request(app)
+      .put('/api/admin/settings/chat')
+      .send({ workspaceId: 'wrkspc_abc123' })
+      .expect(200);
+    const res = await request(app).get('/api/admin/settings').expect(200);
+    const anthropic = res.body.chat.providers.find(
+      (p: { provider: string }) => p.provider === 'anthropic',
+    );
+    expect(anthropic.workspaceId).toBe('wrkspc_abc123');
+  });
+
+  it('clears a workspace id', async () => {
+    await request(app).put('/api/admin/settings/chat').send({ workspaceId: 'wrkspc_x' });
+    await request(app).put('/api/admin/settings/chat').send({ workspaceId: '' }).expect(200);
+    const res = await request(app).get('/api/admin/settings').expect(200);
+    const anthropic = res.body.chat.providers.find(
+      (p: { provider: string }) => p.provider === 'anthropic',
+    );
+    expect(anthropic.workspaceId).toBeNull();
   });
 
   it('switches the chat provider', async () => {

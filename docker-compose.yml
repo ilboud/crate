@@ -33,7 +33,7 @@ services:
       # Chat. Set whichever you use; CHAT_BACKEND picks between them.
       CHAT_BACKEND: ${CHAT_BACKEND:-anthropic}
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
-      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-claude-sonnet-5}
+      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-claude-opus-5}
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
       OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o}
       MCP_URL: http://discogs-mcp:3001/mcp

@@ -6,12 +6,12 @@ import { McpClient } from '../../chat/mcp.js';
 import {
   LOCAL_TOOLS,
   LOCAL_TOOL_NAMES,
-  SYSTEM_PROMPT,
   isToolAllowed,
   runLocalTool,
 } from '../../chat/tools.js';
+import { buildSystemPrompt, loadCorpus, verifyAnswer } from '../../chat/grounding.js';
 import type { ChatBackend, ChatMessage, ToolSpec } from '../../chat/backend.js';
-import { providerStatus, readBackendChoice, resolveKey, type Provider } from '../settings.js';
+import { providerStatus, readBackendChoice, readWorkspaceId, resolveKey, type Provider } from '../settings.js';
 
 export interface ChatConfig {
   backend?: ChatBackend;
@@ -44,7 +44,7 @@ function build(provider: Provider, key: string, db: Db): ChatBackend {
   const model = providerStatus(db, provider).model;
   return provider === 'openai'
     ? new OpenAIBackend(key, model)
-    : new AnthropicBackend(key, model);
+    : new AnthropicBackend(key, model, fetch, readWorkspaceId(db) ?? undefined);
 }
 
 export function mcpFromEnv(): McpClient | null {
@@ -107,6 +107,12 @@ export function chatRoutes(db: Db, config: ChatConfig = {}): Router {
       res.write(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`);
     };
 
+    // Rebuilt per request so a sync or taxonomy edit is reflected immediately.
+    // The text is stable between changes, which is what lets it cache.
+    const system = buildSystemPrompt(db);
+    const corpus = loadCorpus(db);
+    let answer = '';
+
     try {
       const tools: ToolSpec[] = [
         ...LOCAL_TOOLS.map((t) => ({
@@ -131,9 +137,10 @@ export function chatRoutes(db: Db, config: ChatConfig = {}): Router {
         const calls: Array<{ id: string; name: string; arguments: Record<string, unknown> }> = [];
         let text = '';
 
-        for await (const delta of backend.send(messages, tools, SYSTEM_PROMPT)) {
+        for await (const delta of backend.send(messages, tools, system)) {
           if (delta.type === 'text') {
             text += delta.text;
+            answer += delta.text;
             send('text', { text: delta.text });
           } else if (delta.type === 'tool_call') {
             calls.push(delta.call);
@@ -141,7 +148,17 @@ export function chatRoutes(db: Db, config: ChatConfig = {}): Router {
         }
 
         if (calls.length === 0) {
-          send('done', { turns: turn + 1 });
+          // Check what the answer actually claimed. The prompt should prevent
+          // an invented record, but a check that runs regardless is the only
+          // thing that catches it when the prompt does not.
+          const check = verifyAnswer(answer, corpus);
+          if (check.unverified.length > 0) {
+            send('grounding', {
+              unverified: check.unverified,
+              checked: check.claims.length,
+            });
+          }
+          send('done', { turns: turn + 1, checked: check.claims.length });
           return res.end();
         }
 
@@ -177,6 +194,10 @@ export function chatRoutes(db: Db, config: ChatConfig = {}): Router {
         }
       }
 
+      const check = verifyAnswer(answer, corpus);
+      if (check.unverified.length > 0) {
+        send('grounding', { unverified: check.unverified, checked: check.claims.length });
+      }
       send('done', { turns: maxTurns, note: 'reached the tool-call limit' });
       return res.end();
     } catch (err) {

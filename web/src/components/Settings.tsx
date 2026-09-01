@@ -252,6 +252,28 @@ function ChatPanel() {
             )}
           </div>
 
+          {p.provider === 'anthropic' && (
+            <>
+              <p className="fieldhelp" style={{ margin: '12px 0 4px' }}>
+                Workspace ID — only needed for a workspace-scoped key. Leave blank otherwise.
+              </p>
+              <div className="keyrow">
+                <input
+                  type="text"
+                  placeholder="wrkspc_…"
+                  defaultValue={p.workspaceId ?? ''}
+                  aria-label="Anthropic workspace ID"
+                  onBlur={(e) =>
+                    run(
+                      () => api.saveChat({ workspaceId: e.target.value.trim() || null }),
+                      'Workspace saved',
+                    )
+                  }
+                />
+              </div>
+            </>
+          )}
+
           <p className="fieldhelp" style={{ margin: '12px 0 4px' }}>
             Model
           </p>

@@ -10,6 +10,7 @@ import {
   readFeel,
   storeKey,
   storeModel,
+  storeWorkspaceId,
   writeBackendChoice,
   writeFeel,
   type Provider,
@@ -85,7 +86,14 @@ export function adminRoutes(db: Db): Router {
   });
 
   r.put('/settings/chat', (req, res) => {
-    const { backend, provider, model } = req.body ?? {};
+    const { backend, provider, model, workspaceId } = req.body ?? {};
+    if (workspaceId !== undefined) {
+      if (workspaceId !== null && typeof workspaceId !== 'string') {
+        return res.status(400).json({ error: 'workspaceId must be a string, or null to clear' });
+      }
+      const trimmed = typeof workspaceId === 'string' ? workspaceId.trim() : '';
+      storeWorkspaceId(db, trimmed === '' ? null : trimmed);
+    }
     if (backend !== undefined) {
       if (!isProvider(backend)) {
         return res.status(400).json({ error: 'backend must be anthropic or openai' });

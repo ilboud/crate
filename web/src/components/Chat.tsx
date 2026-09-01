@@ -5,6 +5,10 @@ interface Turn {
   role: 'you' | 'assistant';
   text: string;
   tools: string[];
+  /** Quoted titles in the answer that are not in the collection. */
+  unverified: string[];
+  /** How many title claims were checked against the database. */
+  checked: number;
 }
 
 /**
@@ -32,8 +36,8 @@ export function Chat() {
     const question = input.trim();
     if (!question || busy) return;
 
-    const history = [...turns, { role: 'you' as const, text: question, tools: [] }];
-    setTurns([...history, { role: 'assistant', text: '', tools: [] }]);
+    const history = [...turns, { role: 'you' as const, text: question, tools: [], unverified: [], checked: 0 }];
+    setTurns([...history, { role: 'assistant', text: '', tools: [], unverified: [], checked: 0 }]);
     setInput('');
     setBusy(true);
 
@@ -75,11 +79,19 @@ export function Chat() {
           if (line.startsWith('event:')) { event = line.slice(6).trim(); continue; }
           if (!line.startsWith('data:')) continue;
 
-          const data = JSON.parse(line.slice(5).trim()) as Record<string, string>;
-          if (event === 'text') update((t) => ({ ...t, text: t.text + data.text }));
-          else if (event === 'tool') update((t) => ({ ...t, tools: [...t.tools, data.name!] }));
-          else if (event === 'warning' || event === 'error') {
-            update((t) => ({ ...t, text: `${t.text}\n\n${data.message}` }));
+          const data = JSON.parse(line.slice(5).trim()) as Record<string, unknown>;
+          if (event === 'text') update((t) => ({ ...t, text: t.text + String(data.text) }));
+          else if (event === 'tool') update((t) => ({ ...t, tools: [...t.tools, String(data.name)] }));
+          else if (event === 'grounding') {
+            update((t) => ({
+              ...t,
+              unverified: (data.unverified as string[]) ?? [],
+              checked: Number(data.checked ?? 0),
+            }));
+          } else if (event === 'done') {
+            update((t) => ({ ...t, checked: Number(data.checked ?? t.checked) }));
+          } else if (event === 'warning' || event === 'error') {
+            update((t) => ({ ...t, text: `${t.text}\n\n${String(data.message)}` }));
           }
         }
       }
@@ -112,6 +124,14 @@ export function Chat() {
               </div>
             ))}
             <p>{t.text || (busy && i === turns.length - 1 ? '…' : '')}</p>
+
+            {t.unverified.length > 0 && (
+              <div className="ungrounded">
+                <b>Not in your collection:</b>{' '}
+                {t.unverified.map((u) => `“${u}”`).join(', ')}
+                <span> — checked against your records and tracks.</span>
+              </div>
+            )}
           </div>
         ))}
       </div>

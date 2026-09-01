@@ -126,16 +126,12 @@ export function runLocalTool(db: Db, name: string, args: Record<string, unknown>
   return tool.run(db, args);
 }
 
-export const SYSTEM_PROMPT = `You help someone explore their personal vinyl record collection.
-
-Prefer the local tools (search_my_collection, browse_my_collection, get_album_details,
-collection_overview) for anything about what they own — those are instant and authoritative.
-Use the Discogs tools only for information the local index cannot answer: pressing variants,
-other releases by an artist, marketplace data, or details of records not in the collection.
-
-Be concise and concrete. Refer to records by artist and title. When you mention a specific
-copy the user owns, include the label and catalogue number if it helps distinguish pressings.
-If a search returns nothing, say so plainly rather than guessing.
-
-You cannot add, move or delete records. If asked to, explain that those changes are made on
-Discogs directly.`;
+/**
+ * The system prompt now lives in grounding.ts, where it is built per request
+ * with the album index embedded. Kept here only as the fallback used when no
+ * database is available.
+ */
+export const SYSTEM_PROMPT = `You help someone explore their personal vinyl collection.
+Use the local tools for anything about what they own; use the Discogs tools only for
+information the local index cannot answer. Never claim they own a record you have not
+seen in a tool result.`;

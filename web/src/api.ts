@@ -87,6 +87,8 @@ export interface ProviderStatus {
   /** Masked, e.g. "••••4f2a". Never the key itself. */
   hint: string | null;
   model: string;
+  /** Anthropic only. Identifies a workspace; not a secret. */
+  workspaceId?: string | null;
 }
 
 export interface AdminSettings {
@@ -151,7 +153,7 @@ export const api = {
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ provider, key }),
     }),
-  saveChat: (update: { backend?: string; provider?: string; model?: string }) =>
+  saveChat: (update: { backend?: string; provider?: string; model?: string; workspaceId?: string | null }) =>
     json<unknown>('/api/admin/settings/chat', {
       method: 'PUT',
       headers: { 'content-type': 'application/json' },

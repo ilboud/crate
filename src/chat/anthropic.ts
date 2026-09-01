@@ -18,11 +18,19 @@ interface AnthropicBlock {
 /** Anthropic Messages API with streaming and tool use. */
 export class AnthropicBackend implements ChatBackend {
   readonly name = 'anthropic';
+  /** Populated per request; lets the caller confirm the cache is being hit. */
+  lastUsage: Record<string, number> | null = null;
 
   constructor(
     private readonly apiKey: string,
-    private readonly model = 'claude-sonnet-5',
+    private readonly model = 'claude-opus-5',
     private readonly fetchImpl: typeof fetch = fetch,
+    /**
+     * Identity-linked keys are scoped to a workspace and the API rejects them
+     * without this header: "anthropic-workspace-id is required when
+     * authenticating with an identity-linked API key". Ordinary keys ignore it.
+     */
+    private readonly workspaceId?: string,
   ) {}
 
   async *send(
@@ -36,12 +44,16 @@ export class AnthropicBackend implements ChatBackend {
         'content-type': 'application/json',
         'x-api-key': this.apiKey,
         'anthropic-version': '2023-06-01',
+        ...(this.workspaceId ? { 'anthropic-workspace-id': this.workspaceId } : {}),
       },
       body: JSON.stringify({
         model: this.model,
         max_tokens: 2048,
         stream: true,
-        system,
+        // The system prompt carries the whole album index, so caching it is
+        // what keeps this affordable: a cache read is ~0.1x the input rate,
+        // turning ~1.8c per message into ~0.18c.
+        system: [{ type: 'text', text: system, cache_control: { type: 'ephemeral' } }],
         messages: toAnthropicMessages(messages),
         tools: tools.map((t) => ({
           name: t.name,
@@ -94,6 +106,9 @@ export class AnthropicBackend implements ChatBackend {
       } else if (type === 'message_delta') {
         const delta = event.delta as { stop_reason?: string };
         if (delta?.stop_reason) stopReason = delta.stop_reason;
+      } else if (type === 'message_start') {
+        const usage = (event.message as { usage?: Record<string, number> })?.usage;
+        if (usage) this.lastUsage = usage;
       }
     }
 

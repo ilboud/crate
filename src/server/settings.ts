@@ -115,10 +115,12 @@ export interface ProviderStatus {
   source: 'env' | 'stored' | null;
   hint: string | null;
   model: string;
+  /** Anthropic only: workspace id for an identity-linked key, if set. */
+  workspaceId?: string | null;
 }
 
 export const DEFAULT_MODELS: Record<Provider, string> = {
-  anthropic: 'claude-sonnet-5',
+  anthropic: 'claude-opus-5',
   openai: 'gpt-4o',
 };
 
@@ -141,6 +143,8 @@ export function providerStatus(db: Db, provider: Provider): ProviderStatus {
     source: key === null ? null : fromEnv ? 'env' : 'stored',
     hint: maskKey(key),
     model: getSetting(db, `${provider}_model`, DEFAULT_MODELS[provider]),
+    // Not a secret — it identifies a workspace, it does not authenticate.
+    ...(provider === 'anthropic' ? { workspaceId: readWorkspaceId(db) } : {}),
   };
 }
 
@@ -150,6 +154,21 @@ export function storeKey(db: Db, provider: Provider, key: string | null): void {
 
 export function storeModel(db: Db, provider: Provider, model: string): void {
   setSetting(db, `${provider}_model`, model.trim() || DEFAULT_MODELS[provider]);
+}
+
+/**
+ * Workspace id for an identity-linked Anthropic key. Optional: ordinary keys
+ * do not need one, and the API rejects identity-linked keys without it.
+ */
+export function readWorkspaceId(db: Db): string | null {
+  const fromEnv = process.env.ANTHROPIC_WORKSPACE_ID;
+  if (fromEnv) return fromEnv;
+  const stored = getSetting(db, 'anthropic_workspace_id', '');
+  return stored === '' ? null : stored;
+}
+
+export function storeWorkspaceId(db: Db, id: string | null): void {
+  setSetting(db, 'anthropic_workspace_id', id ?? '');
 }
 
 export function readBackendChoice(db: Db): Provider {
