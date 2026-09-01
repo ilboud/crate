@@ -20,6 +20,18 @@ describe('explainBackendError', () => {
     expect(out).toContain('Settings');
   });
 
+  it('explains a workspace that does not exist or is not accessible', () => {
+    // The documented 404 for an unknown workspace or one the key cannot reach.
+    const out = explainBackendError('404 not_found_error: Workspace `wrkspc_01ABC` not found.');
+    expect(out).toContain('not found');
+    expect(out).toContain('Settings → Workspaces');
+  });
+
+  it('points at the ID column, which is where the Console actually shows it', () => {
+    const out = explainBackendError('anthropic-workspace-id is required when authenticating');
+    expect(out).toContain('ID column');
+  });
+
   it('explains a bad key', () => {
     expect(explainBackendError('401 authentication_error: invalid x-api-key'))
       .toContain('API key was rejected');

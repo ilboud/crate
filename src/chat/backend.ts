@@ -52,17 +52,23 @@ export class ChatBackendError extends Error {
 export function explainBackendError(raw: string): string {
   if (/anthropic-workspace-id is required/i.test(raw)) {
     return (
-      'This Anthropic key is scoped to all workspaces, so each request has to name ' +
-      'the workspace it acts in. Open Settings → Chat and paste your workspace ID ' +
-      '(it starts with "wrkspc_" and appears in the workspace URL in the Anthropic ' +
-      'Console). Alternatively, create a key scoped to a single workspace, which ' +
-      'needs no ID.'
+      'This Anthropic key works across all workspaces, so every request has to name ' +
+      'the one it acts in. Copy the "wrkspc_…" value from the ID column of ' +
+      'Settings → Workspaces in the Claude Console, and paste it under Settings → Chat ' +
+      'here. Alternatively, create a key scoped to a single workspace, which needs no ID.'
+    );
+  }
+  if (/Workspace `[^`]+` not found|workspace .* not found/i.test(raw)) {
+    return (
+      'That workspace was not found, or this key\'s account does not have access to ' +
+      'it. Check the ID against the ID column in Settings → Workspaces in the Claude ' +
+      'Console, and that your account is a member of that workspace.'
     );
   }
   if (/workspace-id header must be a valid/i.test(raw)) {
     return (
-      'That workspace ID was not accepted. Check it in Settings → Chat — it should ' +
-      'start with "wrkspc_" and match the workspace URL in the Anthropic Console.'
+      'That workspace ID was not accepted. It should start with "wrkspc_" — copy it ' +
+      'from the ID column in Settings → Workspaces in the Claude Console.'
     );
   }
   if (/authentication|invalid x-api-key|401/i.test(raw)) {
