@@ -8,6 +8,8 @@ PRAGMA foreign_keys = ON;
 CREATE TABLE IF NOT EXISTS taxonomy_group (
   id          INTEGER PRIMARY KEY,
   name        TEXT NOT NULL UNIQUE,
+  -- Tie-break PRECEDENCE for assignment, ordered specific to general — not a
+  -- display order. Menus sort by name; changing this re-files records.
   sort_order  INTEGER NOT NULL DEFAULT 0,
   hidden      INTEGER NOT NULL DEFAULT 0
 );

@@ -69,6 +69,8 @@ export function loadTaxonomy(db: Db): Taxonomy {
     )
     .all() as Array<{ genre: string; name: string }>;
 
+  // sort_order, not name: this is the tie-break precedence, specific to
+  // general. Menus display groups alphabetically, which is a separate concern.
   const groupRows = db
     .prepare('SELECT name FROM taxonomy_group ORDER BY sort_order, id')
     .all() as Array<{ name: string }>;

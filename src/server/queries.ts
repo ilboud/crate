@@ -25,10 +25,14 @@ export function listGroups(db: Db): GroupSummary[] {
   const threshold = Number(getSetting(db, 'hide_group_below', '3'));
   const rows = db
     .prepare(
+      // Alphabetical for browsing. NOT sort_order: that column is the
+      // tie-break precedence used when assigning a group, ordered specific to
+      // general, and 13 records currently depend on it. Reusing it here would
+      // tie where a record is filed to where its genre sits in a menu.
       `SELECT g.name AS name, g.sort_order AS sort_order, g.hidden AS hidden,
               (SELECT COUNT(*) FROM release r WHERE r.primary_group = g.name) AS count
          FROM taxonomy_group g
-        ORDER BY g.sort_order, g.name`,
+        ORDER BY g.name COLLATE NOCASE`,
     )
     .all() as Array<{ name: string; sort_order: number; hidden: number; count: number }>;
 

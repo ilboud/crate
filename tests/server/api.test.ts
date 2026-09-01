@@ -95,6 +95,32 @@ describe('collection API', () => {
     expect(pop.hidden).toBe(true);
   });
 
+  it('lists groups alphabetically, for browsing', async () => {
+    const res = await request(app).get('/api/groups').expect(200);
+    const names = res.body.map((g: { name: string }) => g.name);
+    expect(names).toEqual([...names].sort((a: string, b: string) => a.localeCompare(b)));
+  });
+
+  it('does not let display order drive genre assignment', async () => {
+    // sort_order is the tie-break precedence, ordered specific to general.
+    // Menus sort by name. Tying the two together would re-file records
+    // whenever a group was renamed or the menu reordered.
+    const before = db
+      .prepare('SELECT id, primary_group FROM release ORDER BY id')
+      .all() as Array<{ id: number; primary_group: string }>;
+
+    // Reorder the display arbitrarily; assignments must not move.
+    db.prepare('UPDATE taxonomy_group SET sort_order = -sort_order').run();
+    const res = await request(app).get('/api/groups').expect(200);
+    const names = res.body.map((g: { name: string }) => g.name);
+    expect(names).toEqual([...names].sort((a: string, b: string) => a.localeCompare(b)));
+
+    const after = db
+      .prepare('SELECT id, primary_group FROM release ORDER BY id')
+      .all() as Array<{ id: number; primary_group: string }>;
+    expect(after).toEqual(before);
+  });
+
   it('browses by group', async () => {
     const res = await request(app).get('/api/browse?group=Jazz').expect(200);
     expect(res.body).toHaveLength(4);

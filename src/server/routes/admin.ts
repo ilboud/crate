@@ -114,7 +114,9 @@ export function adminRoutes(db: Db): Router {
 
   r.get('/taxonomy', (_req, res) => {
     const groups = db
-      .prepare('SELECT id, name, sort_order, hidden FROM taxonomy_group ORDER BY sort_order, id')
+      // Alphabetical, matching the crate's genre bar. sort_order remains the
+      // assignment precedence and is deliberately not the display order.
+      .prepare('SELECT id, name, sort_order, hidden FROM taxonomy_group ORDER BY name COLLATE NOCASE')
       .all() as Array<{ id: number; name: string; sort_order: number; hidden: number }>;
 
     const styles = db
@@ -224,7 +226,7 @@ export function adminRoutes(db: Db): Router {
   /** Export/import keeps the taxonomy diffable in git and portable. */
   r.get('/taxonomy/export', (_req, res) => {
     const groups = db
-      .prepare('SELECT id, name, sort_order, hidden FROM taxonomy_group ORDER BY sort_order')
+      .prepare('SELECT id, name, sort_order, hidden FROM taxonomy_group ORDER BY name COLLATE NOCASE')
       .all() as Array<{ id: number; name: string; sort_order: number; hidden: number }>;
     const styles = db.prepare('SELECT style, group_id FROM taxonomy_style').all() as Array<{
       style: string; group_id: number;
