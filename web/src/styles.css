@@ -879,3 +879,50 @@ a { color: inherit; }
 }
 .navbtn.iconbtn svg { display: block; }
 .navbtn.iconbtn[aria-pressed='true'] { color: var(--brass); border-color: rgba(201, 162, 39, 0.45); }
+
+/* ------------------------------------------------------ rendered markdown */
+
+.md > *:first-child { margin-top: 0; }
+.md > *:last-child { margin-bottom: 0; }
+
+.md p { margin: 0 0 10px; }
+
+.md strong { font-weight: 700; color: var(--paper); }
+.md em { font-style: italic; }
+
+.md code {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  background: var(--crate);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 1px 5px;
+}
+
+.md pre {
+  background: var(--crate);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  overflow-x: auto;
+  margin: 0 0 10px;
+}
+.md pre code { background: none; border: 0; padding: 0; font-size: 12px; }
+
+.md ol, .md ul { margin: 0 0 10px; padding-left: 22px; }
+.md li { margin-bottom: 4px; }
+.md li::marker { color: var(--dust); font-family: var(--mono); font-size: 0.85em; }
+
+.md a { color: var(--shellac); text-decoration: underline; text-underline-offset: 2px; }
+.md a:hover { color: var(--paper); }
+
+/* Headings inside a chat turn: weight and tracking, not page-level size. */
+.md .md-h {
+  font-family: var(--display);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 14px 0 6px;
+}
+.md .md-h1 { font-size: 14px; }
+.md .md-h2 { font-size: 12px; }
+.md .md-h3, .md .md-h4 { font-size: 11px; color: var(--dust); }

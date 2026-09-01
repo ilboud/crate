@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { api } from '../api';
+import { Markdown } from './Markdown';
 
 interface Turn {
   role: 'you' | 'assistant';
@@ -123,7 +124,13 @@ export function Chat() {
                   : `Asked Discogs · ${name}`}
               </div>
             ))}
-            <p>{t.text || (busy && i === turns.length - 1 ? '…' : '')}</p>
+            {t.role === 'you' ? (
+              <p>{t.text}</p>
+            ) : t.text ? (
+              <Markdown text={t.text} />
+            ) : (
+              <p>{busy && i === turns.length - 1 ? '…' : ''}</p>
+            )}
 
             {t.unverified.length > 0 && (
               <div className="ungrounded">
