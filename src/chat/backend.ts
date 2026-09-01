@@ -43,6 +43,45 @@ export class ChatBackendError extends Error {
   }
 }
 
+/**
+ * Turn a provider's raw rejection into something actionable.
+ *
+ * The provider error text is accurate but assumes you know the product; the
+ * fix usually lives on a specific screen in this app, so say which.
+ */
+export function explainBackendError(raw: string): string {
+  if (/anthropic-workspace-id is required/i.test(raw)) {
+    return (
+      'This Anthropic key is scoped to all workspaces, so each request has to name ' +
+      'the workspace it acts in. Open Settings → Chat and paste your workspace ID ' +
+      '(it starts with "wrkspc_" and appears in the workspace URL in the Anthropic ' +
+      'Console). Alternatively, create a key scoped to a single workspace, which ' +
+      'needs no ID.'
+    );
+  }
+  if (/workspace-id header must be a valid/i.test(raw)) {
+    return (
+      'That workspace ID was not accepted. Check it in Settings → Chat — it should ' +
+      'start with "wrkspc_" and match the workspace URL in the Anthropic Console.'
+    );
+  }
+  if (/authentication|invalid x-api-key|401/i.test(raw)) {
+    return 'That API key was rejected. Check it in Settings → Chat.';
+  }
+  if (/rate.?limit|429/i.test(raw)) {
+    return 'The provider is rate limiting. Wait a moment and ask again.';
+  }
+  if (/credit balance|billing|quota/i.test(raw)) {
+    return 'The provider reports no available credit for this key.';
+  }
+  if (/model:|not_found_error/i.test(raw) && /model/i.test(raw)) {
+    return (
+      'That model name was not recognised. Check the model field in Settings → Chat.'
+    );
+  }
+  return raw;
+}
+
 /** Reads Server-Sent Events out of a fetch body as parsed JSON objects. */
 export async function* sseJson(
   body: ReadableStream<Uint8Array>,

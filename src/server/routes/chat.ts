@@ -10,6 +10,7 @@ import {
   runLocalTool,
 } from '../../chat/tools.js';
 import { buildSystemPrompt, loadCorpus, verifyAnswer } from '../../chat/grounding.js';
+import { explainBackendError } from '../../chat/backend.js';
 import type { ChatBackend, ChatMessage, ToolSpec } from '../../chat/backend.js';
 import { providerStatus, readBackendChoice, readWorkspaceId, resolveKey, type Provider } from '../settings.js';
 
@@ -201,7 +202,8 @@ export function chatRoutes(db: Db, config: ChatConfig = {}): Router {
       send('done', { turns: maxTurns, note: 'reached the tool-call limit' });
       return res.end();
     } catch (err) {
-      send('error', { message: err instanceof Error ? err.message : String(err) });
+      const raw = err instanceof Error ? err.message : String(err);
+      send('error', { message: explainBackendError(raw), detail: raw });
       return res.end();
     }
   });
