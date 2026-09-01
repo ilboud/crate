@@ -865,3 +865,17 @@ a { color: inherit; }
 }
 .ungrounded b { color: var(--shellac); }
 .ungrounded span { color: var(--dust); }
+
+/* Icon-only nav button: square, so it reads as an affordance next to the
+   word-labelled destinations rather than a truncated one. */
+.navbtn.iconbtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 32px;
+  height: 30px;
+  flex: none;
+}
+.navbtn.iconbtn svg { display: block; }
+.navbtn.iconbtn[aria-pressed='true'] { color: var(--brass); border-color: rgba(201, 162, 39, 0.45); }
