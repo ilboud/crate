@@ -1,6 +1,14 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import type { AlbumCard } from '../api';
+import type { AlbumCard, FeelSettings } from '../api';
 import { bestArt } from '../api';
+import {
+  easeOutCubic,
+  flickDurationMs,
+  projectFlick,
+  stepPxFor,
+  velocityFrom,
+  type Sample,
+} from '../flick';
 import { Sleeve } from './Sleeve';
 
 /**
@@ -17,15 +25,16 @@ interface Props {
   index: number;
   onIndexChange: (i: number) => void;
   onOpen: (album: AlbumCard) => void;
+  feel: FeelSettings;
 }
 
-function useNeighbours(): { visible: number; sleeve: number } {
+function useNeighbours(pinned: number | 'auto'): { visible: number; sleeve: number } {
   const [state, setState] = useState({ visible: 3, sleeve: 260 });
   useEffect(() => {
     const measure = () => {
       const w = window.innerWidth;
       const h = window.innerHeight;
-      const visible = w < 560 ? 2 : w < 1024 ? 4 : 5;
+      const visible = pinned === 'auto' ? (w < 560 ? 2 : w < 1024 ? 4 : 5) : pinned;
       // Leave room for the caption and genre rail below.
       // Tablet portrait is wide AND tall, so a desktop width ratio leaves the
       // crate floating in dead space; give it half the width instead.
@@ -40,15 +49,31 @@ function useNeighbours(): { visible: number; sleeve: number } {
       window.removeEventListener('resize', measure);
       window.removeEventListener('orientationchange', measure);
     };
-  }, []);
+  }, [pinned]);
   return state;
 }
 
-export function CoverFlow({ albums, index, onIndexChange, onOpen }: Props) {
-  const { visible, sleeve } = useNeighbours();
+export function CoverFlow({ albums, index, onIndexChange, onOpen, feel }: Props) {
+  const { visible, sleeve } = useNeighbours(feel.neighbours);
   const stage = useRef<HTMLDivElement>(null);
-  const drag = useRef<{ x: number; startIndex: number; moved: boolean; hit: number | null } | null>(null);
+  const drag = useRef<{
+    x: number; startIndex: number; moved: boolean; hit: number | null; samples: Sample[];
+  } | null>(null);
   const wheelAcc = useRef(0);
+  const glide = useRef<number | null>(null);
+
+  const stepPx = stepPxFor(sleeve, feel.sensitivity);
+
+  // Cancel any glide in flight; a new touch takes over immediately, the way a
+  // finger on a spinning record stops it.
+  const stopGlide = useCallback(() => {
+    if (glide.current !== null) {
+      cancelAnimationFrame(glide.current);
+      glide.current = null;
+    }
+  }, []);
+
+  useEffect(() => stopGlide, [stopGlide]);
 
   const clamp = useCallback(
     (i: number) => Math.max(0, Math.min(albums.length - 1, i)),
@@ -70,6 +95,7 @@ export function CoverFlow({ albums, index, onIndexChange, onOpen }: Props) {
   }, [index, albums, clamp, onIndexChange, onOpen]);
 
   const onPointerDown = (e: React.PointerEvent) => {
+    stopGlide();
     // Record which sleeve is under the pointer NOW: setPointerCapture
     // retargets every later event to the stage, so pointerup cannot tell.
     const card = (e.target as HTMLElement).closest('[data-index]');
@@ -78,6 +104,7 @@ export function CoverFlow({ albums, index, onIndexChange, onOpen }: Props) {
       startIndex: index,
       moved: false,
       hit: card ? Number(card.getAttribute('data-index')) : null,
+      samples: [{ x: e.clientX, t: e.timeStamp }],
     };
     (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
   };
@@ -87,8 +114,13 @@ export function CoverFlow({ albums, index, onIndexChange, onOpen }: Props) {
     if (!d) return;
     const dx = e.clientX - d.x;
     if (Math.abs(dx) > 6) d.moved = true;
-    const step = sleeve * 0.42;
-    onIndexChange(clamp(d.startIndex - Math.round(dx / step)));
+
+    // Keep a short trail of positions; the release velocity is measured from
+    // the last ~100ms of it, not from the whole drag.
+    d.samples.push({ x: e.clientX, t: e.timeStamp });
+    if (d.samples.length > 12) d.samples.shift();
+
+    onIndexChange(clamp(d.startIndex - Math.round(dx / stepPx)));
   };
 
   const onPointerUp = (e: React.PointerEvent) => {
@@ -100,7 +132,39 @@ export function CoverFlow({ albums, index, onIndexChange, onOpen }: Props) {
     if (d && !d.moved && d.hit !== null) {
       if (d.hit === index) { if (albums[d.hit]) onOpen(albums[d.hit]!); }
       else onIndexChange(d.hit);
+      return;
     }
+
+    // Otherwise let the throw carry: a fast flick should coast, a slow drag
+    // should stop where it was let go.
+    if (d?.moved) {
+      const target = projectFlick({
+        velocity: velocityFrom(d.samples),
+        index,
+        stepPx,
+        count: albums.length,
+        momentum: feel.momentum,
+      });
+      if (target !== index) glideTo(index, target);
+    }
+  };
+
+  /** Step through to the target on an ease-out, so the crate decelerates. */
+  const glideTo = (from: number, to: number) => {
+    const reduced = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) { onIndexChange(to); return; }
+
+    const distance = to - from;
+    const duration = flickDurationMs(distance);
+    const started = performance.now();
+
+    const tick = (now: number) => {
+      const progress = Math.min(1, (now - started) / duration);
+      onIndexChange(clamp(from + Math.round(distance * easeOutCubic(progress))));
+      if (progress < 1) glide.current = requestAnimationFrame(tick);
+      else glide.current = null;
+    };
+    glide.current = requestAnimationFrame(tick);
   };
 
   // Trackpads emit many small deltas; accumulate so one gesture is one step.

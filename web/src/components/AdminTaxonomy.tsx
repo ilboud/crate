@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { api, type Taxonomy } from '../api';
 
 /**
@@ -8,7 +8,14 @@ import { api, type Taxonomy } from '../api';
  * Every change re-derives group assignment for the whole collection
  * immediately, so what you see in the crate always matches these rules.
  */
-export function AdminTaxonomy({ onChanged }: { onChanged: () => void }) {
+export function AdminTaxonomy({
+  onChanged,
+  embedded = false,
+}: {
+  onChanged: () => void;
+  /** Rendered inside Settings, which already provides the scroll container. */
+  embedded?: boolean;
+}) {
   const [tax, setTax] = useState<Taxonomy | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [saved, setSaved] = useState<string | null>(null);
@@ -30,15 +37,25 @@ export function AdminTaxonomy({ onChanged }: { onChanged: () => void }) {
     }
   }
 
-  if (error && !tax) return <div className="admin"><p className="empty">{error}</p></div>;
-  if (!tax) return <div className="admin"><p className="empty">Loading the taxonomy…</p></div>;
+  // Settings already supplies the scroll container, so when embedded this
+  // renders only the inner column.
+  const Frame = ({ children }: { children: ReactNode }) =>
+    embedded ? (
+      <div className="admin-inner">{children}</div>
+    ) : (
+      <div className="admin">
+        <div className="admin-inner">{children}</div>
+      </div>
+    );
+
+  if (error && !tax) return <Frame><p className="empty">{error}</p></Frame>;
+  if (!tax) return <Frame><p className="empty">Loading the taxonomy…</p></Frame>;
 
   const stylesOf = (groupId: number) =>
     tax.styles.filter((s) => s.group_id === groupId).sort((a, b) => b.count - a.count);
 
   return (
-    <div className="admin">
-      <div className="admin-inner">
+    <Frame>
         <h2>Genre groups</h2>
         <p className="lede">
           Records are filed by the styles Discogs assigns them. Move a style to a different group
@@ -160,7 +177,6 @@ export function AdminTaxonomy({ onChanged }: { onChanged: () => void }) {
             </button>
           ))}
         </div>
-      </div>
-    </div>
+    </Frame>
   );
 }

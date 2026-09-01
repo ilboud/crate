@@ -11,6 +11,7 @@ import {
   runLocalTool,
 } from '../../chat/tools.js';
 import type { ChatBackend, ChatMessage, ToolSpec } from '../../chat/backend.js';
+import { providerStatus, readBackendChoice, resolveKey, type Provider } from '../settings.js';
 
 export interface ChatConfig {
   backend?: ChatBackend;
@@ -19,19 +20,31 @@ export interface ChatConfig {
   maxTurns?: number;
 }
 
-/** Build the configured backend from the environment. */
-export function backendFromEnv(): ChatBackend | null {
-  const choice = (process.env.CHAT_BACKEND ?? '').toLowerCase();
-  const anthropicKey = process.env.ANTHROPIC_API_KEY;
-  const openaiKey = process.env.OPENAI_API_KEY;
+/**
+ * Build the configured backend. Keys come from the environment first, then
+ * from the admin screen, so an existing Docker deployment is unaffected.
+ *
+ * Resolved per request rather than cached at boot, so saving a key in the
+ * admin screen takes effect without a restart.
+ */
+export function resolveBackend(db: Db): ChatBackend | null {
+  const choice = readBackendChoice(db);
+  const key = resolveKey(db, choice);
+  if (!key) {
+    // Fall back to whichever provider does have a key.
+    const other: Provider = choice === 'anthropic' ? 'openai' : 'anthropic';
+    const otherKey = resolveKey(db, other);
+    if (!otherKey) return null;
+    return build(other, otherKey, db);
+  }
+  return build(choice, key, db);
+}
 
-  if (choice === 'openai' || (!choice && !anthropicKey && openaiKey)) {
-    return openaiKey ? new OpenAIBackend(openaiKey, process.env.OPENAI_MODEL) : null;
-  }
-  if (choice === 'anthropic' || !choice) {
-    return anthropicKey ? new AnthropicBackend(anthropicKey, process.env.ANTHROPIC_MODEL) : null;
-  }
-  return null;
+function build(provider: Provider, key: string, db: Db): ChatBackend {
+  const model = providerStatus(db, provider).model;
+  return provider === 'openai'
+    ? new OpenAIBackend(key, model)
+    : new AnthropicBackend(key, model);
 }
 
 export function mcpFromEnv(): McpClient | null {
@@ -41,11 +54,13 @@ export function mcpFromEnv(): McpClient | null {
 
 export function chatRoutes(db: Db, config: ChatConfig = {}): Router {
   const r = Router();
-  const backend = config.backend ?? backendFromEnv();
+  // Resolved per request so a key saved in the admin screen works immediately.
+  const currentBackend = (): ChatBackend | null => config.backend ?? resolveBackend(db);
   const mcp = config.mcp ?? mcpFromEnv();
   const maxTurns = config.maxTurns ?? 6;
 
   r.get('/status', async (_req, res) => {
+    const backend = currentBackend();
     let mcpTools: number | null = null;
     let mcpError: string | null = null;
     if (mcp) {
@@ -65,9 +80,10 @@ export function chatRoutes(db: Db, config: ChatConfig = {}): Router {
   });
 
   r.post('/', async (req, res) => {
+    const backend = currentBackend();
     if (!backend) {
       return res.status(503).json({
-        error: 'No chat backend configured. Set ANTHROPIC_API_KEY or OPENAI_API_KEY.',
+        error: 'No chat backend configured. Add an API key under Settings, or set ANTHROPIC_API_KEY.',
       });
     }
 

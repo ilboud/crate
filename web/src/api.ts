@@ -65,6 +65,40 @@ export interface Stats {
   lastSync: { started_at: string; finished_at: string | null; ok_count: number; failed_ids: string } | null;
 }
 
+export type Momentum = 'off' | 'low' | 'medium' | 'high';
+
+export interface FeelSettings {
+  sensitivity: number;
+  momentum: Momentum;
+  neighbours: number | 'auto';
+}
+
+export const FEEL_DEFAULTS: FeelSettings = {
+  sensitivity: 0.42,
+  momentum: 'medium',
+  neighbours: 'auto',
+};
+
+export interface ProviderStatus {
+  provider: 'anthropic' | 'openai';
+  configured: boolean;
+  /** Where the key in force comes from; null when none is set. */
+  source: 'env' | 'stored' | null;
+  /** Masked, e.g. "••••4f2a". Never the key itself. */
+  hint: string | null;
+  model: string;
+}
+
+export interface AdminSettings {
+  feel: FeelSettings;
+  chat: {
+    backend: 'anthropic' | 'openai';
+    backendFromEnv: boolean;
+    providers: ProviderStatus[];
+    mcpUrl: string | null;
+  };
+}
+
 export interface TaxonomyGroup { id: number; name: string; sort_order: number; hidden: number }
 export interface TaxonomyStyle { style: string; group_id: number; count: number }
 export interface Taxonomy {
@@ -102,6 +136,27 @@ export const api = {
     json<{ enabled: boolean; backend: string | null; localTools: number; mcpTools: number | null; mcpError: string | null }>(
       '/api/chat/status',
     ),
+
+  settings: () => json<AdminSettings>('/api/admin/settings'),
+  saveFeel: (update: Partial<FeelSettings>) =>
+    json<{ feel: FeelSettings }>('/api/admin/settings/feel', {
+      method: 'PUT',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(update),
+    }).then((r) => r.feel),
+  /** Send null to clear. The key is never readable afterwards. */
+  saveKey: (provider: 'anthropic' | 'openai', key: string | null) =>
+    json<unknown>('/api/admin/settings/key', {
+      method: 'PUT',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ provider, key }),
+    }),
+  saveChat: (update: { backend?: string; provider?: string; model?: string }) =>
+    json<unknown>('/api/admin/settings/chat', {
+      method: 'PUT',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(update),
+    }),
 
   taxonomy: () => json<Taxonomy>('/api/admin/taxonomy'),
   moveStyle: (style: string, groupId: number | null) =>

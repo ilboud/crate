@@ -3,6 +3,23 @@ import type { Db } from '../../db/index.js';
 import { setSetting, getSetting } from '../../db/index.js';
 import { reassignAll, unassignedStyles } from '../../sync/taxonomy.js';
 import { rebuildSimilar } from '../../sync/similar.js';
+import {
+  DEFAULT_MODELS,
+  providerStatus,
+  readBackendChoice,
+  readFeel,
+  storeKey,
+  storeModel,
+  writeBackendChoice,
+  writeFeel,
+  type Provider,
+} from '../settings.js';
+
+const PROVIDERS: readonly Provider[] = ['anthropic', 'openai'];
+
+function isProvider(value: unknown): value is Provider {
+  return typeof value === 'string' && (PROVIDERS as readonly string[]).includes(value);
+}
 
 /**
  * Taxonomy administration.
@@ -20,6 +37,72 @@ function applyTaxonomyChange(db: Db): { counts: Record<string, number> } {
 
 export function adminRoutes(db: Db): Router {
   const r = Router();
+
+  /* ------------------------------------------------------------- feel */
+
+  r.get('/settings', (_req, res) => {
+    res.json({
+      feel: readFeel(db),
+      chat: {
+        backend: readBackendChoice(db),
+        backendFromEnv: Boolean(process.env.CHAT_BACKEND),
+        providers: PROVIDERS.map((p) => providerStatus(db, p)),
+        defaultModels: DEFAULT_MODELS,
+        mcpUrl: process.env.MCP_URL ?? null,
+      },
+    });
+  });
+
+  r.put('/settings/feel', (req, res) => {
+    try {
+      return res.json({ feel: writeFeel(db, req.body ?? {}) });
+    } catch (err) {
+      return res.status(400).json({ error: (err as Error).message });
+    }
+  });
+
+  /* -------------------------------------------------------- chat keys */
+
+  /**
+   * Writes a key or clears it. There is deliberately no route that returns a
+   * stored key: on a LAN app with no login, a secret that can be read back
+   * over HTTP is a secret anyone on the wifi can take.
+   */
+  r.put('/settings/key', (req, res) => {
+    const { provider, key } = req.body ?? {};
+    if (!isProvider(provider)) {
+      return res.status(400).json({ error: 'provider must be anthropic or openai' });
+    }
+    if (key !== null && typeof key !== 'string') {
+      return res.status(400).json({ error: 'key must be a string, or null to clear' });
+    }
+    const trimmed = typeof key === 'string' ? key.trim() : null;
+    if (trimmed !== null && trimmed.length < 8) {
+      return res.status(400).json({ error: 'that does not look like an API key' });
+    }
+    storeKey(db, provider, trimmed);
+    return res.json({ providers: PROVIDERS.map((p) => providerStatus(db, p)) });
+  });
+
+  r.put('/settings/chat', (req, res) => {
+    const { backend, provider, model } = req.body ?? {};
+    if (backend !== undefined) {
+      if (!isProvider(backend)) {
+        return res.status(400).json({ error: 'backend must be anthropic or openai' });
+      }
+      writeBackendChoice(db, backend);
+    }
+    if (model !== undefined) {
+      if (!isProvider(provider)) {
+        return res.status(400).json({ error: 'provider required when setting a model' });
+      }
+      storeModel(db, provider, String(model));
+    }
+    return res.json({
+      backend: readBackendChoice(db),
+      providers: PROVIDERS.map((p) => providerStatus(db, p)),
+    });
+  });
 
   r.get('/taxonomy', (_req, res) => {
     const groups = db

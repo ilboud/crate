@@ -1,13 +1,13 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { api, bestArt, type AlbumCard, type Group, type Stats } from './api';
+import { api, bestArt, FEEL_DEFAULTS, type AlbumCard, type FeelSettings, type Group, type Stats } from './api';
 import { CoverFlow } from './components/CoverFlow';
 import { AlbumDetail } from './components/AlbumDetail';
 import { Search } from './components/Search';
 import { Chat } from './components/Chat';
-import { AdminTaxonomy } from './components/AdminTaxonomy';
+import { Settings } from './components/Settings';
 import { Sleeve } from './components/Sleeve';
 
-type View = 'crate' | 'grid' | 'search' | 'chat' | 'admin';
+type View = 'crate' | 'grid' | 'search' | 'chat' | 'settings';
 type Sort = 'artist' | 'year' | 'added' | 'title';
 
 const SORT_LABELS: Array<[Sort, string]> = [
@@ -30,11 +30,17 @@ export default function App() {
   const [style, setStyle] = useState<string | undefined>();
   const [styles, setStyles] = useState<Array<{ style: string; count: number }>>([]);
   const [query, setQuery] = useState('');
+  const [feel, setFeel] = useState<FeelSettings>(FEEL_DEFAULTS);
   const [loadError, setLoadError] = useState<string | null>(null);
 
   const refreshMeta = useCallback(() => {
     void api.groups().then(setGroups).catch(() => undefined);
     void api.stats().then(setStats).catch(() => undefined);
+  }, []);
+
+  // Crate feel is server-side so it follows you between the phone and laptop.
+  useEffect(() => {
+    void api.settings().then((s) => setFeel(s.feel)).catch(() => undefined);
   }, []);
 
   useEffect(refreshMeta, [refreshMeta]);
@@ -112,8 +118,8 @@ export default function App() {
         <button className="navbtn" aria-pressed={view === 'chat'} onClick={() => { setView('chat'); setOpenId(null); }}>
           Ask
         </button>
-        <button className="navbtn" aria-pressed={view === 'admin'} onClick={() => { setView('admin'); setOpenId(null); }}>
-          Genres
+        <button className="navbtn" aria-pressed={view === 'settings'} onClick={() => { setView('settings'); setOpenId(null); }}>
+          Settings
         </button>
       </header>
 
@@ -139,11 +145,12 @@ export default function App() {
 
         {openId === null && view === 'chat' && <Chat />}
 
-        {openId === null && view === 'admin' && (
-          <AdminTaxonomy
-            onChanged={() => {
+        {openId === null && view === 'settings' && (
+          <Settings
+            onFeelChange={setFeel}
+            onTaxonomyChange={() => {
               refreshMeta();
-              void api.browse({ group, artist, sort }).then(setAlbums).catch(() => undefined);
+              void api.browse({ group, style, artist, sort }).then(setAlbums).catch(() => undefined);
             }}
           />
         )}
@@ -158,7 +165,7 @@ export default function App() {
             )}
             {!loadError && albums.length > 0 && (
               <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-                <CoverFlow albums={albums} index={index} onIndexChange={setIndex} onOpen={open} />
+                <CoverFlow albums={albums} index={index} onIndexChange={setIndex} onOpen={open} feel={feel} />
                 <GenreRail
                   groups={visibleGroups}
                   active={group}
