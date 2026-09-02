@@ -22,6 +22,10 @@ Built for one shelf and one household: LAN only, no accounts, no login.
   index instantly; anything only Discogs knows goes out to the MCP server.
 - **Genres** — edit the genre taxonomy at runtime. Moving a style re-files
   every record carrying it, immediately.
+- **Library** — sync with Discogs on a button or a schedule, and see which
+  records look filed twice. Catalogue numbers separate a duplicate entry from
+  an original-and-reissue you meant to own.
+- **Full screen** — one button in the header; Escape leaves again.
 
 ## Requirements
 
