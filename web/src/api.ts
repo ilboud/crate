@@ -110,6 +110,53 @@ export interface Taxonomy {
   hideGroupBelow: number;
 }
 
+export type SyncSchedule = 'off' | 'daily' | 'weekly' | 'monthly';
+
+export interface SyncStatus {
+  available: boolean;
+  reason: string | null;
+  running: boolean;
+  startedAt: string | null;
+  progress: { done: number; total: number; label: string } | null;
+  schedule: SyncSchedule;
+  nextRunAt: string | null;
+  last: {
+    startedAt: string;
+    finishedAt: string | null;
+    okCount: number;
+    failedIds: number[];
+  } | null;
+  lastResult: {
+    added: number;
+    removed: number;
+    unchanged: number;
+    items: number;
+    failed: number[];
+    durationMs: number;
+  } | null;
+  error: string | null;
+}
+
+export type DoubleKind = 'same-copy' | 'same-pressing' | 'reissue';
+
+export interface DoubleCopy {
+  releaseId: number;
+  title: string;
+  artist: string;
+  year: number | null;
+  format: string;
+  catnos: string[];
+  art: string | null;
+  instances: Array<{ instanceId: number; folderId: number | null; dateAdded: string | null }>;
+}
+
+export interface DoubleGroup {
+  key: string;
+  kind: DoubleKind;
+  why: string;
+  copies: DoubleCopy[];
+}
+
 async function json<T>(url: string, init?: RequestInit): Promise<T> {
   const res = await fetch(url, init);
   if (!res.ok) {
@@ -158,6 +205,24 @@ export const api = {
       method: 'PUT',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(update),
+    }),
+
+  syncStatus: () => json<SyncStatus>('/api/admin/sync'),
+  syncNow: () => json<SyncStatus & { already: boolean }>('/api/admin/sync', { method: 'POST' }),
+  saveSchedule: (schedule: SyncSchedule) =>
+    json<SyncStatus>('/api/admin/sync/schedule', {
+      method: 'PUT',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ schedule }),
+    }),
+
+  doubles: () => json<{ groups: DoubleGroup[] }>('/api/admin/duplicates'),
+  /** Mark a pair as owned on purpose, or put it back on the list. */
+  ignoreDouble: (a: number, b: number, ignore = true) =>
+    json<{ groups: DoubleGroup[] }>('/api/admin/duplicates/ignore', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ a, b, ignore }),
     }),
 
   taxonomy: () => json<Taxonomy>('/api/admin/taxonomy'),

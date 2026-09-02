@@ -94,18 +94,40 @@ npm run sync              # incremental; seconds when little has changed
 npm run sync -- --force   # refetch everything, after a taxonomy change
 ```
 
+Or from the app: **Settings -> Library -> Sync now**, which runs the same code
+in the server process. That screen also sets how often it checks on its own —
+never, daily, weekly or monthly, weekly by default. No cron needed.
+
 Sync is incremental and idempotent: it fetches details only for releases it has
 not seen, prunes ones you no longer own, and records any release that failed so
-the next run retries it. A single failure never aborts the run.
+the next run retries it. A single failure never aborts the run. A run with
+nothing to fetch costs three requests and takes a few seconds.
 
-A weekly cron in Container Manager is plenty for a collection that grows a few
-records a month.
+Two presses of the button while a run is going join that run rather than
+starting a second writer, and the schedule counts from the last finished run,
+so restarting the container neither resets the clock nor triggers a catch-up
+burst.
+
+### Doubles
+
+The same screen lists records the collection appears to hold twice, sorted by
+how sure it is:
+
+| | Meaning |
+|---|---|
+| **Two copies** | One release id, two copies owned. Discogs says so outright. |
+| **Filed twice** | Two release ids sharing a catalogue number — one pressing entered twice. |
+| **Two pressings** | Same album, different catalogue numbers. An original and a reissue, quite possibly deliberate. |
+
+Each entry links to its Discogs page, because that is where a record is added
+or removed — the app only ever reads. Fix it there, press **Sync now**, and it
+disappears. "I own both" hides a pair for good.
 
 ## Configuration
 
 | Variable | Default | Purpose |
 |---|---|---|
-| `DISCOGS_PERSONAL_ACCESS_TOKEN` | — | Required, for sync and the MCP server |
+| `DISCOGS_PERSONAL_ACCESS_TOKEN` | — | Required, for sync and the MCP server. Without it the app still browses whatever the CLI last imported; Sync now says what is missing. |
 | `DISCOGS_USERNAME` | asks Discogs | Skips one API call at sync time |
 | `APP_PORT` | `8088` | Host port on the NAS |
 | `DB_PATH` | `data/collection.db` | SQLite file |

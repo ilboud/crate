@@ -27,7 +27,8 @@ services:
       WEB_DIR: /app/web/dist
       PORT: "8080"
       HOST: 0.0.0.0
-      # Sync needs this; the app itself does not read Discogs directly.
+      # Sync needs this, on the CLI and for the app's own Sync now button
+      # and schedule. Read-only: the collection is only ever edited on Discogs.
       DISCOGS_PERSONAL_ACCESS_TOKEN: ${DISCOGS_PERSONAL_ACCESS_TOKEN:?set this in .env}
       DISCOGS_USERNAME: ${DISCOGS_USERNAME:-}
       # Chat. Set whichever you use; CHAT_BACKEND picks between them.

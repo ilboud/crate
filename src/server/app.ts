@@ -5,11 +5,15 @@ import type { Db } from '../db/index.js';
 import { collectionRoutes } from './routes/collection.js';
 import { adminRoutes } from './routes/admin.js';
 import { chatRoutes, type ChatConfig } from './routes/chat.js';
+import { libraryRoutes } from './routes/library.js';
+import type { SyncRunner } from '../sync/runner.js';
 
 export interface AppConfig {
   coversDir: string;
   webDir?: string;
   chat?: ChatConfig;
+  /** Absent when no Discogs token reached the server; sync routes report why. */
+  runner?: SyncRunner | null;
 }
 
 /**
@@ -24,6 +28,7 @@ export function createApp(db: Db, config: AppConfig): Express {
 
   app.use('/api', collectionRoutes(db));
   app.use('/api/admin', adminRoutes(db));
+  app.use('/api/admin', libraryRoutes(db, config.runner ?? null));
   app.use('/api/chat', chatRoutes(db, config.chat));
 
   // Mirrored art. immutable: a given release id's cover never changes, and

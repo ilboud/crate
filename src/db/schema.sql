@@ -165,3 +165,14 @@ CREATE VIRTUAL TABLE IF NOT EXISTS release_fts USING fts5(
   release_id UNINDEXED,
   tokenize = 'unicode61 remove_diacritics 2'
 );
+
+-- A pair of releases the user has confirmed is NOT a double — an original and
+-- a reissue they own on purpose. Stored with the lower id first so a pair is
+-- recorded once however it is detected, and keyed on release rather than
+-- instance so it survives a re-sync.
+CREATE TABLE IF NOT EXISTS duplicate_ignore (
+  a_id      INTEGER NOT NULL,
+  b_id      INTEGER NOT NULL,
+  noted_at  TEXT NOT NULL,
+  PRIMARY KEY (a_id, b_id)
+);

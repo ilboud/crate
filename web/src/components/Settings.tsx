@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react';
 import { api, type AdminSettings, type FeelSettings, type Momentum } from '../api';
 import { AdminTaxonomy } from './AdminTaxonomy';
+import { Library } from './Library';
 
-type Tab = 'feel' | 'chat' | 'genres';
+type Tab = 'feel' | 'chat' | 'genres' | 'library';
 
 const TABS: Array<[Tab, string]> = [
   ['feel', 'Feel'],
   ['chat', 'Chat'],
   ['genres', 'Genres'],
+  ['library', 'Library'],
 ];
 
 export function Settings({
@@ -32,6 +34,7 @@ export function Settings({
 
         {tab === 'feel' && <FeelPanel onChange={onFeelChange} />}
         {tab === 'chat' && <ChatPanel />}
+        {tab === 'library' && <Library onSynced={onTaxonomyChange} />}
       </div>
 
       {/* Rendered outside admin-inner: it brings its own layout. */}

@@ -1,5 +1,6 @@
 import { initDb } from '../db/index.js';
 import { createApp } from './app.js';
+import { readSchedule, SyncRunner } from '../sync/runner.js';
 
 const dbPath = process.env.DB_PATH ?? 'data/collection.db';
 const coversDir = process.env.COVERS_DIR ?? 'covers';
@@ -9,7 +10,12 @@ const port = Number(process.env.PORT ?? 8080);
 const host = process.env.HOST ?? '0.0.0.0';
 
 const db = initDb(dbPath);
-const app = createApp(db, { coversDir, webDir });
+// No token means the app still runs, read-only against whatever the CLI last
+// imported; the sync routes then say exactly what is missing.
+const runner = process.env.DISCOGS_PERSONAL_ACCESS_TOKEN
+  ? new SyncRunner(db, { coversDir })
+  : null;
+const app = createApp(db, { coversDir, webDir, runner });
 
 const server = app.listen(port, host, () => {
   const { releases } = { releases: (db.prepare('SELECT COUNT(*) AS n FROM release').get() as { n: number }).n };
@@ -20,6 +26,12 @@ const server = app.listen(port, host, () => {
     console.log('  chat     disabled (set ANTHROPIC_API_KEY or OPENAI_API_KEY)');
   } else {
     console.log(`  chat     ${process.env.CHAT_BACKEND ?? 'anthropic'} via ${process.env.MCP_URL ?? 'local tools only'}`);
+  }
+  if (runner) {
+    runner.startScheduler();
+    console.log(`  sync     ${readSchedule(db)} (read-only; edits happen on Discogs)`);
+  } else {
+    console.log('  sync     disabled (set DISCOGS_PERSONAL_ACCESS_TOKEN)');
   }
 });
 
