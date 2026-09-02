@@ -102,8 +102,12 @@ export default function App() {
             value={query}
             onChange={(e) => {
               setQuery(e.target.value);
-              if (e.target.value.trim().length >= 2) setView('search');
-              else if (view === 'search') setView('crate');
+              if (e.target.value.trim().length >= 2) {
+                setView('search');
+                // An open record covers every other view, so searching from
+                // inside one would type into a box and see nothing happen.
+                setOpenId(null);
+              } else if (view === 'search') setView('crate');
             }}
             placeholder="Search records, songs, artists"
             aria-label="Search records, songs and artists"

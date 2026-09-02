@@ -542,21 +542,33 @@ a { color: inherit; }
 .res-group { margin-bottom: 26px; }
 .res-row {
   display: grid;
-  grid-template-columns: 44px 1fr max-content;
-  gap: 12px;
+  grid-template-columns: 52px 1fr max-content;
+  gap: 14px;
   align-items: center;
-  padding: 7px 0;
+  padding: 9px 0;
   border-bottom: 1px solid rgba(232, 225, 212, 0.055);
   text-align: left;
   width: 100%;
 }
-.res-row img { width: 44px; height: 44px; object-fit: cover; border-radius: var(--radius); }
-.res-row .who { font-size: 14px; }
-.res-row .where { font-family: var(--mono); font-size: 10px; color: var(--dust); margin-top: 2px; }
+.res-row img { width: 52px; height: 52px; object-fit: cover; border-radius: var(--radius); }
+/* Block, not inline: as spans these ran together on one line — "Bitches
+   BrewMiles Davis" — and the margin below was silently ignored. Stacked, the
+   two lines also fill the height the sleeve sets, instead of leaving a band
+   of empty space beside it. */
+.res-row .who,
+.res-row .where { display: block; }
+.res-row .who { font-size: 15px; line-height: 1.25; }
+.res-row .where {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--dust);
+  margin-top: 3px;
+  line-height: 1.3;
+}
 .res-row:hover .who { color: var(--shellac); }
 .res-row .side {
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 11px;
   color: var(--brass);
   border: 1px solid rgba(201, 162, 39, 0.35);
   border-radius: 999px;
