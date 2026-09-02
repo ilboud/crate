@@ -11,7 +11,7 @@ services:
     build:
       context: .
       dockerfile: docker/Dockerfile
-    image: discogs-collection:latest
+    image: crate:latest
     container_name: discogs-app
     restart: unless-stopped
     ports:

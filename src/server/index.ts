@@ -19,7 +19,7 @@ const app = createApp(db, { coversDir, webDir, runner });
 
 const server = app.listen(port, host, () => {
   const { releases } = { releases: (db.prepare('SELECT COUNT(*) AS n FROM release').get() as { n: number }).n };
-  console.log(`discogs-collection listening on http://${host}:${port}`);
+  console.log(`crate listening on http://${host}:${port}`);
   console.log(`  database ${dbPath} — ${releases} releases`);
   console.log(`  covers   ${coversDir}`);
   if (!process.env.ANTHROPIC_API_KEY && !process.env.OPENAI_API_KEY) {

@@ -85,7 +85,7 @@ export class McpClient {
     await this.rpc('initialize', {
       protocolVersion: '2024-11-05',
       capabilities: {},
-      clientInfo: { name: 'discogs-collection-app', version: '0.1.0' },
+      clientInfo: { name: 'crate', version: '0.1.0' },
     });
     await this.rpc('notifications/initialized', {}, true);
     this.initialized = true;
