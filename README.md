@@ -173,3 +173,7 @@ npx tsc --noEmit  # typecheck
 ```
 
 Design and implementation notes live in `docs/superpowers/`.
+
+## Licence
+
+MIT — see [LICENSE](LICENSE).
