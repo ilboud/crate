@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { api, bestArt, duration, totalDuration, type Album, type AlbumCard } from '../api';
 import { Sleeve } from './Sleeve';
+import { isFullscreen } from '../fullscreen';
 
 /**
  * One record, opened.
@@ -44,7 +45,15 @@ export function AlbumDetail({
   }, [id]);
 
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape') return;
+      // In fullscreen, Escape means "leave fullscreen" and belongs to the
+      // browser. Most browsers swallow the key and this never runs; the ones
+      // that deliver it anyway would otherwise close the record as well,
+      // doing two things on one press.
+      if (isFullscreen()) return;
+      onClose();
+    };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [onClose]);

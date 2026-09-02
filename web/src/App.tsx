@@ -6,6 +6,7 @@ import { Search } from './components/Search';
 import { Chat } from './components/Chat';
 import { Settings } from './components/Settings';
 import { Sleeve } from './components/Sleeve';
+import { useFullscreen } from './fullscreen';
 
 type View = 'crate' | 'grid' | 'search' | 'chat' | 'settings';
 type Sort = 'artist' | 'year' | 'added' | 'title';
@@ -32,6 +33,7 @@ export default function App() {
   const [query, setQuery] = useState('');
   const [feel, setFeel] = useState<FeelSettings>(FEEL_DEFAULTS);
   const [loadError, setLoadError] = useState<string | null>(null);
+  const fullscreen = useFullscreen();
 
   const refreshMeta = useCallback(() => {
     void api.groups().then(setGroups).catch(() => undefined);
@@ -118,6 +120,17 @@ export default function App() {
         <button className="navbtn" aria-pressed={view === 'chat'} onClick={() => { setView('chat'); setOpenId(null); }}>
           Ask
         </button>
+        {fullscreen.supported && (
+          <button
+            className="navbtn iconbtn"
+            aria-pressed={fullscreen.active}
+            onClick={fullscreen.toggle}
+            title={fullscreen.active ? 'Exit full screen (Esc)' : 'Full screen'}
+            aria-label={fullscreen.active ? 'Exit full screen' : 'Full screen'}
+          >
+            {fullscreen.active ? <ContractIcon /> : <ExpandIcon />}
+          </button>
+        )}
         <button
           className="navbtn iconbtn"
           aria-pressed={view === 'settings'}
@@ -256,6 +269,29 @@ export default function App() {
     </div>
   );
 }
+
+/** Four corners pushing out; the mirrored pair pulling in reads as "exit". */
+function CornersIcon({ out }: { out: boolean }) {
+  return (
+    <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false">
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.9"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d={
+          out
+            ? 'M9 4H4v5M15 4h5v5M9 20H4v-5M15 20h5v-5'
+            : 'M4 9h5V4M20 9h-5V4M4 15h5v5M20 15h-5v5'
+        }
+      />
+    </svg>
+  );
+}
+
+const ExpandIcon = () => <CornersIcon out />;
+const ContractIcon = () => <CornersIcon out={false} />;
 
 function CogIcon() {
   return (
