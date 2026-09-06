@@ -320,12 +320,64 @@ function ChatPanel() {
 
       <section className="field">
         <label>Discogs tools</label>
-        <p className="fieldhelp">
-          {settings.chat.mcpUrl
-            ? `Connected through ${settings.chat.mcpUrl}. Set by MCP_URL.`
-            : 'No MCP server configured, so chat answers from the local index only. Set MCP_URL to add pressing and marketplace lookups.'}
-        </p>
+        <McpStatus url={settings.chat.mcpUrl} />
       </section>
     </>
+  );
+}
+
+/**
+ * Whether the Discogs MCP server actually answers — not merely whether a URL
+ * is configured.
+ *
+ * The previous version said "Connected" the moment MCP_URL was non-empty,
+ * which is not a connection, it is a setting. It read as reassurance on a
+ * screen whose whole job is telling you what is wired up, while chat was
+ * reporting the opposite. /api/chat/status calls the server for real.
+ */
+function McpStatus({ url }: { url: string | null }) {
+  const [state, setState] = useState<
+    { tools: number | null; error: string | null } | 'loading' | 'unreachable'
+  >('loading');
+
+  useEffect(() => {
+    if (!url) return;
+    let live = true;
+    api
+      .chatStatus()
+      .then((s) => { if (live) setState({ tools: s.mcpTools, error: s.mcpError }); })
+      .catch(() => { if (live) setState('unreachable'); });
+    return () => { live = false; };
+  }, [url]);
+
+  if (!url) {
+    return (
+      <p className="fieldhelp">
+        No MCP server configured, so chat answers from the local index only. Set MCP_URL to add
+        pressing and marketplace lookups.
+      </p>
+    );
+  }
+
+  if (state === 'loading') return <p className="fieldhelp">Checking {url}…</p>;
+
+  if (state === 'unreachable' || state.error !== null) {
+    const detail = state === 'unreachable' ? 'the app could not be reached' : state.error;
+    return (
+      <>
+        <div className="warn">Cannot reach {url} — {detail}</div>
+        <p className="fieldhelp">
+          Chat still works and still answers from your collection; only the extra Discogs lookups
+          are missing. Check the MCP container is running.
+        </p>
+      </>
+    );
+  }
+
+  return (
+    <p className="fieldhelp">
+      Connected to {url} — <b>{state.tools}</b> Discogs {state.tools === 1 ? 'tool' : 'tools'}{' '}
+      available. Set by MCP_URL.
+    </p>
   );
 }
