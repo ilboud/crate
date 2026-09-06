@@ -67,7 +67,16 @@ sudo docker compose up -d --build
 The first build takes 5–15 minutes: it compiles the server and bundles the
 frontend on the NAS. On a 2 GB model expect the slower end. That is not a hang.
 
-Two containers come up — `discogs-app` and `discogs-mcp`.
+Two containers come up — `discogs-app` and the Discogs MCP server it asks
+about pressings and marketplace data.
+
+Both are built from this repo. The MCP server used to run as `npx -y
+discogs-mcp-server` on a stock node image, which cannot work in a clean
+container: the package depends on dotenv by git URL, npm shells out to `git`,
+and the slim node images have no git binary. It failed with `spawn git ENOENT`
+on every boot, and the app reported `Discogs tools unavailable: fetch failed` —
+a symptom two hops from its cause. Building the image also keeps a network
+fetch out of the startup path, which matters on a NAS that reboots.
 
 ## 4. Fill the collection
 

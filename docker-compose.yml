@@ -67,12 +67,16 @@ services:
       - discogs-mcp
 
   discogs-mcp:
-    image: node:20-bookworm-slim
+    # Built rather than `npx -y ...` on a stock node image: the package pulls a
+    # dependency by git URL, and the slim image has no git, so npx died with
+    # `spawn git ENOENT` on every boot. Building also pins the version and
+    # removes a network fetch from the startup path.
+    build:
+      context: .
+      dockerfile: docker/mcp.Dockerfile
+    image: crate-mcp:latest
     container_name: discogs-mcp
     restart: unless-stopped
-    # HTTP stream mode rather than stdio, so the app reaches it as a peer over
-    # the Docker network instead of managing a subprocess.
-    command: npx -y discogs-mcp-server stream
     environment:
       DISCOGS_PERSONAL_ACCESS_TOKEN: ${DISCOGS_PERSONAL_ACCESS_TOKEN:?set this in .env}
       PORT: "3001"
