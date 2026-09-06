@@ -43,7 +43,7 @@ npm install
 npm --prefix web install
 
 export DISCOGS_PERSONAL_ACCESS_TOKEN=...
-npm run sync          # first run pulls ~250 releases, about 5 minutes
+npm run sync          # first run pulls the whole collection, about 5 minutes
 npm run build
 npm start             # http://localhost:8080
 ```
@@ -84,6 +84,10 @@ docker run --rm -v crate_crate-data:/data -v "$PWD":/backup alpine \
 To reach it away from home, use Tailscale or the Synology VPN. Do not forward a
 port — there is no login, and the token behind it can change your collection.
 
+[docs/deploy-synology.md](docs/deploy-synology.md) has the step-by-step version,
+including the two things that fail on a Synology specifically and would not fail
+on a plain Linux box.
+
 ## Cover art
 
 Discogs caps its images at 600px, which is soft on a retina cover flow.
@@ -102,9 +106,9 @@ Discogs art unless a candidate is both verified and measurably larger.
 Upgrades land in `covers/{id}-hi.jpg` and a separate column; `cover_path` is
 never overwritten. To undo one, delete the file and clear `hi_path`.
 
-On this collection: 157 of 243 upgraded to 1200px. The rest kept Discogs art,
-mostly because the candidate was no larger — which is the right outcome, not a
-failure.
+On this collection: 155 of 239 upgraded to 1200px — 147 from iTunes, 8 from the
+Cover Art Archive. The rest kept Discogs art, mostly because the candidate was
+no larger, which is the right outcome rather than a failure.
 
 ## Keeping it current
 
