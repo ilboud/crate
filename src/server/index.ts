@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs';
 import { initDb } from '../db/index.js';
 import { createApp } from './app.js';
 import { readSchedule, SyncRunner } from '../sync/runner.js';
@@ -19,7 +20,15 @@ const app = createApp(db, { coversDir, webDir, runner });
 
 const server = app.listen(port, host, () => {
   const { releases } = { releases: (db.prepare('SELECT COUNT(*) AS n FROM release').get() as { n: number }).n };
-  console.log(`crate listening on http://${host}:${port}`);
+  // Deliberately not a clickable URL. In a container this is the port bound
+  // INSIDE it, which is never the port anyone types — compose publishes 8080
+  // as 8088 — so printing http://0.0.0.0:8080 sends people to a refused
+  // connection and a debugging session over nothing.
+  const contained = existsSync('/.dockerenv');
+  console.log(`crate listening on ${host}:${port}${contained ? ' inside the container' : ''}`);
+  if (contained) {
+    console.log('           browse to the host port published for it, not this one');
+  }
   console.log(`  database ${dbPath} — ${releases} releases`);
   console.log(`  covers   ${coversDir}`);
   if (!process.env.ANTHROPIC_API_KEY && !process.env.OPENAI_API_KEY) {
