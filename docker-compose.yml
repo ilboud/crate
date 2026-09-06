@@ -6,6 +6,12 @@
 # collection, so the app is not exposed to the internet. Reach it from outside
 # the house over Tailscale or the Synology VPN rather than by opening a port.
 
+# Pin the project name. Compose otherwise derives it from the directory, which
+# prefixes every volume — the same file would produce crate_crate-data on the
+# NAS and discogs_crate-data here, and a backup command naming one would
+# silently create an empty volume rather than find the other.
+name: crate
+
 services:
   discogs-app:
     build:
@@ -19,8 +25,18 @@ services:
       # uses it — DSM itself listens on 5000/5001.
       - "${APP_PORT:-8088}:8080"
     volumes:
-      - ./data:/data
-      - ./covers:/covers
+      # Named volumes, not bind mounts. Docker initialises an empty named
+      # volume from the image's own directory — ownership included — and the
+      # Dockerfile already chowns /data and /covers to the node user. A bind
+      # mount instead takes the host directory's ownership, so on a NAS it
+      # arrives root-owned and the app cannot write its database. Synology's
+      # daemon also refuses to create a missing bind path at all.
+      #
+      # To keep the files somewhere you can browse instead, swap these for
+      # `./data:/data` and `./covers:/covers`, then create the directories and
+      # `chown -R 1000:1000` them before the first start.
+      - crate-data:/data
+      - crate-covers:/covers
     environment:
       DB_PATH: /data/collection.db
       COVERS_DIR: /covers
@@ -54,3 +70,11 @@ services:
       SERVER_HOST: 0.0.0.0
     expose:
       - "3001"
+
+volumes:
+  # Both hold derived state: everything here is rebuildable from Discogs by
+  # running the sync and art commands. What is not rebuildable is small and
+  # accumulates over time — genre overrides, "I own both" dismissals and the
+  # stored API keys — so crate-data is the one worth backing up.
+  crate-data:
+  crate-covers:

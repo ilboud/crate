@@ -56,15 +56,30 @@ in two terminals; the Vite dev server proxies `/api` and `/covers` to the server
 ```bash
 cp .env.example .env      # fill in the token, and an API key if you want chat
 docker compose up -d --build
-docker compose exec discogs-app node dist/src/sync/cli.js
+docker compose exec discogs-app node dist/src/sync/cli.js   # ~5 min, first run
+docker compose exec discogs-app node dist/src/art/cli.js    # optional, sharper covers
 ```
 
 The app is then at `http://<nas>:8088`. Point Container Manager at the same
 compose file if you prefer the DSM UI.
 
 Two containers come up: `discogs-app` and `discogs-mcp` (the Discogs MCP server
-in HTTP stream mode). `./data` holds the SQLite database and `./covers` the
-mirrored art, both bind-mounted so they survive a rebuild.
+in HTTP stream mode). State lives in two named volumes, `crate-data` for the
+SQLite database and `crate-covers` for the mirrored art, so it survives a
+rebuild. Named rather than bind-mounted on purpose: Docker initialises a named
+volume from the image, ownership included, so the app can write to it without
+anyone chowning a host directory first — and Synology's daemon refuses to
+create a missing bind path at all.
+
+Nothing in either volume is irreplaceable; the sync and art commands above
+rebuild both from Discogs. What accumulates over time and does not — genre
+overrides, "I own both" dismissals, stored API keys — is small and lives in
+`crate-data`:
+
+```bash
+docker run --rm -v crate_crate-data:/data -v "$PWD":/backup alpine \
+  tar czf /backup/crate-data.tgz -C / data
+```
 
 To reach it away from home, use Tailscale or the Synology VPN. Do not forward a
 port — there is no login, and the token behind it can change your collection.
