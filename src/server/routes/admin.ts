@@ -4,6 +4,7 @@ import { setSetting, getSetting } from '../../db/index.js';
 import { reassignAll, unassignedStyles } from '../../sync/taxonomy.js';
 import { rebuildSimilar } from '../../sync/similar.js';
 import {
+  backendFromEnv,
   DEFAULT_MODELS,
   providerStatus,
   readBackendChoice,
@@ -46,7 +47,7 @@ export function adminRoutes(db: Db): Router {
       feel: readFeel(db),
       chat: {
         backend: readBackendChoice(db),
-        backendFromEnv: Boolean(process.env.CHAT_BACKEND),
+        backendFromEnv: backendFromEnv(),
         providers: PROVIDERS.map((p) => providerStatus(db, p)),
         defaultModels: DEFAULT_MODELS,
         mcpUrl: process.env.MCP_URL ?? null,

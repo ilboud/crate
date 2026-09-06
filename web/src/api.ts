@@ -87,6 +87,7 @@ export interface ProviderStatus {
   /** Masked, e.g. "••••4f2a". Never the key itself. */
   hint: string | null;
   model: string;
+  modelFromEnv: boolean;
   /** Anthropic only. Identifies a workspace; not a secret. */
   workspaceId?: string | null;
 }

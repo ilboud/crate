@@ -48,11 +48,20 @@ services:
       DISCOGS_PERSONAL_ACCESS_TOKEN: ${DISCOGS_PERSONAL_ACCESS_TOKEN:?set this in .env}
       DISCOGS_USERNAME: ${DISCOGS_USERNAME:-}
       # Chat. Set whichever you use; CHAT_BACKEND picks between them.
-      CHAT_BACKEND: ${CHAT_BACKEND:-anthropic}
+      #
+      # No defaults here on purpose. Anything set in the environment overrides
+      # the Settings screen and greys the control out, so giving these a
+      # fallback value would hard-code a choice into every deployment and take
+      # the switch away from the person using it. Empty means "not set", and
+      # the app falls back to its own defaults and its own UI.
+      CHAT_BACKEND: ${CHAT_BACKEND:-}
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
-      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-claude-opus-5}
+      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-}
+      # Required when the Anthropic key covers all workspaces; the API rejects
+      # such a key without it.
+      ANTHROPIC_WORKSPACE_ID: ${ANTHROPIC_WORKSPACE_ID:-}
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
-      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o}
+      OPENAI_MODEL: ${OPENAI_MODEL:-}
       MCP_URL: http://discogs-mcp:3001/mcp
     depends_on:
       - discogs-mcp

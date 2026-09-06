@@ -6,14 +6,17 @@ import { join } from 'node:path';
 import { initDb, type Db } from '../../src/db/index.js';
 import { createApp } from '../../src/server/app.js';
 import {
+  backendFromEnv,
   clampSensitivity,
   maskKey,
   providerStatus,
   readBackendChoice,
   readFeel,
   resolveKey,
+  resolveModel,
   readWorkspaceId,
   storeKey,
+  storeModel,
   storeWorkspaceId,
   writeFeel,
 } from '../../src/server/settings.js';
@@ -295,5 +298,72 @@ describe('settings API', () => {
     const res = await request(app).get('/api/admin/settings').expect(200);
     const openai = res.body.chat.providers.find((p: { provider: string }) => p.provider === 'openai');
     expect(openai.model).toBe('gpt-4o-mini');
+  });
+});
+
+/**
+ * Compose passes every declared variable through, empty ones included. That
+ * turned "optional override" into "always in force": the provider switch was
+ * greyed out on every container deployment because CHAT_BACKEND existed as an
+ * empty string.
+ */
+describe('an empty environment variable means unset', () => {
+  const saved = { ...process.env };
+  afterEach(() => {
+    process.env = { ...saved };
+  });
+
+  it('does not treat a blank CHAT_BACKEND as the environment deciding', () => {
+    process.env.CHAT_BACKEND = '';
+    expect(backendFromEnv()).toBe(false);
+  });
+
+  it('does not treat a value it cannot use as the environment deciding', () => {
+    // Greying out the control for a typo the app then ignores is worse than
+    // ignoring the typo alone.
+    process.env.CHAT_BACKEND = 'claude';
+    expect(backendFromEnv()).toBe(false);
+  });
+
+  it('reports the environment as deciding for a real provider', () => {
+    process.env.CHAT_BACKEND = 'openai';
+    expect(backendFromEnv()).toBe(true);
+  });
+
+  it('lets a blank model fall through to the stored one', () => {
+    const db = initDb(':memory:');
+    process.env.ANTHROPIC_MODEL = '';
+    storeModel(db, 'anthropic', 'claude-sonnet-5');
+    expect(resolveModel(db, 'anthropic')).toEqual({
+      model: 'claude-sonnet-5',
+      fromEnv: false,
+    });
+  });
+
+  it('lets a set model win over the stored one, and says so', () => {
+    const db = initDb(':memory:');
+    process.env.ANTHROPIC_MODEL = 'claude-opus-5';
+    storeModel(db, 'anthropic', 'claude-sonnet-5');
+    expect(resolveModel(db, 'anthropic')).toEqual({
+      model: 'claude-opus-5',
+      fromEnv: true,
+    });
+    expect(providerStatus(db, 'anthropic').modelFromEnv).toBe(true);
+  });
+});
+
+/** One key per provider. They are never the same setting. */
+describe('keys stay in their own provider', () => {
+  it('storing an Anthropic key leaves OpenAI unconfigured', () => {
+    const db = initDb(':memory:');
+    delete process.env.ANTHROPIC_API_KEY;
+    delete process.env.OPENAI_API_KEY;
+
+    storeKey(db, 'anthropic', 'sk-ant-api03-abcdefghijklmnop4f2a');
+
+    expect(providerStatus(db, 'anthropic').configured).toBe(true);
+    const openai = providerStatus(db, 'openai');
+    expect(openai.configured).toBe(false);
+    expect(openai.hint).toBeNull();
   });
 });

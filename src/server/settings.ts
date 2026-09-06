@@ -97,6 +97,11 @@ const ENV_VAR: Record<Provider, string> = {
   openai: 'OPENAI_API_KEY',
 };
 
+const MODEL_ENV_VAR: Record<Provider, string> = {
+  anthropic: 'ANTHROPIC_MODEL',
+  openai: 'OPENAI_MODEL',
+};
+
 /**
  * Never the key itself — only enough to recognise which one is stored.
  * A short value is reported as set without a hint, since four characters of a
@@ -115,6 +120,8 @@ export interface ProviderStatus {
   source: 'env' | 'stored' | null;
   hint: string | null;
   model: string;
+  /** True when the model is pinned by the environment and the UI cannot change it. */
+  modelFromEnv: boolean;
   /** Anthropic only: workspace id for an identity-linked key, if set. */
   workspaceId?: string | null;
 }
@@ -132,17 +139,34 @@ export function resolveKey(db: Db, provider: Provider): string | null {
   return stored === '' ? null : stored;
 }
 
+/**
+ * The model actually used, environment first — the same precedence as the key,
+ * so a deployment can pin one. An empty variable counts as unset: Compose
+ * passes every declared variable through, so blank has to mean "not set" or
+ * every containerised deployment would be pinned to nothing.
+ */
+export function resolveModel(db: Db, provider: Provider): { model: string; fromEnv: boolean } {
+  const fromEnv = (process.env[MODEL_ENV_VAR[provider]] ?? '').trim();
+  if (fromEnv) return { model: fromEnv, fromEnv: true };
+  return {
+    model: getSetting(db, `${provider}_model`, DEFAULT_MODELS[provider]),
+    fromEnv: false,
+  };
+}
+
 export function providerStatus(db: Db, provider: Provider): ProviderStatus {
   const fromEnv = process.env[ENV_VAR[provider]];
   const stored = getSetting(db, KEY_SETTING[provider], '');
   const key = fromEnv || stored || null;
+  const model = resolveModel(db, provider);
 
   return {
     provider,
     configured: key !== null,
     source: key === null ? null : fromEnv ? 'env' : 'stored',
     hint: maskKey(key),
-    model: getSetting(db, `${provider}_model`, DEFAULT_MODELS[provider]),
+    model: model.model,
+    modelFromEnv: model.fromEnv,
     // Not a secret — it identifies a workspace, it does not authenticate.
     ...(provider === 'anthropic' ? { workspaceId: readWorkspaceId(db) } : {}),
   };
@@ -171,8 +195,22 @@ export function storeWorkspaceId(db: Db, id: string | null): void {
   setSetting(db, 'anthropic_workspace_id', id ?? '');
 }
 
+/**
+ * True only when CHAT_BACKEND names a provider the app recognises.
+ *
+ * Not `Boolean(process.env.CHAT_BACKEND)`: Compose passes declared variables
+ * through as empty strings, and a typo like CHAT_BACKEND=claude is ignored by
+ * readBackendChoice below. Either would grey out the provider switch while the
+ * environment was not in fact deciding anything — a control disabled for a
+ * reason the user cannot see or fix.
+ */
+export function backendFromEnv(): boolean {
+  const fromEnv = (process.env.CHAT_BACKEND ?? '').trim().toLowerCase();
+  return fromEnv === 'anthropic' || fromEnv === 'openai';
+}
+
 export function readBackendChoice(db: Db): Provider {
-  const fromEnv = (process.env.CHAT_BACKEND ?? '').toLowerCase();
+  const fromEnv = (process.env.CHAT_BACKEND ?? '').trim().toLowerCase();
   if (fromEnv === 'anthropic' || fromEnv === 'openai') return fromEnv;
   const stored = getSetting(db, 'chat_backend', 'anthropic');
   return stored === 'openai' ? 'openai' : 'anthropic';

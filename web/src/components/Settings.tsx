@@ -226,7 +226,16 @@ function ChatPanel() {
           <div className="keyrow">
             <input
               type="password"
-              autoComplete="off"
+              // Two password fields on one screen invite a password manager to
+              // fill both with the same secret — which is how an Anthropic key
+              // ends up saved as the OpenAI one. A distinct name and
+              // new-password are what browsers actually honour; they ignore
+              // autoComplete="off" on password inputs.
+              name={`${p.provider}-api-key`}
+              id={`${p.provider}-api-key`}
+              autoComplete="new-password"
+              data-1p-ignore
+              data-lpignore="true"
               placeholder={p.configured ? 'Paste a new key to replace it' : 'Paste your API key'}
               value={drafts[p.provider] ?? ''}
               onChange={(e) => setDrafts({ ...drafts, [p.provider]: e.target.value })}
@@ -302,6 +311,8 @@ function ChatPanel() {
               onBlur={(e) =>
                 run(() => api.saveChat({ provider: p.provider, model: e.target.value }), 'Model saved')
               }
+              disabled={p.modelFromEnv}
+              title={p.modelFromEnv ? 'Pinned by the environment' : undefined}
             />
           </div>
         </section>
